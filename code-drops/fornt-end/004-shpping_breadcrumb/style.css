@@ -1,0 +1,79 @@
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+nav.nav-breadcrumb{
+  background-color: rgb( 13,171,157);
+}
+
+ul.ul-breadcrumb{
+  width: 50%;
+  height: 60px;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+li p{
+  color: white;
+  font-size: 12px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+li{
+  position: relative;/*让 '>' 定位*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*这里flex布局的作用是让文字和a标签垂直对齐*/
+}
+
+a.breadcrumb{
+  width: 40px;
+  height: 40px;
+  margin-bottom: 4px;/*和文字之间留出距离*/
+  border-radius: 50%;
+  background-color: rgb( 24, 49, 83);
+  display: flex;/*这里的flex布局是为了让icon水平和垂直方向都居中对齐*/
+  justify-content: center;
+  align-items: center;
+  transition: all 0.25s;
+}
+
+i.bread-icon{
+  color: white;
+}
+
+a.breadcrumb:hover{
+  background-color: white;
+}
+
+/*这行代码的作用：让鼠标hovera标签的时候icon的颜色也同时变化，避免hover某些区域的时候只有部分元素会变化颜色*/
+a.breadcrumb:hover  i.bread-icon{
+  color: rgb( 24, 49, 83);
+}
+
+ul li+li::before{
+  content: '>';
+  position: absolute;
+  right: 95px;
+  top: 10px;/*因为是相对于li定位，所以需要多折腾一下*/
+  color: rgb( 24, 49, 83);
+}
+
+/*告诉用户目前在哪个页面*/
+li.current a{
+  background-color: white;
+}
+li.current i{
+  color: rgb( 24, 49, 83);
+}
+li.current p{
+  color: rgb( 24, 49, 83);
+}
+
