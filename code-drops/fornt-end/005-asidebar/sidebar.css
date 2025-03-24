@@ -12,62 +12,57 @@ body{
   min-height: 100vh;
   background-color: rgb(240,244,255);
 }
+
 aside.sidebar{
-  background-color: rgb( 22, 26, 45);
   height: 100%;
   width: 85px;
   position: fixed;
   top: 0;
   left: 0;
-  transition: width 0.4s;
-  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   padding: 25px 20px;
-
+  overflow-x: hidden;
+  transition: width 0.4s;
+  background-color: rgb( 22, 26, 45);
 }
-
 aside.sidebar:hover{
   width: 260px;
 }
+
 
 .sidebar-header{
   display: flex;
   align-items: center;
   gap: 12px;
   margin: 0 0 20px;
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 10;
+
   background-color: rgba(22, 26, 45,1);
 }
 .sidebar-header i{
-  font-size: 30px;
+  font-size: 30px;/*icon本质上就是字体*/
 }
 .sidebar-header h2{
   color: white;
   font-size: 18px;
-
 }
 
-h4{
-  position: relative;
-}
-h4 span{
+
+h4.sidebar-menu {
+  position: relative;/*让分割线定位*/
   color: white;
-  white-space: nowrap;
+  white-space: nowrap;/*在这个项目里面，和hidden配合使用，起到不换行，被切断的效果，hidden只是意味着超出的部分被隐藏，但是如果换行了的话，就相当于没有超出，就不会隐藏，但是也要注意的是，换行是以单词为最小单位的，而不是单词（看中间有没有空格）*/
 }
 
-ul.sidebar-links{
+ul.sidebar-links{/*针对于火狐浏览器*/
   scrollbar-width: none;
 }
-ul.sidebar-links::-webkit-scrollbar{
+ul.sidebar-links::-webkit-scrollbar{/*针对于webkit浏览器，包括chrome、edge、safari等等*/
   display: none;
 }
 
 ul.sidebar-links{
-  overflow-y: auto;
+  overflow-y: auto;/*因为asidebar的高度限定了，而links又是其子元素，他自身的高度超出的话在自己这里设置滚动就可以了*/
 }
 ul.sidebar-links a{
   display: flex;
@@ -75,37 +70,39 @@ ul.sidebar-links a{
   padding: 16px 14px;
   border-radius: 6px;
   color: white;
-  gap: 14px;
+  gap: 14px;/*微调图标和文字之间的距离，这也是能让收缩的时候只有图标的关键！简约必备*/
   margin: 10px 0;
   transition: color 0.2s ease,backdround-color 0.2s ease;
-  white-space: nowrap;
-
+  white-space: nowrap;/*确保收缩之后是被隐藏而不是被挤到下一行*/
 }
 ul.sidebar-links a:hover{
   background-color: white;
   color: rgb( 22, 26, 45);
 }
 
-ul.sidebar-links h4 span{
-  opacity: 0;
+ul.sidebar-links h4.sidebar-menu span{
+  opacity: 0;/*未展开的时候隐藏文字，只保留线条*/
 }
-.menu-separator{
+aside.sidebar .menu-separator{
   position: absolute;
   top: 50%;
   height: 1px;
   width: 100%;
+  transform: scaleX(1);
+  transform-origin: left;/*控制分割线收回时的端点：左边。这里要注意，看到的分割线过0.2s之后慢慢变短的效果，不是因为给分割线设置了动画时长（我们代码里并没有设置），实际上是被hidden了，被sidebar的hidden效果剪切掉了，然后因为还在收缩过程中，所以才显示出来了慢慢收缩的美妙效果*/
   background-color: #4f52ba;
   opacity: 1;
-  transition-delay: 0.2s;
+  transition-delay: 0.2s;/*收缩的时候延迟*/
 }
-aside.sidebar:hover ul.sidebar-links h4 span{
+aside.sidebar:hover  ul.sidebar-links h4.sidebar-menu span{
   opacity: 1;
 }
 aside.sidebar:hover .menu-separator{
-  opacity: 0;
-  transition-delay: 0s;
+  transform: scaleX(0);
+  transform-origin: right;/*控制伸缩时的端点：右边（不过这里因为没有给分割线设置动画时间，所以是瞬间的行为，所以无论设置成哪个方向都没区别）*/
+  transition-delay: 0s;/*展开的时候不延迟*/
 }
-
+/*这个延迟属性真的玩的很美妙，展开不延迟，收缩延迟，极致的控制感造就了极致的动画美感*/
 
 div.account{
   background-color: white;
@@ -115,8 +112,9 @@ div.account{
   align-items: center;
   justify-content: start;
   gap: 10px;
-  height: 60px;
+  height: 60px;/*这个嘛，本来一开始没想加的，但是后来展开收缩的时候发现高度会有点变化，所以就固定了一下，emmm，随机应变吧*/
 }
+
 div.account-left img{
   width: 40px;
   height: 40px;
@@ -124,20 +122,14 @@ div.account-left img{
   object-position: center;
   border-radius: 50%;
   position: relative;
-  left: -7px;
+  left: -7px;/*这个也是随机应变，微调头像在收缩状态下位置不太美观的问题*/
 }
 
 div.account-right{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  line-height: 1.6;
+  line-height: 1.6;/*这个确实不错，一开始想调p的上下外边距，但是不好搞，容易破坏整体的布局*/
   white-space: nowrap;
 }
 
-.material-symbols-outlined{
-  font-size: 24px;
-  font-variation-settings:
-  'FILL' 0,
-  'opsz' 60;
-}
