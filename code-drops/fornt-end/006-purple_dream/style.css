@@ -1,0 +1,231 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+a{
+  color: inherit;
+}
+a:hover{
+  text-decoration: underline;
+}
+body{
+  height: 700px;
+  background: url('img/background.jpg') center/cover ;
+  /* background-size: cover;
+  background-position: center; */
+}
+
+.login{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 450px;
+  border-radius: 10px;
+  margin: 0 auto;
+  position: relative;
+  top: 100px;
+  background-color: rgba(255,255,255,0.1);/*淡白色的滤镜效果*/
+  backdrop-filter: blur(5px);/*磨砂效果*/
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);/*和背景分离开来，有层次感*/
+}
+
+
+p.login-head{
+  margin: 0 auto -15px;
+  padding: 20px 40px;
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
+}
+p.register{
+  margin: 0 auto;
+}
+
+.input-login {
+  width: 230px;
+  border-radius: 16px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(255,255,255,0.2);
+  padding: 8px 14px;
+  margin: 4px auto;
+  background-color: transparent;
+  color: white;/*这是修改输入之后的文本颜色*/
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/*哈哈这里给两个icon定位是真的很好玩*/
+.email,.passworld{
+  display: flex;
+  position: relative;
+}
+.input-icon{
+  position: absolute;
+  top: 30px;
+  left: 280px;
+  color: white;
+}
+
+/*修改占位符的文本属性*/
+.input-login::placeholder{
+  color: white;
+}
+.input-login:focus{
+  outline: none;/*消除点击输入的时候那个难看的黑框*/
+}
+.button-login{
+  width: 220px;
+  border-radius: 20px;
+  padding: 6px 8px;
+  margin: 0 auto;
+  font-weight: bold;
+  border: none;
+  color: rgb( 48, 48, 48);
+  background-color: white;
+  margin-top: 6px;
+  margin-bottom: 14px;
+  transition: opacity 0.05s ease-in-out, box-shadow 0.2s ease-in-out ;
+}
+
+.button-login:hover{
+  box-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+.button-login:active{
+  opacity: 0.8;
+  box-shadow: 0 0 6px rgba(255,255,255,0.2);
+}
+.help{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 235px;
+  margin: 1px auto 5px;
+}
+.help span{
+  font-size: 10px;
+  color: white;
+}
+.help .left{
+  display: flex;
+  justify-content: space-between;
+  width: 90px;
+  position: relative;
+  top: 5px;
+}
+p.register{
+  color: white;
+  font-size: 12px;
+}
+p.register a{
+  font-weight: bold;
+}
+
+
+.help input[type=checkbox] {
+  appearance: none;  /* 取消默认样式 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  vertical-align: middle;/*让复选框和remember me 对齐*/
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  border: 2px solid rgba(255,255,255,0.8); /* 白色边框 */
+  background: transparent;
+  cursor: pointer;
+  position: relative;/*让勾可以用absolute定位*/
+  transition: all 0.15s ease-in-out;/*ease-in-out;缓入缓出，两头慢，中间快*/
+}
+
+/*选中状态 */
+.help input[type=checkbox]:checked {
+  background-color: white;
+  border-color: white;
+}
+
+/*悬停光晕*/
+.help input[type=checkbox]:hover {
+  border-color: white; 
+  box-shadow: 0 0 8px rgba(255,255,255,0.6); 
+}
+
+/* 选中时显示勾号 */
+.help input[type=checkbox]:checked::after {
+  content: '✔'; /* Unicode 对勾 */
+  font-size: 12px;/*要比复选框小啊一定*/
+  color: black;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  top: 50%;/*这两个属性让勾的“左上角”定位到checkbox的中间，要注意，这个符号并不是一个大小可忽略的质点*/
+  transform: translate(-50%,-50%)
+  /*让这个勾的中心点进行移动，百分比是相对于自身而言*/
+  /*transform 是一个 CSS 变换（Transformation）属性，它可以让元素进行 移动（translate）、旋转（rotate）、缩放（scale）、倾斜（skew） 等变换。*/
+  /*translate(x, y) 让元素 沿 X 轴 和 Y 轴 进行位移*/
+}
+
+
+p.register .help span{
+  font-family: "Funnel Display", sans-serif;
+}
+
+.separator{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.separator hr{
+  flex: 1;
+  border: none;
+  height: 1px;
+  background-color: rgba(255,255,255,0.2);
+}
+.separator p{
+  text-transform: uppercase;
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+}
+
+.third-part-account-line-1,.third-part-account-line-2 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.third-part-account-line-1 a,.third-part-account-line-2 a{
+  display: inline-block;
+  padding: 4px 60px;
+  border-radius: 18px;
+  background-color: rgba(255,255,255,0.5);
+  transition: all 0.15s ;
+}
+.third-part-account-line-1 a:hover,.third-part-account-line-2 a:hover{
+  background-color: rgba(255,255,255,0.2);
+}
+
+.third-part-account-icon{
+  font-size: 16px;
+  color: rgba(0,0,0,0.7);
+}
+.third-part-account-line-1 a:hover .third-part-account-icon,.third-part-account-line-2 a:hover .third-part-account-icon {
+  color: rgba(0,0,0,1);
+}
+
+.third-part-account-line-1 a:active,.third-part-account-line-2 a:active{
+  background-color: rgba(255,255,255,0.1);
+}
+p.login-foot{
+  margin: 8px 10px 0;
+  color: rgba(255,255,255,0.5);
+  font-family: "Funnel Display", sans-serif;
+  font-size: 12px;
+}
+p.login-foot a{
+  text-decoration: underline;
+  color: rgba(255,255,255,0.8);
+}
