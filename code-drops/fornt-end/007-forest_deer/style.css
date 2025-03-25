@@ -1,0 +1,231 @@
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body{
+  background: url('src/background.jpg') center/cover no-repeat;
+  height: 110vh;
+}
+
+
+/*-----------------------nav_structure_start---------------*/
+
+.navbar{
+  margin: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-right{
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-right a{
+  margin: 0 20px;
+}
+
+.nav-right li{
+  display: inline-block;
+}
+/*-----------------------nav_structure_end---------------*/
+
+
+/*-------------------------nav_a_style_start-----------------------*/
+.nav-right a.link-basic{
+  color: white;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.nav-right a.link-basic::after{
+  content: '';
+  height: 1.3px;
+  background-color: white;
+  position: absolute;
+  left: -18%;
+  bottom: 0;
+  width: 130%;
+  transform: scaleX(0) translateX(-18%) ;
+  transform-origin: right;
+  transition: transform 0.25s;/*动画效果写在这里才有用，写在a标签里面没用*/
+
+}
+.nav-right a.link-basic:hover::after{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-right a.link-outline{
+  background-color: transparent;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+  padding: 6px 12px ;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.2s;
+  color: white;
+}
+.nav-right a.link-outline:hover{
+  background-color: white;
+  color: black;
+}
+/*-------------------------nav_a_style_end-----------------------*/
+
+
+
+/*------------------------form_structure_start-------------------*/
+form.form-register{
+  position: relative;
+  top: 50px;
+  width: 400px;
+  min-height: 400px;
+  padding: 20px 0;/*这个属性搭上flex布局就能很好的调整高度了！不用设置height也能表现得十分完美*/
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form.form-register h1{
+  margin: 25px auto;
+}
+
+div.input-group{
+  margin: 6px auto;
+  position: relative;
+}
+div.input-group i{
+  position: absolute;
+  bottom: 6px;
+  right: 5px;
+}
+.form-register hr{
+  border: none;/*去除默认样式*/
+  height: 1.5px;
+  width: 100%;/*确保它是线，如果设置成1px，其实就只是一个点*/
+  background-color: black;/*设置分割线的颜色，不是color，而是background-color！*/
+}
+
+div.form-protocol{
+  margin-top: 16px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+/*------------------------form_structure_end-------------------*/
+
+
+
+/*------------------------form_style_start-------------------*/
+
+.form-register{
+  background-color: rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 2px 4px 16px rgba(0,0,0,0.5);
+}
+
+
+.input-group i{
+  font-size: 16px;
+}
+
+.input-group input{
+  margin: 6px auto;
+  padding: 4px 8px;
+  width: 220px;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+}
+.input-group input::placeholder{
+  color: black;
+  letter-spacing: 1.1px;
+  font-weight: normal;
+  font-family: "Roboto", sans-serif;
+}
+.input-group input:focus{
+  outline: none;/*去除点击后的很丑的外边框*/
+}
+
+.form-protocol p{
+  margin-left: 6px;
+}
+.form-protocol input[type=checkbox]{
+  appearance: none;/*完全清除默认样式*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: white;
+  border: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.15s ease-in-out;
+}
+.form-protocol input[type=checkbox]:hover{
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+.form-protocol input[type=checkbox]:checked{
+  background-color: rgb( 20, 37, 52);
+  color: white;
+}
+.form-protocol input[type=checkbox]:checked::after{
+  content: '✔';
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-5.2px,-10px);/*translate有两个属性，X和Y轴，是定位其元素的中心点*/
+}
+
+
+.btn-primary{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 230px;
+  padding: 8px 10px;
+  color: white;
+  font-weight: bold;
+  background-color: rgb( 20, 37, 52);
+  border: none;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+.btn-primary:hover{
+  opacity: 0.85;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+.btn-primary:active{
+  box-shadow: none;
+}
+
+
+.form-register p{
+  font-family: "Funnel Sans", sans-serif;
+}
+.form-register a{
+  color: white;
+  text-decoration: underline;
+  transition: text-shadow 0.15s ease-in-out;
+}
+.form-register a:hover{
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+}
+/*------------------------form_style_end-------------------*/
+
+
+
+
+
+
+
+
