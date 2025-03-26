@@ -19,23 +19,29 @@ header img{
   border-radius: 50%;
   position: relative;
   top: 10px;
-
+  /*这里居中不用margin： 0 auto 的原因是这玩意儿只对纯粹的block元素（且具有明确宽度）生效，对inline或者inline-block不生效*/
 }
 
 
 td{
-
   padding: 15px 40px;
-  border: 1px solid grey ;
+  border: 1px solid rgba(0,0,0,0.3);
+  /*border的简写推荐的逻辑顺序：
+  width style color
+  */
 }
 
 table{
   border-collapse: collapse;
+  /*这里让表格的边框坍缩实现视觉效果的另一种解法是：*/
+  /*
+  border-spacing:0;
+  border-collapse:separator;
+  border:0.5px (变为原来的一半)
+  */
   margin: 20px auto;
   text-align: center;
   background-color: rgb(255, 240, 229);
-
-
 }
 
 tbody{
@@ -44,12 +50,13 @@ tbody{
   font-family: 'Work Sans',serif;
   font-size: 20px;
   font-style: italic;
-
 }
 
 thead,tfoot{
   background-image: url('src/background-form.jpg');
   background-size: cover;
+  background-position: center;
+  /*这两个属性设置当背景图片大小不适配时，最终的展示效果，和img的object属性类似*/
   color: rgb(55, 65, 81);
 }
 
