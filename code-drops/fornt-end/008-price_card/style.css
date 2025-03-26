@@ -1,0 +1,163 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  background: linear-gradient(#D5A3FF 0%, #77A5F8 100%);
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+span,p{
+  font-size: 12px;
+}
+
+div.card-wrapper{
+  width: 300px;
+  height: 380px;
+  background-color: white;
+  margin: 120px auto;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+div.card-wrapper input[type='radio'] {
+  display: none;
+}
+
+.card-wrapper header{
+  width: 100%;
+  padding: 4px 0;
+  margin: 6px 0 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;/*我靠，一开始这里面的文字用的是span标签，flex布局死活不起作用，搞得我都怀疑人生了,flex布局的对齐方式只对块状元素有效*/
+  align-items: center;
+  border-color: rgba(0,0,0,0.1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 25px;
+  position: relative;
+}
+.card-wrapper header .color-slider{
+  position: absolute;
+  background: linear-gradient(145deg, #D5A3FF 0%, #77A5F8 100%);
+  height: 85%;
+  border-radius: inherit;
+  z-index: 1;
+  transition: all 0.3s;
+}
+#tab-1:checked ~ header .color-slider{
+  left: 0%;
+  width: 70px;
+  transform: translateX(5%);
+}
+#tab-2:checked ~ header .color-slider{
+  left: 50%;
+  width: 90px;
+  transform: translateX(-50%);
+}
+#tab-3:checked ~ header .color-slider{
+  left: 100%;
+  width: 76px;
+  transform: translateX(-104%);
+}
+
+#tab-1:checked ~ header label[for='tab-1'],
+#tab-2:checked ~ header label[for='tab-2'],
+#tab-3:checked ~ header label[for='tab-3']{
+  color: white;
+}
+div.card-area{
+  width: 100%;
+  overflow: hidden;
+}
+div.card{
+  display: flex;
+  width: 300%;
+}
+
+div.row{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 33.3%;
+  transition: all 0.4s ease;
+}
+
+#tab-1:checked ~ .card-area .card .row-1{
+  margin-left: 0%;
+}
+#tab-2:checked ~ .card-area .card .row-1{
+  margin-left: -33.4%;
+}
+#tab-3:checked ~ .card-area .card .row-1{
+  margin-left: -66.7%;
+}
+
+.card-wrapper header label{
+  color: black;
+  padding: 4px 0;
+  width: 80px;
+  border-radius: 16px;
+  text-align: center;
+  font-size: 16px;
+  z-index: 2;
+  transition: all 0.1s;
+  text-align: center;
+  cursor: pointer;
+}
+div.price{
+  text-align: center;
+}
+div.price span::before{
+  content: '$';
+  position: absolute;
+  top: 6px;
+  left: -6px;
+  font-size: 10px;
+  color: rgba(0,0,0,0.6);
+}
+div.price span{
+  font-size: 40px;
+  font-weight: bold;
+  position: relative;
+}
+
+hr{
+  border: none;
+  width:95%;
+  height: 1px;
+  background-color: rgba(0,0,0,0.1);
+}
+
+
+div.intro{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 0 0 10px;
+}
+div.intro .check{
+  margin-right: 4px;
+  background: linear-gradient(145deg, #D5A3FF 0%, #77A5F8 100%);
+  background-clip: text;/*css的写法，但是大多数浏览器需要加webkit前缀才行，纯属为了让vscode开心，不亮警告波浪线*/
+  -webkit-background-clip: text;/*	让背景只显示在文字上*/
+  -webkit-text-fill-color: transparent;/*把原来的文字颜色设为透明，让背景“漏出来”*/
+}
+button{
+  width: 90%;
+  padding: 8px 0;
+  border-radius: 16px;
+  border: none;
+  background: linear-gradient(145deg, #D5A3FF 0%, #77A5F8 100%);
+  font-size: 16px;
+  color: white;
+  transition: transform 0.2s;
+}
+button:hover{
+  transform: scale(0.98);
+}
