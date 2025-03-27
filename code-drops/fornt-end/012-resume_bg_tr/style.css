@@ -1,0 +1,176 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+a{
+  color: inherit;
+}
+
+body{
+  background-color: rgb(242,242,242);
+  transition: all 0.4s;
+}
+
+div.card-wrapper{
+  width: 600px;
+  height: 350px;
+  margin: 160px auto 0;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 18px rgba(0,0,0,0.3);
+  position: relative;
+  transition: all 0.4s;
+}
+
+div.card-main{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 30px 10px;
+}
+
+div.img-box{
+  height: 100%;
+  padding: 4px 4px;/*极具美感的相框就是这么来的！*/
+  background-color: rgb( 8, 45, 60);
+  border-radius: 10px;
+}
+
+.card-wrapper img{
+  height: 100%;
+  width: 200px;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid white;
+  border-radius: inherit;
+}
+
+
+section.info{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+section.info h2,
+section.info h3,
+section.info p{
+  color: rgb( 8, 45, 60);
+  transition: all 0.4s;
+  font-family: "Roboto", sans-serif;
+}
+section.info p{
+  font-family: "Gidole", sans-serif;
+}
+
+
+section.info li{
+  margin-top: 5px;
+  width: fit-content;
+  transition: transform 0.2s;
+}
+section.info a{
+  padding: 4px 10px;
+  background-color: rgb( 8, 45, 60);
+  color: white;
+  border-radius: 6px;
+  transition: background-color 0.4s,color 0.4s,transform 0.2s,opacity 0.15s;
+}
+section.info li:hover{   /*这里不选择a标签是因为a标签没法缩放，而且缩放之前要把li元素的长度调成内容大小，不然scale缩放看起来很别扭，因为a标签和li的缩放不一致*/
+  transform: scale(0.98);
+}
+section.info a:active{
+  opacity: 0.8;
+}
+input[type='checkbox'] {
+  display: none;
+}
+
+label{
+  width: 45px;
+  height: 22px;
+  position: absolute;
+  right: 2%;
+  top: 3%;
+  background-color: rgb( 8, 45, 60);
+  border-radius: 12px;
+  transition: all 0.4s;
+}
+
+label::after{
+  content: '';
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: aliceblue;
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  transform: translateY(-50%);
+  transition: all 0.4s;
+}
+
+#tab:checked ~ label{
+  background-color: aliceblue;
+}
+
+#tab:checked ~ label::after{
+  background-color: rgb( 8, 45, 60);
+  position: absolute;
+  top: 50%;
+  /*right: 6%;如果这样写的话，就不会有动画效果，因为left和right的定位属性是互斥的，无法平缓过渡*/
+  /*left: auto;清除原来的往左定位，不然left会覆盖掉这个右定位，导致动不了.(动画效果这些东西默认会保留之前的样式，然后这个left又会干扰right，不像color那些元素一样后面写的就直接盖住前面的)*/
+  left: 56%;
+}
+
+.card-wrapper:has(#tab:checked){  /*因为~只能从同级往下选，要注意的是这个has对火狐浏览器不兼容*/
+  background-color: rgb( 8, 45, 60);
+}
+body:has(#tab:checked){
+  background-color: rgb( 8, 45, 60);
+}
+
+/*~本质上只是兄弟元素选择器，所以必须从兄弟层开始写起，不然无法选中*/
+#tab:checked ~ .card-main section.info h2,
+#tab:checked ~ .card-main section.info h3,
+#tab:checked ~ .card-main section.info p{
+  color: white;
+}
+
+#tab:checked ~ .card-main section.info a{
+  background-color: aliceblue;
+  color: rgb( 8, 45, 60);
+} 
+
+#tab:checked ~ aside.links li i{
+  color: rgb(240,248,255);
+}
+
+aside.links ul{
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}
+aside.links ul li{
+  display: inline-block;
+  margin: 0 6px 4px; 
+}
+aside.links  li i{
+  color: rgba(0,0,0,0.7);
+  transition: color 0.35s ;
+}
+aside.links  li i:hover{
+  color: rgba(0,0,0,1);
+}
+
+
+
+
+
+
+
+
