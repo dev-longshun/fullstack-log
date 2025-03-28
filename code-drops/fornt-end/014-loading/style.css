@@ -1,0 +1,34 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+}
+
+.square{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 45%;
+  border: 3px solid rgb(0,255,255);
+  background: none;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgb(0,255,255);
+  filter: blur(0.4px);
+  animation: loading 3.5s linear infinite ;
+}
+
+@keyframes loading{
+  0%   { transform: rotateX(0deg)   rotateY(0deg)   rotateZ(0deg); }
+  20%  { transform: rotateX(180deg) rotateY(0deg)   rotateZ(0deg); }
+  40%  { transform: rotateX(180deg) rotateY(180deg) rotateZ(0deg); }
+  60%  { transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg); }
+  80%  { transform: rotateX(360deg) rotateY(180deg) rotateZ(180deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(180deg); }
+}

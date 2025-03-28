@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300");
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  display: flex;
+  height: 100vh;
+  background: black;
+  align-items: center;
+  justify-content: center;
+}
+button{
+  position: relative;
+  height: 60px;
+  width: 200px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: white;
+  background: #111;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+}
+button::before{
+  opacity: 0;
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);/*calc里面操作符的左右两边必须加空格，不然会解析失败，变成0，也就是没有宽高*/
+  height: calc(100% + 4px);
+  border-radius: inherit;
+  background: linear-gradient( 45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  z-index: -1;
+  filter: blur(5px);
+  background-size: 400%;
+  animation: glowmove 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+}
+
+button:hover::before{
+  opacity: 1;
+}
+
+button:hover:active{
+  background: none;
+}
+
+@keyframes glowmove{
+  0%{ background-position: 0 0;}
+  50%{ background-position: 400% 0;}
+  100%{ background-position: 0 0;}
+}
