@@ -1,0 +1,138 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+
+
+body{
+  background: linear-gradient(rgb(102,233,202) , rgb( 76,131,231));
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding-top: 1px;/*这是为了防止块级元素的margin折叠现象，当card是body的第一个子元素的时候，并且body没有设置padding，border，overflow等属性的时候，card的margin-top就会传递给body，就好像整个页面都被往下推了一样，是个隐藏的坑点*/
+}
+
+
+
+div.card{
+  width: 400px;
+  height: 320px;
+  margin: 180px auto 0;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 18px rgba(0,0,0,0.3);
+  background-color: white;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+label{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 12px 16px ;
+  background-color: rgb(242,242,244);
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: all 0.2s;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  /*justify-content: space-between;这里不奏效是因为main没有高度，justify和其他的flex对齐方式一定要有明确的“范围，之前没发现这个问题是因为之前大多数是水平方向的，块状元素都是默认撑满，其余情况我都是设置了宽度的”*/
+  width: 90%;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+label p:nth-of-type(1){
+  position: relative;
+  left: 20px;
+}
+
+label p:nth-of-type(1)::before{
+  content: '';
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: rgb(215,217,216);/*这里要的是背景颜色哈，一开始写的color给我自己都整懵逼了，想不通为啥没有成功创建出伪元素*/
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#H:checked ~ label[for='H'] {
+  background-color: rgb(235,238,253);
+  border: 2px solid rgb( 76,131,231);
+}
+
+#H:checked ~ label[for='H'] p:nth-of-type(1)::before{
+  width: 8px;
+  height: 8px;
+  border: 4px solid rgb( 76,123,231);
+  background-color: white;
+}
+
+#J:checked ~ label[for='J'] {
+  background-color: rgb(235,238,253);
+  border: 2px solid rgb( 76,131,231);
+}
+
+#J:checked ~ label[for='J'] p:nth-of-type(1)::before{
+  width: 8px;
+  height: 8px;
+  border: 4px solid rgb( 76,123,231);
+  background-color: white;
+}
+
+#M:checked ~ label[for='M'] {
+  background-color: rgb(235,238,253);
+  border: 2px solid rgb( 76,131,231);
+}
+
+#M:checked ~ label[for='M'] p:nth-of-type(1)::before{
+  width: 8px;
+  height: 8px;
+  border: 4px solid rgb( 76,123,231);
+  background-color: white;
+}
+
+main a{
+  color: inherit;
+  background:linear-gradient(rgb(102,233,202) , rgb( 76,131,231));  
+  width: 150px;
+  padding: 6px 10px ;
+  text-align: center;
+  border-radius: 8px;
+  position: relative;
+  left: 50%;
+  color: white;
+  transform: translateX(-50%);
+  transition: box-shadow 0.2s;
+}
+
+main a:hover{
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+h4{
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+p{
+  font-size: 14px;
+  color: #111;
+  letter-spacing: 0.03em;
+  font-family: "Gidole", sans-serif;
+}
