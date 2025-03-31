@@ -1,0 +1,194 @@
+/*默认的距离消除掉*/
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+a{
+  color: inherit;
+}
+
+h3{
+  font-weight: normal;
+}
+
+body{
+  height: 100vh;
+  position: relative;
+  padding-top: 1px;/*防止子元素的margin传递给body导致整个页面下移*/
+}
+body::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255,103,108);
+  clip-path: inset(47% 0 0 0 );
+  z-index: -1;
+}
+
+.card-wrapper{
+  position: relative;/*给label定位用的*/
+}
+
+div.container{
+  width: 800px;
+  height: fit-content;
+  margin: 100px auto 0;
+  padding: 40px 20px 80px;
+  display: flex;
+  overflow: hidden;
+  box-sizing: content-box;/*如果设置的是border-box的话，会导致后面的group的200%出问题，也就是相当于container的内容宽度去扩大，而不是相对于实际渲染宽度*/
+}
+
+div.card-group{
+  min-width: 300%;/*这个点很坑啊，如果不设置min-weight的话，会默认按照内容宽度渲染而不是200%*/
+  display: flex;
+  /*flex-shirnk:0;*/ /*或者用这个，不让浏览器乱压缩flex，因为flex本身是根据内容宽度决定实际宽度的，然后这里又提了个过分的要求，即为父辈的200%*/
+}
+
+.page{
+  width: 34%;/*像这里，虽说也没有撑满，但是比父级小，所以浏览器会大方的给它这个宽度*/
+  display: flex;
+  justify-content: space-around;
+  transition: transform 0.4s;
+}
+
+#tab-1:checked ~ .container .card-group .page{
+  transform: translateX(0);
+}
+#tab-2:checked ~ .container .card-group .page{
+  transform: translateX(-100%);
+}
+#tab-3:checked ~ .container .card-group .page{
+  transform: translateX(-200%);
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+label{
+  background-color: rgb(255,255,255);
+  cursor: pointer;
+  color: white;
+  border: none;
+  height: 15px;
+  width: 20px;
+  border-radius: 10px;
+  transition: width 0.4s;
+
+}
+#tab-1:checked ~ .switch label[for='tab-1'] {
+  width: 50px;
+}
+#tab-2:checked ~ .switch label[for='tab-2'] {
+  width: 50px;
+}
+#tab-3:checked ~ .switch label[for='tab-3'] {
+  width: 50px;
+}
+
+div.switch{
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  display: flex;
+  gap: 10px;
+  transform: translateX(-50%);
+}
+
+div.card{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px ;
+  width: 200px;
+  height: 280px;
+  justify-content:start;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  border-radius: 12px;
+  transition: transform 0.3s;
+  background-color: white;/*这是个隐藏的坑点啊，这玩意儿没背景色的话，下面的红色背景就直接透过来了，怎么调z-index都没用*/
+}
+div.card:hover{
+  transform: translateY(-3%);
+}
+
+div.card p{
+  color: rgb(255,103,108);
+  font-size: 16px;
+}
+
+.img-box{
+  height: 100px;
+  width: 100px;
+  padding: 2px;/*外层光晕颜色*/
+  background-color: rgb(255,103,108);
+  border-radius: 50%;
+}
+
+.img-box img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;/*这个图片刚好是正方形的，所以不用调整*/
+  border-radius: inherit;
+  border: 2px solid white;
+  display: block;
+}
+
+.links{
+  display: flex;
+  gap: 10px;
+}
+
+.links a{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255,103,108);
+  border: 1px solid transparent;
+  border-radius: 50%;
+  transition: all 0.2s;
+
+}
+.links a i{
+  color: white;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.links a:hover{
+  background-color: white;
+  border: 1px solid rgb(255,103,108);
+
+}
+.links a:hover i{
+  color: rgb(255,103,108);
+}
+
+button{
+  padding: 6px 30px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background-color: rgb(255,103,108);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transform: all 0.2s;
+}
+button:hover{
+  background-color: white;
+  color: rgb(255,103,108);
+  border: 1px solid rgb(255,103,108);
+}
+
+
+

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>交互式 Flex 布局演示</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #111;
+      margin: 0;
+      padding: 2rem;
+      color: #fff;
+    }
+    .card {
+      background: #1c1c1c;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: rgb(0,255,255);
+    }
+    .element-control {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    input[type="number"] {
+      padding: 0.4rem;
+      border-radius: 6px;
+      border: none;
+      width: 60px;
+      margin-left: 0.5rem;
+    }
+    input[type="checkbox"] {
+      transform: scale(1.2);
+      margin-left: 0.5rem;
+    }
+    .display-area {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      align-items: flex-start;
+    }
+    .css-output {
+      background: #111;
+      border: 1px solid #333;
+      padding: 1rem;
+      border-radius: 8px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      min-width: 260px;
+      height: 300px;
+    }
+    .container {
+      border: 2px dashed #444;
+      height: 300px;
+      display: flex;
+      transition: all 0.3s ease;
+      padding: 1rem;
+      border-radius: 12px;
+      background-color: #222;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: nowrap;
+      align-content: flex-start;
+      flex: 1;
+      overflow-wrap: break-word;
+    }
+    .item {
+      background: rgb(0,255,255);
+      color: #111;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 8px;
+      font-weight: bold;
+      height: 40px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .controls-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    button {
+      background: rgb(0,255,255);
+      border: none;
+      color: #111;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #00d4d4;
+    }
+    button.active {
+      background: #007f7f;
+      color: #fff;
+    }
+    button.disabled {
+      background: #444;
+      color: #aaa;
+      cursor: not-allowed;
+    }
+    label {
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>交互式 Flex 布局演示</h2>
+
+    <div class="element-control">
+      <label>元素数量：<input type="number" min="1" max="30" value="6" onchange="updateItems(this.value)"></label>
+      <label style="margin-left: 2rem;">开启高度差：<input type="checkbox" id="toggleHeight" onchange="toggleHeightMode(this.checked)"></label>
+    </div>
+
+    <div class="display-area">
+      <div class="css-output" id="cssOutput"></div>
+      <div class="container" id="flexBox"></div>
+    </div>
+
+    <div class="controls">
+      <div class="controls-group">
+        <label><strong>主轴方向 (flex-direction)</strong></label>
+        <button onclick="setDirection('row', this)">row</button>
+        <button onclick="setDirection('column', this)">column</button>
+        <button onclick="setDirection('row-reverse', this)">row-reverse</button>
+        <button onclick="setDirection('column-reverse', this)">column-reverse</button>
+      </div>
+      <div class="controls-group">
+        <label><strong>主轴对齐 (justify-content)</strong></label>
+        <button onclick="setJustify('flex-start', this)">flex-start</button>
+        <button onclick="setJustify('center', this)">center</button>
+        <button onclick="setJustify('flex-end', this)">flex-end</button>
+        <button onclick="setJustify('space-between', this)">space-between</button>
+        <button onclick="setJustify('space-around', this)">space-around</button>
+        <button onclick="setJustify('space-evenly', this)">space-evenly</button>
+      </div>
+      <div class="controls-group">
+        <label><strong>交叉轴对齐 (align-items)</strong></label>
+        <button onclick="setAlign('flex-start', this)">flex-start</button>
+        <button onclick="setAlign('center', this)">center</button>
+        <button onclick="setAlign('flex-end', this)">flex-end</button>
+        <button onclick="setAlign('stretch', this)">stretch</button>
+        <button onclick="setAlign('baseline', this)">baseline</button>
+      </div>
+      <div class="controls-group" id="wrapGroup">
+        <label><strong>换行 (flex-wrap)</strong></label>
+        <button onclick="setWrap('nowrap', this)">nowrap</button>
+        <button onclick="setWrap('wrap', this)">wrap</button>
+        <button onclick="setWrap('wrap-reverse', this)">wrap-reverse</button>
+      </div>
+      <div class="controls-group" id="alignContentGroup">
+        <label><strong>多行对齐 (align-content)</strong></label>
+        <button onclick="setAlignContent('flex-start', this)">flex-start</button>
+        <button onclick="setAlignContent('center', this)">center</button>
+        <button onclick="setAlignContent('flex-end', this)">flex-end</button>
+        <button onclick="setAlignContent('space-between', this)">space-between</button>
+        <button onclick="setAlignContent('space-around', this)">space-around</button>
+        <button onclick="setAlignContent('stretch', this)">stretch</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const box = document.getElementById('flexBox');
+    const cssOutput = document.getElementById('cssOutput');
+    const alignContentGroup = document.getElementById('alignContentGroup');
+    const wrapGroup = document.getElementById('wrapGroup');
+    let heightMode = false;
+    let currentDirection = 'row';
+    let currentWrap = 'nowrap';
+
+    function clearActive(btn) {
+      [...btn.parentElement.querySelectorAll('button')].forEach(b => b.classList.remove('active'));
+    }
+
+    function updateOutput() {
+      cssOutput.textContent = `{
+  flex-direction: ${currentDirection};
+  justify-content: ${box.style.justifyContent || 'flex-start'};
+  align-items: ${box.style.alignItems || 'center'};
+  flex-wrap: ${currentWrap};
+  align-content: ${box.style.alignContent || 'flex-start'};
+}`;
+    }
+
+    function applyFlexSettings() {
+      box.style.flexDirection = currentDirection;
+      box.style.flexWrap = currentWrap;
+    }
+
+    function setDirection(direction, btn) {
+      currentDirection = direction;
+      applyFlexSettings();
+      clearActive(btn);
+      btn.classList.add('active');
+      updateOutput();
+      checkWrapStatus();
+    }
+
+    function setJustify(justify, btn) {
+      box.style.justifyContent = justify;
+      clearActive(btn);
+      btn.classList.add('active');
+      updateOutput();
+    }
+
+    function setAlign(align, btn) {
+      box.style.alignItems = align;
+      clearActive(btn);
+      btn.classList.add('active');
+      updateOutput();
+    }
+
+    function setWrap(wrap, btn) {
+      currentWrap = wrap;
+      applyFlexSettings();
+      clearActive(btn);
+      btn.classList.add('active');
+      updateOutput();
+      checkWrapStatus();
+    }
+
+    function setAlignContent(content, btn) {
+      if (btn.classList.contains('disabled')) return;
+      box.style.alignContent = content;
+      clearActive(btn);
+      btn.classList.add('active');
+      updateOutput();
+    }
+
+    function updateItems(count) {
+      box.innerHTML = '';
+      for (let i = 1; i <= count; i++) {
+        const div = document.createElement('div');
+        div.className = 'item';
+        div.textContent = i;
+        if (heightMode && i % 3 === 0) div.style.height = '60px';
+        box.appendChild(div);
+      }
+      checkWrapStatus();
+    }
+
+    function toggleHeightMode(enabled) {
+      heightMode = enabled;
+      const currentCount = box.children.length;
+      updateItems(currentCount);
+    }
+
+    function checkWrapStatus() {
+      const firstTop = box.children[0]?.offsetTop;
+      const hasMultiline = [...box.children].some(el => el.offsetTop !== firstTop);
+      const buttons = alignContentGroup.querySelectorAll('button');
+      buttons.forEach(btn => {
+        if (hasMultiline) {
+          btn.classList.remove('disabled');
+        } else {
+          btn.classList.add('disabled');
+        }
+      });
+    }
+
+    updateItems(6);
+    updateOutput();
+    // 初始化 wrap 按钮高亮
+    setWrap(currentWrap, wrapGroup.querySelector('button'));
+  </script>
+</body>
+</html>
