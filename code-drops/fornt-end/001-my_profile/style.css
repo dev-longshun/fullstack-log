@@ -4,15 +4,17 @@
   margin: 0;
 }
 
-div.container{
+body{
+  height: 100vh;
+  width: 100%;
   display: flex;
-  gap: 100px;
+  justify-content: center;
+  align-items: center;
 }
+
 div.card{
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
-  margin-left: 10px;
   width: 200px;
   height: 300px;
   padding-bottom: 20px;
@@ -43,9 +45,24 @@ div.card button{
 }
 div.card button:hover{
   opacity: 0.8;
-
 }
 div.card button:active{
   background-color: white;
   color: rgb(47, 95, 188);
 }
+
+
+/*结构拆分
+1.body来个宽高，直接flex布局，（控制卡片位置）
+
+2.card里面flex布局，竖直方向，间距用gap粗调一下，再根据情况用margin微调
+
+3.图片用object-fit和object-position调整
+
+4.button主要用padding调节尺寸，然后hover和active设置交互效果
+  opacity和颜色交换
+  transition设置丝滑过渡
+    transition：变化属性 变换时间 时间函数 延迟时间 
+  PDTD property-duration-timefunction-delay
+  一个属性之间的简写之间用空格，多个属性之间要用逗号分开
+*/
