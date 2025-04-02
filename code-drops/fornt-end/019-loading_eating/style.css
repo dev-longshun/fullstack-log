@@ -1,0 +1,45 @@
+.pacman-container {
+  position: relative;
+  width: fit-content;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pacman {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  border-radius: 50%;
+  position: relative;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 50%, 100% 100%, 0% 100%);/*最后那个点后面不能有逗号！*/
+  animation: chomp 0.5s infinite;
+  /* animation的简写推荐顺序，NDTDC <name> <duration> <timing-function> <delay> <iteration-count>*/
+}
+
+@keyframes chomp {
+  0%   { clip-path: polygon(0% 0%, 100% 0%, 100% 0%,  50% 50%, 100% 100%, 100% 100%,  0% 100%);}
+  50%   { clip-path: polygon(0% 0%, 100% 0%,100% 50%,   50% 50%, 100% 50%,100% 100%, 0% 100%);}
+  100%   { clip-path: polygon(0% 0%, 100% 0%,100% 0%,  50% 50%, 100% 100%,100% 100%, 0% 100%);}
+}
+/*这里的关键就是利用重复点的思维，以保证变换的时候不会因为这个点动到想要的地方导致之前的那个点没有支撑住而变形*/
+/*https://bennettfeely.com/clippy/，一个能辅助裁剪的网站，clip-path：polygon原则上支持无数个点的裁剪，裁剪出来的是保留下来的，而不是扔掉的*/
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: #e55;
+  border-radius: 50%;
+  animation: dot-move 0.8s linear infinite;
+  opacity: 0;
+  flex-shrink: 0;/*当父元素是flex布局且空间不够的时候，会对子元素进行压缩，因为子元素的默认shrik值是1，也就是可以压缩，设置成0就代表不能压缩*/
+}
+
+.dot1 { animation-delay: 0s; }
+.dot2 { animation-delay: 0.15s; }
+.dot3 { animation-delay: 0.3s; }
+
+@keyframes dot-move {
+  0%   { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(-100px); opacity: 0; }
+}
