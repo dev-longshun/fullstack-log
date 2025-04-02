@@ -1,24 +1,54 @@
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scrollbar-width: none;/*firefox专属*/
+  -ms-overflow-style: none;/*IE和旧Edge专属*/
+}
+
+html::-webkit-scrollbar{
+  display: none;/*chrome和safari专属*/
+}
+
 body{
-  padding-bottom: 100px;
   background-image: url('src/background-body.jpg');
   background-size: cover;
   background-position: center;
+  width: 100%;
+  padding-bottom: 100px;
 }
+
 
 header{
   display: flex;
   justify-content: center;
+  width: 100%;
+  padding: 20px 0 30px;
+}
+header .avatar{
+  position: relative;
+}
+.avatar::before{
+  content: 'longshun';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%,-10%);
+  text-shadow: 3px 2px 2px rgba(0,0,0,0.8);
 }
 
 header img{
   width: 50px;
   height: 50px;
+  display: block;
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
-  position: relative;
-  top: 10px;
   /*这里居中不用margin： 0 auto 的原因是这玩意儿只对纯粹的block元素（且具有明确宽度）生效，对inline或者inline-block不生效*/
 }
 
@@ -39,7 +69,7 @@ table{
   border-collapse:separator;
   border:0.5px (变为原来的一半)
   */
-  margin: 20px auto;
+  margin: 0 auto;
   text-align: center;
   background-color: rgb(255, 240, 229);
 }
@@ -71,3 +101,27 @@ tfoot{
   font-family: 'Zhi Mang Xing',serif;
   font-size: 60px;
 }
+
+
+
+/*结构拆分
+1.首先头部是个header，因为要创建伪类，而img不能创建伪类，所以必须来个东西包裹住头像。
+  利用transform
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
