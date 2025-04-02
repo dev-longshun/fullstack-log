@@ -2,11 +2,16 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: url('src/background.jpg') center/cover ;
-  height: 100vh;
+  background: url('src/background.jpg') center/cover;
+    /*background: [background-color] [background-image] [background-position]/[background-size] [background-repeat]*/                        /*center center 和center的效果一样，就是垂直和水平都居中*/
+  height: 100vh;             
+}
+body::-webkit-scrollbar{
+  display: none;
 }
 
 
@@ -24,21 +29,21 @@ body {
 /*包裹表格*/
 .table-wrapper{
   height: 400px;
-  max-width: fit-content;
+  max-width: 60%;
+  min-width: fit-content;
   overflow: auto;/*直接对table设置overflow：auto属性不会生效，因为table不是块状盒容器，不受这个控制，table更像是一个流式内容容器，会自动“撑开”*/
   margin: 20px auto 0;
   border-radius: 12px;
-  padding-right: 1px;/*让表格和滑动条不直接黏在一起*/
 }
 
 /* 表格样式 */
 .table-box {
-  width: 100%;
+  width: 100%;/*当table的宽度不是box的100%的时候，看不到圆角是因为还没剪切到table上面，其实这行代码已经奏效了，可以把加一个背景色看看效果*/
   background-color: #fff5;
   font-size: 16px;
   margin: 0 auto;
   box-shadow: 2px 4px 16px rgba(0,0,0,0.3);
-  border-collapse: collapse;
+  border-collapse: collapse;/*没想到这竟然是解决表头滑动时抖动的关键因素*/
 }
 
 .table-box thead tr {
