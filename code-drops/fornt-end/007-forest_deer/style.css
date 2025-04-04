@@ -186,6 +186,9 @@ div.form-protocol{
   top: 50%;
   transform: translate(-5.2px,-10px);/*translate有两个属性，X和Y轴，是定位其元素的中心点*/
 }
+/* 理论上，<input> 这类自闭合标签是不能直接使用 ::before / ::after 伪元素的。
+但 type="checkbox" 和 type="radio" 是例外 ——
+浏览器会为它们自动渲染一个“可装饰的伪盒子”，使得伪元素能作用在它们上面。 */
 
 
 .btn-primary{
