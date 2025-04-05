@@ -107,7 +107,7 @@ tfoot{
 @font-face {
   font-family: 'de yi hei';
   src: 
-  url('font/SmileySans-Oblique.otf.woff2') format('woff2'),
+  url('../000-font/chinese/smile/SmileySans-Oblique.ttf.woff2') format('woff2'),
   url('font/SmileySans-Oblique.ttf') format('truetype');
   font-style: oblique;
   font-weight: normal;
