@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Font Previewer</title>
+
+  <!-- 在这里写 @font-face，把你实际的字体路径和格式补上 -->
+  <style>
+    @font-face {
+      font-family: 'Lxgw Mono';
+      src: url('./chinese/lxgw/LXGWWenKaiMono-Medium.ttf') format('truetype');
+      font-weight: medium;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Smile Sans';
+      src: url('./chinese/smile/SmileySans-Oblique.ttf.woff2') format('woff2');
+      font-weight: normal;
+      font-style: oblique;
+    }
+
+    @font-face {
+      font-family: 'Work Sans';
+      src: url('./english/work-sans/WorkSans-Medium.woff2') format('woff2');
+      font-weight: medium;
+      font-style: normal;
+    }
+    
+
+    /* === 一些简单的全局样式 === */
+    body {
+      margin: 20px;
+      font-family: sans-serif; /* 兜底 */
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    p {
+      line-height: 1.5;
+      margin: 8px 0;
+    }
+
+    /* === 预览区样式 === */
+    .preview-input {
+      width: 100%;
+      max-width: 500px;
+      padding: 8px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .font-sample {
+      margin-bottom: 30px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .font-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .sample-text {
+      font-size: 24px;
+      word-wrap: break-word;
+      /* 这里可以根据字体特点进行微调，比如 letter-spacing */
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>字体预览器 (Font Previewer)</h1>
+  <p>在下方输入你想预览的文字，所有示例会同步显示。</p>
+
+  <!-- 1) 输入框，用来控制示例文字 -->
+  <input
+    type="text"
+    class="preview-input"
+    id="previewInput"
+    placeholder="输入一些文字试试..."
+    value="天行健，君子以自强不息 Heaven moves vigorously, and a gentleman should constantly strive to improve himself"
+  >
+
+  <!-- 2) 这里放多个 .font-sample 块，每个块绑定一个字体 -->
+
+  <div class="font-sample" style="font-family: 'Lxgw Mono';">
+    <p class="font-name">lxgw</p>
+    <p class="sample-text">天行健，君子以自强不息 Heaven moves vigorously, and a gentleman should constantly strive to improve himself</p>
+  </div>
+  <div class="font-sample" style="font-family: 'Smile Sans';">
+    <p class="font-name">smile sans</p>
+    <p class="sample-text">天行健，君子以自强不息 Heaven moves vigorously, and a gentleman should constantly strive to improve himself</p>
+  </div>
+
+  <div class="font-sample" style="font-family: 'Work Sans';">
+    <p class="font-name">work sans</p>
+    <p class="sample-text">天行健，君子以自强不息 Heaven moves vigorously, and a gentleman should constantly strive to improve himself</p>
+  </div>
+
+
+  <!-- 你可以继续复制 .font-sample 块，换上你其他喜欢的字体 -->
+  <!-- 例如：SmileySans-Bold, SmileySans-ExtraLight, Poppins, Lora... -->
+
+  <script>
+    // 让输入框同步更新所有预览文字
+    const input = document.getElementById('previewInput');
+    const samples = document.querySelectorAll('.sample-text');
+
+    input.addEventListener('input', function() {
+      samples.forEach(sample => {
+        sample.textContent = input.value;
+      });
+    });
+  </script>
+
+</body>
+</html>
