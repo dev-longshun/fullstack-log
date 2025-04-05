@@ -77,9 +77,8 @@ table{
 tbody{
   background-size: cover;
   color: rgb(97, 67, 38);
-  font-family: 'de yi hei',serif;
+  font-family: 'smile',serif;
   font-size: 20px;
-  font-style: italic;
   letter-spacing: 0.1em;
 }
 
@@ -105,7 +104,7 @@ tfoot{
 
 
 @font-face {
-  font-family: 'de yi hei';
+  font-family: 'smile';
   src: 
   url('../000-font/chinese/smile/SmileySans-Oblique.ttf.woff2') format('woff2'),
   url('font/SmileySans-Oblique.ttf') format('truetype');
