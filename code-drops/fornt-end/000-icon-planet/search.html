@@ -33,7 +33,7 @@
     /* 图标列表布局 */
     .icon-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       gap: 1rem;
     }
 
@@ -49,33 +49,42 @@
       transition: background 0.2s ease;
     }
     .icon-card:hover {
-      /* transform: translateY(-2px); */
-      /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
-      background-color: rgb(255,212, 59);
+      background-color: rgb(255, 212, 59);
     }
 
-    /* 在这里我们不再用 <object> ，而是内联SVG，所以不需要专门限制宽高 */
+    /* 内联SVG样式 */
     .icon-card svg {
       width: 40px;
       height: 40px;
       display: inline-block;
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, 0);
     }
 
     .icon-name {
-      margin-top: 8px;
       font-size: 0.9rem;
       color: #555;
-      word-break: break-all; /* 避免名称太长溢出 */
+      word-break: break-all;
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -55%);
+      width: 100%;
+      pointer-events: none;
     }
     
     /* 按钮容器 */
     .button-container {
       margin-top: 8px;
       display: flex;
-      gap: 6px;
+      gap: 10px;
       justify-content: center;
       position: absolute;
-      bottom: 10px;
+      bottom: 5%;
+      left: 50%;
+      transform: translate(-50%, -5%);
     }
     .button-container button {
       border: none;
@@ -85,7 +94,6 @@
       cursor: pointer;
       font-size: 0.8rem;
       transition: background 0.2s;
-
     }
     .button-container button:hover {
       background: #ddd;
@@ -127,131 +135,97 @@
   </div>
 
   <script>
-  // 1. 用 fetch 加载 icons.json
-  let iconData = [];
-
-  fetch('./icons.json')
-    .then(response => response.json())
-    .then(data => {
-      iconData = data; // 保存到全局
-      renderIcons(iconData);
-    })
-    .catch(err => {
-      console.error('Error loading icons.json:', err);
-    });
-
-  // 2. 获取搜索框、图标容器
-  const searchInput = document.getElementById('searchInput');
-  const iconContainer = document.getElementById('iconContainer');
-
-  // 3. 搜索事件：监听 input 输入
-  searchInput.addEventListener('input', (e) => {
-    const keyword = e.target.value.toLowerCase();
-    // 如果输入为空，展示全部；否则过滤
-    const filtered = iconData.filter(icon => {
-      // 合并 name 和 keywords，一起搜
-      const combinedText = icon.name + ' ' + icon.keywords.join(' ');
-      return combinedText.toLowerCase().includes(keyword);
-    });
-    renderIcons(filtered);
-  });
-
-  // 4. 渲染函数
-  function renderIcons(dataArray) {
-    iconContainer.innerHTML = ''; // 清空旧的
-    dataArray.forEach(icon => {
-      // === 创建容器 ===
-      const card = document.createElement('div');
-      card.classList.add('icon-card');
-      
-      // === tooltip ===
-      const tooltip = document.createElement('div');
-      tooltip.classList.add('tooltip');
-      tooltip.textContent = 'Copied!';
-      card.appendChild(tooltip);
-
-      // === 用 fetch 拉取 SVG 源码，并加 fill 属性 ===
-      const svgHolder = document.createElement('div');
-      fetch(icon.path)
-        .then(res => res.text())
-        .then(svgText => {
-          // 改这行即可换颜色: #f00(红), #3498db(蓝), #2ecc71(绿)...
-          const coloredSVG = svgText.replace('<svg', '<svg fill="#183153"');
-          svgHolder.innerHTML = coloredSVG;
-        })
-        .catch(err => console.error('Load SVG failed:', err));
-
-      card.appendChild(svgHolder);
-
-      // === 图标名称 ===
-      const nameEl = document.createElement('div');
-      nameEl.classList.add('icon-name');
-      nameEl.textContent = icon.name;
-      card.appendChild(nameEl);
-
-      // === 按钮们 ===
-      const btnContainer = document.createElement('div');
-      btnContainer.classList.add('button-container');
-
-      // A. 复制路径按钮
-      const btnPath = document.createElement('button');
-      btnPath.textContent = 'Path';
-      btnPath.addEventListener('click', (e) => {
-        e.stopPropagation(); 
-        copyPath(icon.path, card);
+    // 1. 用 fetch 加载 icons.json
+    let iconData = [];
+    fetch('./icons.json')
+      .then(response => response.json())
+      .then(data => {
+        iconData = data; // 保存数据到全局变量
+        renderIcons(iconData);
+      })
+      .catch(err => {
+        console.error('Error loading icons.json:', err);
       });
-      btnContainer.appendChild(btnPath);
 
-      // B. 复制代码按钮
-      const btnCode = document.createElement('button');
-      btnCode.textContent = 'Code';
-      btnCode.addEventListener('click', (e) => {
-        e.stopPropagation(); 
-        copySVG(icon.path, card);
+    // 2. 获取 DOM 元素：搜索框和图标容器
+    const searchInput = document.getElementById('searchInput');
+    const iconContainer = document.getElementById('iconContainer');
+
+    // 3. 搜索事件：监听输入，实时过滤图标
+    searchInput.addEventListener('input', (e) => {
+      const keyword = e.target.value.toLowerCase();
+      const filtered = iconData.filter(icon => {
+        const combinedText = icon.name + ' ' + icon.keywords.join(' ');
+        return combinedText.toLowerCase().includes(keyword);
       });
-      btnContainer.appendChild(btnCode);
-
-      card.appendChild(btnContainer);
-
-      // === 加入容器 ===
-      iconContainer.appendChild(card);
+      renderIcons(filtered);
     });
-  }
 
-  // 5. 复制“路径”
-  async function copyPath(path, cardElement) {
-    try {
-      await navigator.clipboard.writeText(path);
-      showTooltip(cardElement, 'Path Copied!');
-    } catch (error) {
-      console.error('Failed to copy path:', error);
+    // 4. 渲染函数：根据传入的数据生成每个图标卡片
+    function renderIcons(dataArray) {
+      iconContainer.innerHTML = ''; // 清空旧内容
+      dataArray.forEach(icon => {
+        // 创建图标卡片容器
+        const card = document.createElement('div');
+        card.classList.add('icon-card');
+        
+        // 创建 tooltip
+        const tooltip = document.createElement('div');
+        tooltip.classList.add('tooltip');
+        tooltip.textContent = 'Copied!';
+        card.appendChild(tooltip);
+        
+        // 用 fetch 加载 SVG 源码，并将 fill 属性替换成你喜欢的颜色（例如 "#183153"）
+        const svgHolder = document.createElement('div');
+        fetch(icon.path)
+          .then(res => res.text())
+          .then(svgText => {
+            // 修改这行的颜色代码即可更换颜色
+            const coloredSVG = svgText.replace('<svg', '<svg fill="#183153"');
+            svgHolder.innerHTML = coloredSVG;
+          })
+          .catch(err => console.error('Load SVG failed:', err));
+        card.appendChild(svgHolder);
+        
+        // 显示图标名称
+        const nameEl = document.createElement('div');
+        nameEl.classList.add('icon-name');
+        nameEl.textContent = icon.name;
+        card.appendChild(nameEl);
+        
+        // 创建按钮容器
+        const btnContainer = document.createElement('div');
+        btnContainer.classList.add('button-container');
+        
+        // 复制类名按钮：最终类名格式为 "icon-" + icon.name
+        const btnClass = document.createElement('button');
+        btnClass.textContent = 'class-name';
+        btnClass.addEventListener('click', (e) => {
+          e.stopPropagation(); // 阻止事件冒泡，避免触发卡片的其他事件
+          const finalClass = `icon-${icon.name}`;
+          navigator.clipboard.writeText(finalClass)
+            .then(() => showTooltip(card, 'Class Copied!'))
+            .catch(err => console.error('Copy failed:', err));
+        });
+        btnContainer.appendChild(btnClass);
+        
+        card.appendChild(btnContainer);
+        
+        // 加入图标容器
+        iconContainer.appendChild(card);
+      });
     }
-  }
 
-  // 6. 复制“SVG 源代码”
-  async function copySVG(path, cardElement) {
-    try {
-      const res = await fetch(path);
-      const svgText = await res.text();
-      await navigator.clipboard.writeText(svgText);
-      showTooltip(cardElement, 'SVG Copied!');
-    } catch (error) {
-      console.error('Failed to copy SVG:', error);
+    // 5. 显示 tooltip 提示复制成功
+    function showTooltip(cardElement, msg) {
+      const tooltip = cardElement.querySelector('.tooltip');
+      tooltip.textContent = msg;
+      cardElement.classList.add('show-tooltip');
+      setTimeout(() => {
+        cardElement.classList.remove('show-tooltip');
+        tooltip.textContent = 'Copied!';
+      }, 1000);
     }
-  }
-
-  // 7. 显示提示
-  function showTooltip(cardElement, msg) {
-    const tooltip = cardElement.querySelector('.tooltip');
-    tooltip.textContent = msg;
-    cardElement.classList.add('show-tooltip');
-
-    // 1秒后隐藏 & 恢复默认文字
-    setTimeout(() => {
-      cardElement.classList.remove('show-tooltip');
-      tooltip.textContent = 'Copied!';
-    }, 1000);
-  }
   </script>
 
 </body>

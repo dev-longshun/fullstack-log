@@ -1,162 +1,337 @@
 [
   {
+    "name": "angle-down-solid",
+    "keywords": ["angle", "down", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/angle-down-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "angle-left-solid",
+    "keywords": ["angle", "left", "previous", "backward", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/angle-left-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "angle-right-solid",
+    "keywords": ["angle", "right", "next", "forward", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/angle-right-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "angle-up-solid",
+    "keywords": ["angle", "up", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/angle-up-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "angles-down-solid",
+    "keywords": ["angles", "down", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/angles-down-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "angles-left-solid",
+    "keywords": ["angles", "left", "previous", "backward", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/angles-left-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "angles-right-solid",
+    "keywords": ["angles", "right", "next", "forward", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/angles-right-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "angles-up-solid",
+    "keywords": ["angles", "up", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/angles-up-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "award-solid",
     "keywords": ["award", "solid", "fill", "bold"],
-    "path": "icons/award-solid.svg",
+    "path": "../000-icon-planet/icons/award-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
   {
     "name": "bars-solid",
     "keywords": ["bars", "solid", "fill", "bold"],
-    "path": "icons/bars-solid.svg",
+    "path": "../000-icon-planet/icons/bars-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
   {
     "name": "bell-solid",
     "keywords": ["bell", "solid", "fill", "bold"],
-    "path": "icons/bell-solid.svg",
+    "path": "../000-icon-planet/icons/bell-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
   {
     "name": "camera-solid",
     "keywords": ["camera", "solid", "fill", "bold"],
-    "path": "icons/camera-solid.svg",
+    "path": "../000-icon-planet/icons/camera-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
   {
     "name": "check-solid",
     "keywords": ["check", "solid", "fill", "bold"],
-    "path": "icons/check-solid.svg",
+    "path": "../000-icon-planet/icons/check-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
   {
     "name": "circle-user-solid",
     "keywords": ["circle", "round", "shape", "user", "person", "account", "profile", "member", "solid", "fill", "bold"],
-    "path": "icons/circle-user-solid.svg",
+    "path": "../000-icon-planet/icons/circle-user-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
   {
     "name": "comment-solid",
     "keywords": ["comment", "solid", "fill", "bold"],
-    "path": "icons/comment-solid.svg",
+    "path": "../000-icon-planet/icons/comment-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
   {
     "name": "envelope-solid",
     "keywords": ["envelope", "solid", "fill", "bold"],
-    "path": "icons/envelope-solid.svg",
+    "path": "../000-icon-planet/icons/envelope-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "facebook-brands",
+    "keywords": ["facebook", "brands"],
+    "path": "../000-icon-planet/icons/facebook-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "facebook-f-brands",
+    "keywords": ["facebook", "f", "brands"],
+    "path": "../000-icon-planet/icons/facebook-f-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "hashtag-solid",
+    "keywords": ["hashtag", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/hashtag-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
   {
     "name": "heart-solid",
     "keywords": ["heart", "solid", "fill", "bold"],
-    "path": "icons/heart-solid.svg",
+    "path": "../000-icon-planet/icons/heart-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
   {
     "name": "house-chimney-solid",
     "keywords": ["house", "home", "building", "residence", "realestate", "chimney", "smokestack", "solid", "fill", "bold"],
-    "path": "icons/house-chimney-solid.svg",
+    "path": "../000-icon-planet/icons/house-chimney-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
   {
     "name": "house-solid",
     "keywords": ["house", "home", "building", "residence", "realestate", "solid", "fill", "bold"],
-    "path": "icons/house-solid.svg",
+    "path": "../000-icon-planet/icons/house-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
   {
     "name": "image-solid",
     "keywords": ["image", "solid", "fill", "bold"],
-    "path": "icons/image-solid.svg",
+    "path": "../000-icon-planet/icons/image-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "instagram-brands",
+    "keywords": ["instagram", "brands"],
+    "path": "../000-icon-planet/icons/instagram-brands.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
   {
     "name": "key-solid",
     "keywords": ["key", "solid", "fill", "bold"],
-    "path": "icons/key-solid.svg",
+    "path": "../000-icon-planet/icons/key-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "link-solid",
+    "keywords": ["link", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/link-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "linkedin-brands",
+    "keywords": ["linkedin", "brands"],
+    "path": "../000-icon-planet/icons/linkedin-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "linkedin-in-brands",
+    "keywords": ["linkedin", "in", "brands"],
+    "path": "../000-icon-planet/icons/linkedin-in-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "location-crosshairs-solid",
+    "keywords": ["location", "crosshairs", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/location-crosshairs-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
   {
     "name": "location-dot-solid",
     "keywords": ["location", "dot", "solid", "fill", "bold"],
-    "path": "icons/location-dot-solid.svg",
+    "path": "../000-icon-planet/icons/location-dot-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
   {
     "name": "lock-solid",
     "keywords": ["lock", "solid", "fill", "bold"],
-    "path": "icons/lock-solid.svg",
+    "path": "../000-icon-planet/icons/lock-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
   {
     "name": "magnifying-glass-solid",
     "keywords": ["magnifying", "glass", "solid", "fill", "bold"],
-    "path": "icons/magnifying-glass-solid.svg",
+    "path": "../000-icon-planet/icons/magnifying-glass-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
   {
     "name": "music-solid",
     "keywords": ["music", "solid", "fill", "bold"],
-    "path": "icons/music-solid.svg",
+    "path": "../000-icon-planet/icons/music-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
   {
     "name": "phone-solid",
     "keywords": ["phone", "solid", "fill", "bold"],
-    "path": "icons/phone-solid.svg",
+    "path": "../000-icon-planet/icons/phone-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "quote-left-solid",
+    "keywords": ["quote", "left", "previous", "backward", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/quote-left-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "quote-right-solid",
+    "keywords": ["quote", "right", "next", "forward", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/quote-right-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "square-instagram-brands",
+    "keywords": ["square", "instagram", "brands"],
+    "path": "../000-icon-planet/icons/square-instagram-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "square-twitter-brands",
+    "keywords": ["square", "twitter", "brands"],
+    "path": "../000-icon-planet/icons/square-twitter-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "square-x-twitter-brands",
+    "keywords": ["square", "x", "twitter", "brands"],
+    "path": "../000-icon-planet/icons/square-x-twitter-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "square-youtube-brands",
+    "keywords": ["square", "youtube", "brands"],
+    "path": "../000-icon-planet/icons/square-youtube-brands.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
   {
     "name": "star-solid",
     "keywords": ["star", "solid", "fill", "bold"],
-    "path": "icons/star-solid.svg",
+    "path": "../000-icon-planet/icons/star-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "twitter-brands",
+    "keywords": ["twitter", "brands"],
+    "path": "../000-icon-planet/icons/twitter-brands.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
   {
     "name": "unlock-solid",
     "keywords": ["unlock", "solid", "fill", "bold"],
-    "path": "icons/unlock-solid.svg",
+    "path": "../000-icon-planet/icons/unlock-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
   {
     "name": "user-regular",
     "keywords": ["user", "person", "account", "profile", "member", "regular"],
-    "path": "icons/user-regular.svg",
+    "path": "../000-icon-planet/icons/user-regular.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
   {
     "name": "user-solid",
     "keywords": ["user", "person", "account", "profile", "member", "solid", "fill", "bold"],
-    "path": "icons/user-solid.svg",
+    "path": "../000-icon-planet/icons/user-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
   {
     "name": "users-solid",
     "keywords": ["users", "solid", "fill", "bold"],
-    "path": "icons/users-solid.svg",
+    "path": "../000-icon-planet/icons/users-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "x-twitter-brands",
+    "keywords": ["x", "twitter", "brands"],
+    "path": "../000-icon-planet/icons/x-twitter-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "youtube-brands",
+    "keywords": ["youtube", "brands"],
+    "path": "../000-icon-planet/icons/youtube-brands.svg",
     "category": "",
     "license": "Custom/Unknown"
   }

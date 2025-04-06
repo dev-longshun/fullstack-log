@@ -82,7 +82,7 @@ function main() {
       // keywords 就是 tokens + 同义词 的综合
       "keywords": allKeywords,
       // 默认 path 指向 icons 文件夹
-      "path": `icons/${filename}`,
+      "path": `../000-icon-planet/icons/${filename}`,
       // category 可自己补
       "category": "",
       // license 默认填
