@@ -1,0 +1,163 @@
+[
+  {
+    "name": "award-solid",
+    "keywords": ["award", "solid", "fill", "bold"],
+    "path": "icons/award-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "bars-solid",
+    "keywords": ["bars", "solid", "fill", "bold"],
+    "path": "icons/bars-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "bell-solid",
+    "keywords": ["bell", "solid", "fill", "bold"],
+    "path": "icons/bell-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "camera-solid",
+    "keywords": ["camera", "solid", "fill", "bold"],
+    "path": "icons/camera-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "check-solid",
+    "keywords": ["check", "solid", "fill", "bold"],
+    "path": "icons/check-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "circle-user-solid",
+    "keywords": ["circle", "round", "shape", "user", "person", "account", "profile", "member", "solid", "fill", "bold"],
+    "path": "icons/circle-user-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "comment-solid",
+    "keywords": ["comment", "solid", "fill", "bold"],
+    "path": "icons/comment-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "envelope-solid",
+    "keywords": ["envelope", "solid", "fill", "bold"],
+    "path": "icons/envelope-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "heart-solid",
+    "keywords": ["heart", "solid", "fill", "bold"],
+    "path": "icons/heart-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "house-chimney-solid",
+    "keywords": ["house", "home", "building", "residence", "realestate", "chimney", "smokestack", "solid", "fill", "bold"],
+    "path": "icons/house-chimney-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "house-solid",
+    "keywords": ["house", "home", "building", "residence", "realestate", "solid", "fill", "bold"],
+    "path": "icons/house-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "image-solid",
+    "keywords": ["image", "solid", "fill", "bold"],
+    "path": "icons/image-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "key-solid",
+    "keywords": ["key", "solid", "fill", "bold"],
+    "path": "icons/key-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "location-dot-solid",
+    "keywords": ["location", "dot", "solid", "fill", "bold"],
+    "path": "icons/location-dot-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "lock-solid",
+    "keywords": ["lock", "solid", "fill", "bold"],
+    "path": "icons/lock-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "magnifying-glass-solid",
+    "keywords": ["magnifying", "glass", "solid", "fill", "bold"],
+    "path": "icons/magnifying-glass-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "music-solid",
+    "keywords": ["music", "solid", "fill", "bold"],
+    "path": "icons/music-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "phone-solid",
+    "keywords": ["phone", "solid", "fill", "bold"],
+    "path": "icons/phone-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "star-solid",
+    "keywords": ["star", "solid", "fill", "bold"],
+    "path": "icons/star-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "unlock-solid",
+    "keywords": ["unlock", "solid", "fill", "bold"],
+    "path": "icons/unlock-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "user-regular",
+    "keywords": ["user", "person", "account", "profile", "member", "regular"],
+    "path": "icons/user-regular.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "user-solid",
+    "keywords": ["user", "person", "account", "profile", "member", "solid", "fill", "bold"],
+    "path": "icons/user-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "users-solid",
+    "keywords": ["users", "solid", "fill", "bold"],
+    "path": "icons/users-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  }
+]

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Grid Overlap Demo</title>
+  <style>
+    .container {
+      display: grid;
+      /* 定义8行，每行50px；6列，每列50px；加上2px间隙 */
+      grid-template: repeat(8, 50px) / repeat(6, 50px);
+      gap: 2px;
+      position: relative;
+      border: 2px solid #333;
+    }
+    .info {
+      /* 占据1到9行、1到4列，即左侧区域 */
+      grid-area: 1 / 1 / 9 / 4;
+      background-color: #ADD8E6; /* 浅蓝色 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+    }
+    .services {
+      /* 占据1到9行、4到7列，即右侧区域 */
+      grid-area: 1 / 4 / 9 / 7;
+      background-color: #90EE90; /* 浅绿色 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+    }
+    img {
+      /* 占据2到5行、3到5列，中间的小区域 */
+      grid-area: 2 / 3 / 5 / 5;
+      z-index: 1; /* 提升图片层级，使其浮在上面 */
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="info">Info!</div>
+    <img src="../001-my_profile/src/baking.png" alt="Demo Image">
+    <div class="services">Services!</div>
+  </div>
+</body>
+</html>
