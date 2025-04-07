@@ -1,13 +1,13 @@
 /**
  * generate-icons-json.js
  * ----------------------
- * 自动扫描 ./icons 文件夹下的所有 .svg 文件
- * 根据文件名分词 + 内置同义词字典，生成一个 icons.json
+ * 自动扫描 ./solid-icons 文件夹下的所有 .svg 文件
+ * 根据文件名分词 + 内置同义词字典，生成一个 solid-icons.json
  * 
  * 使用方法：
  *   1. 在终端进入本脚本所在目录
  *   2. 运行:  node generate-icons-json.js
- *   3. 程序会在同目录下生成/覆盖 icons.json
+ *   3. 程序会在同目录下生成/覆盖 solid-icons.json
  */
 
 const fs = require('fs');
@@ -90,7 +90,7 @@ function main() {
     };
   });
 
-  // 3) 写出到 icons.json
+  // 3) 写出到 solid-icons.json
   try {
     const jsonStr = JSON.stringify(iconList, null, 2)
     .replace(/"keywords": \[(.*?)\]/gs, (match, inner) => {
