@@ -62,7 +62,7 @@
       left: 50%;
       transform: translate(-50%, 0);
       /* 注意：颜色由 SVG 内部 stroke 控制，此处可以设置父元素颜色 */
-      color: #183153;
+      /* color: #183153; */
     }
 
     .icon-name {
@@ -182,13 +182,51 @@
         fetch(icon.path)
           .then(res => res.text())
           .then(svgText => {
-            // 先过滤掉 live-server 注入的 script 标签
-            const cleanedSVG = svgText.replace(/<script[\s\S]*<\/script>/gi, '');
-            // 修改 SVG：保持 fill 为 none，设置 stroke 为 white，stroke-width 为 2
-            const coloredSVG = cleanedSVG.replace('<svg', '<svg fill="none"  stroke-width="2" ');
+            // 1. 删除 live-server 注入的 <script> 标签（非贪婪匹配）
+            let cleanedSVG = svgText.replace(/<script[\s\S]*?<\/script>/gi, '');
+            // 2. 删除所有注释
+            cleanedSVG = cleanedSVG.replace(/<!--[\s\S]*?-->/g, '');
+            // 3. 压缩换行和多余空白，使整个 SVG 成为一行
+            cleanedSVG = cleanedSVG.replace(/\n/g, ' ').replace(/\s+/g, ' ').trim();
+            // 4. 修改 SVG 属性，设置 fill 为 none, stroke 为 "#183153", stroke-width 为 2
+            // 注意：此处可能会产生重复属性，如果原始 SVG 内已有类似属性
+            const coloredSVG = cleanedSVG.replace('<svg', '<svg fill="none" stroke="#183153" stroke-width="2" ');
+            
+            // 渲染时直接使用 coloredSVG
             svgHolder.innerHTML = coloredSVG;
-            // 将 SVG 源码存到卡片的数据属性中，便于复制
-            card.dataset.svg = coloredSVG;
+            card.appendChild(svgHolder);
+            
+            // 定义一个函数，去除 <svg> 标签内重复的属性（只保留第一次出现的）
+            function removeDuplicateAttributes(svgString) {
+              // 找到 <svg> 标签结束位置（第一个 '>'）
+              const tagEndIndex = svgString.indexOf('>');
+              if (tagEndIndex === -1) return svgString;
+              const tagContent = svgString.substring(0, tagEndIndex);
+              const rest = svgString.substring(tagEndIndex);
+              // 按空白分割标签内容
+              const tokens = tagContent.split(/\s+/);
+              const seen = {};
+              const uniqueTokens = [];
+              tokens.forEach(token => {
+                // 如果 token 包含 "="，认为它是一个属性
+                if (token.includes('=')) {
+                  const attrName = token.split('=')[0];
+                  if (!seen[attrName]) {
+                    seen[attrName] = true;
+                    uniqueTokens.push(token);
+                  }
+                } else {
+                  // 例如 "<svg" 这样的部分
+                  uniqueTokens.push(token);
+                }
+              });
+              const newTag = uniqueTokens.join(' ');
+              return newTag + rest;
+            }
+            
+            // 用上面的函数处理 coloredSVG，得到最终用于复制的纯净 SVG 源码
+            const finalSVG = removeDuplicateAttributes(coloredSVG);
+            card.dataset.svg = finalSVG; // 存入数据属性，便于复制
           })
           .catch(err => console.error('Load SVG failed:', err));
         card.appendChild(svgHolder);
