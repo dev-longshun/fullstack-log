@@ -61,6 +61,7 @@
       top: 10%;
       left: 50%;
       transform: translate(-50%, 0);
+      /* 注意：颜色由 SVG 内部 stroke 控制，此处可以设置父元素颜色 */
       color: #183153;
     }
 
@@ -136,7 +137,7 @@
   </div>
 
   <script>
-    // 1. 用 fetch 加载 solid-icons.json
+    // 1. 用 fetch 加载 solid-icons.json（此处文件名请根据实际情况确认）
     let iconData = [];
     fetch('./stroke-icons.json')
       .then(response => response.json())
@@ -145,7 +146,7 @@
         renderIcons(iconData);
       })
       .catch(err => {
-        console.error('Error loading solid-icons.json:', err);
+        console.error('Error loading stroke-icons.json:', err);
       });
 
     // 2. 获取 DOM 元素：搜索框和图标容器
@@ -176,14 +177,18 @@
         tooltip.textContent = 'Copied!';
         card.appendChild(tooltip);
         
-        // 用 fetch 加载 SVG 源码，并将 fill 属性替换成你喜欢的颜色（例如 "#183153"）
+        // 用 fetch 加载 SVG 源码，并替换为适合 stroke 图标的属性
         const svgHolder = document.createElement('div');
         fetch(icon.path)
           .then(res => res.text())
           .then(svgText => {
-            // 修改这行的颜色代码即可更换颜色,因为这是线框图标，所以不要填充
-            const coloredSVG = svgText.replace('<svg', '<svg fill="none" stroke-width="2" ');
+            // 先过滤掉 live-server 注入的 script 标签
+            const cleanedSVG = svgText.replace(/<script[\s\S]*<\/script>/gi, '');
+            // 修改 SVG：保持 fill 为 none，设置 stroke 为 white，stroke-width 为 2
+            const coloredSVG = cleanedSVG.replace('<svg', '<svg fill="none"  stroke-width="2" ');
             svgHolder.innerHTML = coloredSVG;
+            // 将 SVG 源码存到卡片的数据属性中，便于复制
+            card.dataset.svg = coloredSVG;
           })
           .catch(err => console.error('Load SVG failed:', err));
         card.appendChild(svgHolder);
@@ -198,17 +203,21 @@
         const btnContainer = document.createElement('div');
         btnContainer.classList.add('button-container');
         
-        // 复制类名按钮：最终类名格式为 "icon-" + icon.name
-        const btnClass = document.createElement('button');
-        btnClass.textContent = 'class-name';
-        btnClass.addEventListener('click', (e) => {
-          e.stopPropagation(); // 阻止事件冒泡，避免触发卡片的其他事件
-          const finalClass = `../000-icon-planet/stroke-icons/${icon.name}.svg`;
-          navigator.clipboard.writeText(finalClass)
-            .then(() => showTooltip(card, 'Class Copied!'))
-            .catch(err => console.error('Copy failed:', err));
+        // 复制 SVG 源码按钮
+        const btnCopy = document.createElement('button');
+        btnCopy.textContent = 'Copy SVG';
+        btnCopy.addEventListener('click', (e) => {
+          e.stopPropagation(); // 阻止事件冒泡
+          const svgSource = card.dataset.svg;
+          if (svgSource) {
+            navigator.clipboard.writeText(svgSource)
+              .then(() => showTooltip(card, 'SVG Copied!'))
+              .catch(err => console.error('Copy failed:', err));
+          } else {
+            console.error('SVG source not available yet!');
+          }
         });
-        btnContainer.appendChild(btnClass);
+        btnContainer.appendChild(btnCopy);
         
         card.appendChild(btnContainer);
         
