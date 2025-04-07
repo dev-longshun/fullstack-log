@@ -343,13 +343,6 @@
     "license": "Custom/Unknown"
   },
   {
-    "name": "eraser",
-    "keywords": ["eraser"],
-    "path": "../000-icon-planet/solid-icons/eraser.svg",
-    "category": "",
-    "license": "Custom/Unknown"
-  },
-  {
     "name": "face-smile-regular",
     "keywords": ["face", "smile", "regular"],
     "path": "../000-icon-planet/solid-icons/face-smile-regular.svg",
@@ -535,20 +528,6 @@
     "name": "key-solid",
     "keywords": ["key", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/key-solid.svg",
-    "category": "",
-    "license": "Custom/Unknown"
-  },
-  {
-    "name": "layers-2",
-    "keywords": ["layers", "2"],
-    "path": "../000-icon-planet/solid-icons/layers-2.svg",
-    "category": "",
-    "license": "Custom/Unknown"
-  },
-  {
-    "name": "layers",
-    "keywords": ["layers"],
-    "path": "../000-icon-planet/solid-icons/layers.svg",
     "category": "",
     "license": "Custom/Unknown"
   },

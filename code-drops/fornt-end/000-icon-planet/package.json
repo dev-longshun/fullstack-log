@@ -4,7 +4,10 @@
   "main": "generate-icons-json.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "update:icons":"node generate-icons-json.js"
+    "update:solid-icons":"node generate-solid-icons-json.js",
+    "update:stroke-icons":"node generate-stroke-icons-json.js",
+    "update:all":"node generate-stroke-icons-json.js && node generate-solid-icons-json.js"
+
   },
   "keywords": [],
   "author": "",

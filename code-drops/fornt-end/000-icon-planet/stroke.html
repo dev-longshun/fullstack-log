@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stroke Icon Planet</title>
+  <style>
+    /* 通用复位 */
+    * {
+      margin: 0; 
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: sans-serif;
+      padding: 1rem;
+      background: #f4f4f4;
+    }
+    h1 {
+      margin-bottom: 1rem;
+    }
+    
+    /* 搜索框 */
+    .search-box {
+      margin-bottom: 1rem;
+    }
+    .search-box input {
+      width: 100%;
+      max-width: 400px;
+      padding: 8px;
+      font-size: 1rem;
+    }
+    
+    /* 图标列表布局 */
+    .icon-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+
+    /* 单个图标卡片 */
+    .icon-card {
+      position: relative;
+      background: #fff;
+      height: 150px;
+      padding: 8px;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: background 0.2s ease;
+    }
+    .icon-card:hover {
+      background-color: rgb(255, 212, 59);
+    }
+
+    /* 内联SVG样式 */
+    .icon-card svg {
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      color: #183153;
+    }
+
+    .icon-name {
+      font-size: 0.9rem;
+      color: #555;
+      word-break: break-all;
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -55%);
+      width: 100%;
+      pointer-events: none;
+    }
+    
+    /* 按钮容器 */
+    .button-container {
+      margin-top: 8px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translate(-50%, -5%);
+    }
+    .button-container button {
+      border: none;
+      background: #ededed;
+      padding: 4px 6px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      transition: background 0.2s;
+    }
+    .button-container button:hover {
+      background: #ddd;
+    }
+
+    /* 提示复制成功 */
+    .tooltip {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: #fff;
+      padding: 4px 8px;
+      font-size: 0.75rem;
+      border-radius: 4px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      white-space: nowrap;
+    }
+    .icon-card.show-tooltip .tooltip {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Stroke Icon Planet</h1>
+  
+  <!-- 搜索框 -->
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search icons by name or keywords..." />
+  </div>
+  
+  <!-- 图标容器 -->
+  <div class="icon-container" id="iconContainer">
+    <!-- JS 动态生成 icon-card -->
+  </div>
+
+  <script>
+    // 1. 用 fetch 加载 solid-icons.json
+    let iconData = [];
+    fetch('./stroke-icons.json')
+      .then(response => response.json())
+      .then(data => {
+        iconData = data; // 保存数据到全局变量
+        renderIcons(iconData);
+      })
+      .catch(err => {
+        console.error('Error loading solid-icons.json:', err);
+      });
+
+    // 2. 获取 DOM 元素：搜索框和图标容器
+    const searchInput = document.getElementById('searchInput');
+    const iconContainer = document.getElementById('iconContainer');
+
+    // 3. 搜索事件：监听输入，实时过滤图标
+    searchInput.addEventListener('input', (e) => {
+      const keyword = e.target.value.toLowerCase();
+      const filtered = iconData.filter(icon => {
+        const combinedText = icon.name + ' ' + icon.keywords.join(' ');
+        return combinedText.toLowerCase().includes(keyword);
+      });
+      renderIcons(filtered);
+    });
+
+    // 4. 渲染函数：根据传入的数据生成每个图标卡片
+    function renderIcons(dataArray) {
+      iconContainer.innerHTML = ''; // 清空旧内容
+      dataArray.forEach(icon => {
+        // 创建图标卡片容器
+        const card = document.createElement('div');
+        card.classList.add('icon-card');
+        
+        // 创建 tooltip
+        const tooltip = document.createElement('div');
+        tooltip.classList.add('tooltip');
+        tooltip.textContent = 'Copied!';
+        card.appendChild(tooltip);
+        
+        // 用 fetch 加载 SVG 源码，并将 fill 属性替换成你喜欢的颜色（例如 "#183153"）
+        const svgHolder = document.createElement('div');
+        fetch(icon.path)
+          .then(res => res.text())
+          .then(svgText => {
+            // 修改这行的颜色代码即可更换颜色,因为这是线框图标，所以不要填充
+            const coloredSVG = svgText.replace('<svg', '<svg fill="none" stroke-width="2" ');
+            svgHolder.innerHTML = coloredSVG;
+          })
+          .catch(err => console.error('Load SVG failed:', err));
+        card.appendChild(svgHolder);
+        
+        // 显示图标名称
+        const nameEl = document.createElement('div');
+        nameEl.classList.add('icon-name');
+        nameEl.textContent = icon.name;
+        card.appendChild(nameEl);
+        
+        // 创建按钮容器
+        const btnContainer = document.createElement('div');
+        btnContainer.classList.add('button-container');
+        
+        // 复制类名按钮：最终类名格式为 "icon-" + icon.name
+        const btnClass = document.createElement('button');
+        btnClass.textContent = 'class-name';
+        btnClass.addEventListener('click', (e) => {
+          e.stopPropagation(); // 阻止事件冒泡，避免触发卡片的其他事件
+          const finalClass = `../000-icon-planet/stroke-icons/${icon.name}.svg`;
+          navigator.clipboard.writeText(finalClass)
+            .then(() => showTooltip(card, 'Class Copied!'))
+            .catch(err => console.error('Copy failed:', err));
+        });
+        btnContainer.appendChild(btnClass);
+        
+        card.appendChild(btnContainer);
+        
+        // 加入图标容器
+        iconContainer.appendChild(card);
+      });
+    }
+
+    // 5. 显示 tooltip 提示复制成功
+    function showTooltip(cardElement, msg) {
+      const tooltip = cardElement.querySelector('.tooltip');
+      tooltip.textContent = msg;
+      cardElement.classList.add('show-tooltip');
+      setTimeout(() => {
+        cardElement.classList.remove('show-tooltip');
+        tooltip.textContent = 'Copied!';
+      }, 1000);
+    }
+  </script>
+
+</body>
+</html>
