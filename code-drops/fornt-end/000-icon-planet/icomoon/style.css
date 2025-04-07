@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?98350j');
-  src:  url('fonts/icomoon.eot?98350j#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?98350j') format('truetype'),
-    url('fonts/icomoon.woff?98350j') format('woff'),
-    url('fonts/icomoon.svg?98350j#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?iomq01');
+  src:  url('fonts/icomoon.eot?iomq01#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?iomq01') format('truetype'),
+    url('fonts/icomoon.woff?iomq01') format('woff'),
+    url('fonts/icomoon.svg?iomq01#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,249 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-location-arrow-solid:before {
+  content: "\e934";
+}
+.icon-plane-slash-solid:before {
+  content: "\e935";
+}
+.icon-plane-solid:before {
+  content: "\e936";
+}
+.icon-plane-up-solid:before {
+  content: "\e937";
+}
+.icon-tree-solid:before {
+  content: "\e938";
+}
+.icon-wifi-solid:before {
+  content: "\e939";
+}
+.icon-accessible-icon-brands-solid:before {
+  content: "\e93a";
+}
+.icon-alipay-brands-solid:before {
+  content: "\e93b";
+}
+.icon-amazon-pay-brands-solid:before {
+  content: "\e93c";
+}
+.icon-amilia-brands-solid:before {
+  content: "\e93d";
+}
+.icon-android-brands-solid:before {
+  content: "\e93e";
+}
+.icon-apple-brands:before {
+  content: "\e93f";
+}
+.icon-apple-pay-brands-solid:before {
+  content: "\e940";
+}
+.icon-bag-shopping-solid:before {
+  content: "\e941";
+}
+.icon-bilibili-brands-solid:before {
+  content: "\e942";
+}
+.icon-bluesky-brands:before {
+  content: "\e943";
+}
+.icon-bluetooth-brands-solid:before {
+  content: "\e944";
+}
+.icon-calendar-days-regular:before {
+  content: "\e945";
+}
+.icon-calendar-days-solid:before {
+  content: "\e946";
+}
+.icon-calendar-regular:before {
+  content: "\e947";
+}
+.icon-calendar-solid:before {
+  content: "\e948";
+}
+.icon-cart-shopping-solid:before {
+  content: "\e949";
+}
+.icon-cc-amazon-pay-brands-solid:before {
+  content: "\e94a";
+}
+.icon-cc-paypal-brands-solid:before {
+  content: "\e94b";
+}
+.icon-cc-visa-brands-solid:before {
+  content: "\e94c";
+}
+.icon-clipboard-regular:before {
+  content: "\e94d";
+}
+.icon-clipboard-solid:before {
+  content: "\e94e";
+}
+.icon-cloud-solid:before {
+  content: "\e94f";
+}
+.icon-codepen-brands-solid:before {
+  content: "\e950";
+}
+.icon-coins-solid:before {
+  content: "\e951";
+}
+.icon-comment-regular:before {
+  content: "\e952";
+}
+.icon-copyright-regular:before {
+  content: "\e953";
+}
+.icon-copyright-solid:before {
+  content: "\e954";
+}
+.icon-credit-card-solid:before {
+  content: "\e955";
+}
+.icon-deskpro-brands-solid:before {
+  content: "\e956";
+}
+.icon-dollar-sign-solid:before {
+  content: "\e957";
+}
+.icon-edge-legacy-brands-solid:before {
+  content: "\e958";
+}
+.icon-envelope-regular:before {
+  content: "\e959";
+}
+.icon-face-smile-regular:before {
+  content: "\e95a";
+}
+.icon-figma-brands:before {
+  content: "\e95b";
+}
+.icon-file-regular:before {
+  content: "\e95c";
+}
+.icon-file-solid:before {
+  content: "\e95d";
+}
+.icon-firefox-brands-solid:before {
+  content: "\e95e";
+}
+.icon-firefox-browser-brands-solid:before {
+  content: "\e95f";
+}
+.icon-github-brands:before {
+  content: "\e960";
+}
+.icon-golang-brands-solid:before {
+  content: "\e961";
+}
+.icon-google-brands:before {
+  content: "\e962";
+}
+.icon-google-drive-brands-solid:before {
+  content: "\e963";
+}
+.icon-google-pay-brands-solid:before {
+  content: "\e964";
+}
+.icon-google-play-brands-solid:before {
+  content: "\e965";
+}
+.icon-google-plus-brands-solid:before {
+  content: "\e966";
+}
+.icon-google-plus-g-brands-solid:before {
+  content: "\e967";
+}
+.icon-headphones-solid:before {
+  content: "\e968";
+}
+.icon-heart-regular:before {
+  content: "\e969";
+}
+.icon-html5-brands-solid:before {
+  content: "\e96a";
+}
+.icon-internet-explorer-brands-solid:before {
+  content: "\e96b";
+}
+.icon-linux-brands-solid:before {
+  content: "\e96c";
+}
+.icon-microsoft-brands-solid:before {
+  content: "\e96d";
+}
+.icon-node-brands-solid:before {
+  content: "\e96e";
+}
+.icon-paypal-brands-solid:before {
+  content: "\e96f";
+}
+.icon-python-brands-solid:before {
+  content: "\e970";
+}
+.icon-react-brands-solid:before {
+  content: "\e971";
+}
+.icon-sack-dollar-solid:before {
+  content: "\e972";
+}
+.icon-square-js-brands-solid:before {
+  content: "\e973";
+}
+.icon-square-steam-brands-solid:before {
+  content: "\e974";
+}
+.icon-star-regular:before {
+  content: "\e975";
+}
+.icon-steam-brands-solid:before {
+  content: "\e976";
+}
+.icon-steam-symbol-brands-solid:before {
+  content: "\e977";
+}
+.icon-telegram-brands-solid:before {
+  content: "\e978";
+}
+.icon-thumbs-up-regular:before {
+  content: "\e979";
+}
+.icon-twitch-brands-solid:before {
+  content: "\e97a";
+}
+.icon-weibo-brands-solid:before {
+  content: "\e97b";
+}
+.icon-wikipedia-w-brands-solid:before {
+  content: "\e97c";
+}
+.icon-windows-brands-solid:before {
+  content: "\e97d";
+}
+.icon-wordpress-brands-solid:before {
+  content: "\e97e";
+}
+.icon-yen-sign-solid:before {
+  content: "\e97f";
+}
+.icon-zhihu-brands-solid:before {
+  content: "\e980";
+}
+.icon-bilibili-brands:before {
+  content: "\e930";
+}
+.icon-qq-brands:before {
+  content: "\e931";
+}
+.icon-tiktok-brands:before {
+  content: "\e932";
+}
+.icon-weixin-brands:before {
+  content: "\e933";
+}
 .icon-quote-left-solid:before {
   content: "\e92e";
 }

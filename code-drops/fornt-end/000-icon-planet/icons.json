@@ -1,5 +1,40 @@
 [
   {
+    "name": "accessible-icon-brands-solid",
+    "keywords": ["accessible", "icon", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/accessible-icon-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "alipay-brands-solid",
+    "keywords": ["alipay", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/alipay-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "amazon-pay-brands-solid",
+    "keywords": ["amazon", "pay", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/amazon-pay-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "amilia-brands-solid",
+    "keywords": ["amilia", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/amilia-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "android-brands-solid",
+    "keywords": ["android", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/android-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "angle-down-solid",
     "keywords": ["angle", "down", "solid", "fill", "bold"],
     "path": "../000-icon-planet/icons/angle-down-solid.svg",
@@ -56,9 +91,30 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "apple-brands",
+    "keywords": ["apple", "brands"],
+    "path": "../000-icon-planet/icons/apple-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "apple-pay-brands-solid",
+    "keywords": ["apple", "pay", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/apple-pay-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "award-solid",
     "keywords": ["award", "solid", "fill", "bold"],
     "path": "../000-icon-planet/icons/award-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "bag-shopping-solid",
+    "keywords": ["bag", "shopping", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/bag-shopping-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -77,9 +133,93 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "bilibili-brands-solid",
+    "keywords": ["bilibili", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/bilibili-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "bilibili-brands",
+    "keywords": ["bilibili", "brands"],
+    "path": "../000-icon-planet/icons/bilibili-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "bluesky-brands",
+    "keywords": ["bluesky", "brands"],
+    "path": "../000-icon-planet/icons/bluesky-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "bluetooth-brands-solid",
+    "keywords": ["bluetooth", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/bluetooth-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "calendar-days-regular",
+    "keywords": ["calendar", "days", "regular"],
+    "path": "../000-icon-planet/icons/calendar-days-regular.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "calendar-days-solid",
+    "keywords": ["calendar", "days", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/calendar-days-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "calendar-regular",
+    "keywords": ["calendar", "regular"],
+    "path": "../000-icon-planet/icons/calendar-regular.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "calendar-solid",
+    "keywords": ["calendar", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/calendar-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "camera-solid",
     "keywords": ["camera", "solid", "fill", "bold"],
     "path": "../000-icon-planet/icons/camera-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "cart-shopping-solid",
+    "keywords": ["cart", "shopping", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/cart-shopping-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "cc-amazon-pay-brands-solid",
+    "keywords": ["cc", "amazon", "pay", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/cc-amazon-pay-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "cc-paypal-brands-solid",
+    "keywords": ["cc", "paypal", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/cc-paypal-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "cc-visa-brands-solid",
+    "keywords": ["cc", "visa", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/cc-visa-brands-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -98,6 +238,48 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "clipboard-regular",
+    "keywords": ["clipboard", "regular"],
+    "path": "../000-icon-planet/icons/clipboard-regular.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "clipboard-solid",
+    "keywords": ["clipboard", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/clipboard-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "cloud-solid",
+    "keywords": ["cloud", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/cloud-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "codepen-brands-solid",
+    "keywords": ["codepen", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/codepen-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "coins-solid",
+    "keywords": ["coins", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/coins-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "comment-regular",
+    "keywords": ["comment", "regular"],
+    "path": "../000-icon-planet/icons/comment-regular.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "comment-solid",
     "keywords": ["comment", "solid", "fill", "bold"],
     "path": "../000-icon-planet/icons/comment-solid.svg",
@@ -105,9 +287,65 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "copyright-regular",
+    "keywords": ["copyright", "regular"],
+    "path": "../000-icon-planet/icons/copyright-regular.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "copyright-solid",
+    "keywords": ["copyright", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/copyright-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "credit-card-solid",
+    "keywords": ["credit", "card", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/credit-card-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "deskpro-brands-solid",
+    "keywords": ["deskpro", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/deskpro-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "dollar-sign-solid",
+    "keywords": ["dollar", "sign", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/dollar-sign-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "edge-legacy-brands-solid",
+    "keywords": ["edge", "legacy", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/edge-legacy-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "envelope-regular",
+    "keywords": ["envelope", "regular"],
+    "path": "../000-icon-planet/icons/envelope-regular.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "envelope-solid",
     "keywords": ["envelope", "solid", "fill", "bold"],
     "path": "../000-icon-planet/icons/envelope-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "face-smile-regular",
+    "keywords": ["face", "smile", "regular"],
+    "path": "../000-icon-planet/icons/face-smile-regular.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -126,9 +364,114 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "figma-brands",
+    "keywords": ["figma", "brands"],
+    "path": "../000-icon-planet/icons/figma-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "file-regular",
+    "keywords": ["file", "regular"],
+    "path": "../000-icon-planet/icons/file-regular.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "file-solid",
+    "keywords": ["file", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/file-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "firefox-brands-solid",
+    "keywords": ["firefox", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/firefox-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "firefox-browser-brands-solid",
+    "keywords": ["firefox", "browser", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/firefox-browser-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "github-brands",
+    "keywords": ["github", "brands"],
+    "path": "../000-icon-planet/icons/github-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "golang-brands-solid",
+    "keywords": ["golang", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/golang-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "google-brands",
+    "keywords": ["google", "brands"],
+    "path": "../000-icon-planet/icons/google-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "google-drive-brands-solid",
+    "keywords": ["google", "drive", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/google-drive-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "google-pay-brands-solid",
+    "keywords": ["google", "pay", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/google-pay-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "google-play-brands-solid",
+    "keywords": ["google", "play", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/google-play-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "google-plus-brands-solid",
+    "keywords": ["google", "plus", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/google-plus-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "google-plus-g-brands-solid",
+    "keywords": ["google", "plus", "g", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/google-plus-g-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "hashtag-solid",
     "keywords": ["hashtag", "solid", "fill", "bold"],
     "path": "../000-icon-planet/icons/hashtag-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "headphones-solid",
+    "keywords": ["headphones", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/headphones-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "heart-regular",
+    "keywords": ["heart", "regular"],
+    "path": "../000-icon-planet/icons/heart-regular.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -154,6 +497,13 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "html5-brands-solid",
+    "keywords": ["html5", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/html5-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "image-solid",
     "keywords": ["image", "solid", "fill", "bold"],
     "path": "../000-icon-planet/icons/image-solid.svg",
@@ -164,6 +514,13 @@
     "name": "instagram-brands",
     "keywords": ["instagram", "brands"],
     "path": "../000-icon-planet/icons/instagram-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "internet-explorer-brands-solid",
+    "keywords": ["internet", "explorer", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/internet-explorer-brands-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -196,6 +553,20 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "linux-brands-solid",
+    "keywords": ["linux", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/linux-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "location-arrow-solid",
+    "keywords": ["location", "arrow", "direction", "pointer", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/location-arrow-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "location-crosshairs-solid",
     "keywords": ["location", "crosshairs", "solid", "fill", "bold"],
     "path": "../000-icon-planet/icons/location-crosshairs-solid.svg",
@@ -224,6 +595,13 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "microsoft-brands-solid",
+    "keywords": ["microsoft", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/microsoft-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "music-solid",
     "keywords": ["music", "solid", "fill", "bold"],
     "path": "../000-icon-planet/icons/music-solid.svg",
@@ -231,9 +609,58 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "node-brands-solid",
+    "keywords": ["node", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/node-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "paypal-brands-solid",
+    "keywords": ["paypal", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/paypal-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "phone-solid",
     "keywords": ["phone", "solid", "fill", "bold"],
     "path": "../000-icon-planet/icons/phone-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "plane-slash-solid",
+    "keywords": ["plane", "slash", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/plane-slash-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "plane-solid",
+    "keywords": ["plane", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/plane-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "plane-up-solid",
+    "keywords": ["plane", "up", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/plane-up-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "python-brands-solid",
+    "keywords": ["python", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/python-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "qq-brands",
+    "keywords": ["qq", "brands"],
+    "path": "../000-icon-planet/icons/qq-brands.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -252,9 +679,37 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "react-brands-solid",
+    "keywords": ["react", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/react-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "sack-dollar-solid",
+    "keywords": ["sack", "dollar", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/sack-dollar-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "square-instagram-brands",
     "keywords": ["square", "instagram", "brands"],
     "path": "../000-icon-planet/icons/square-instagram-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "square-js-brands-solid",
+    "keywords": ["square", "js", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/square-js-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "square-steam-brands-solid",
+    "keywords": ["square", "steam", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/square-steam-brands-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -280,9 +735,65 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "star-regular",
+    "keywords": ["star", "regular"],
+    "path": "../000-icon-planet/icons/star-regular.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "star-solid",
     "keywords": ["star", "solid", "fill", "bold"],
     "path": "../000-icon-planet/icons/star-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "steam-brands-solid",
+    "keywords": ["steam", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/steam-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "steam-symbol-brands-solid",
+    "keywords": ["steam", "symbol", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/steam-symbol-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "telegram-brands-solid",
+    "keywords": ["telegram", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/telegram-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "thumbs-up-regular",
+    "keywords": ["thumbs", "up", "regular"],
+    "path": "../000-icon-planet/icons/thumbs-up-regular.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "tiktok-brands",
+    "keywords": ["tiktok", "brands"],
+    "path": "../000-icon-planet/icons/tiktok-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "tree-solid",
+    "keywords": ["tree", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/tree-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "twitch-brands-solid",
+    "keywords": ["twitch", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/twitch-brands-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -322,6 +833,48 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "weibo-brands-solid",
+    "keywords": ["weibo", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/weibo-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "weixin-brands",
+    "keywords": ["weixin", "brands"],
+    "path": "../000-icon-planet/icons/weixin-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "wifi-solid",
+    "keywords": ["wifi", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/wifi-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "wikipedia-w-brands-solid",
+    "keywords": ["wikipedia", "w", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/wikipedia-w-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "windows-brands-solid",
+    "keywords": ["windows", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/windows-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "wordpress-brands-solid",
+    "keywords": ["wordpress", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/wordpress-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "x-twitter-brands",
     "keywords": ["x", "twitter", "brands"],
     "path": "../000-icon-planet/icons/x-twitter-brands.svg",
@@ -329,9 +882,23 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "yen-sign-solid",
+    "keywords": ["yen", "sign", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/yen-sign-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "youtube-brands",
     "keywords": ["youtube", "brands"],
     "path": "../000-icon-planet/icons/youtube-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "zhihu-brands-solid",
+    "keywords": ["zhihu", "brands", "solid", "fill", "bold"],
+    "path": "../000-icon-planet/icons/zhihu-brands-solid.svg",
     "category": "",
     "license": "Custom/Unknown"
   }
