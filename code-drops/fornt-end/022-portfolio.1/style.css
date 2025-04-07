@@ -1,0 +1,212 @@
+@font-face {
+  font-family: 'Pally';
+  src: url('../000-font/english/pally/Pally-Medium.woff2') format('woff2');
+  font-weight: medium;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'lxgw';
+  src: url('../000-font/chinese/lxgw/LXGWWenKaiMono-Medium.ttf') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'lxgw';
+  src: url('../000-font/chinese/lxgw/LXGWWenKaiMono-Regular.ttf') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../000-font/english/work-sans/WorkSans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+a{
+  color: white;
+}
+
+body {
+  background-color: rgb(  0,  0,  0);
+}
+
+/*header begin*/
+header {
+  margin: 20px auto 0;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+}
+header > a:first-of-type {
+  font-size: 24px;
+  font-family: 'Pally',sans-serif;
+  transition: transform 0.2s;
+  color: rgb(183, 75, 75);
+}
+header > a:first-of-type:hover {
+  transform: scale(1.1);
+}
+header nav {
+  display: flex;
+  gap: 35px;
+}
+header nav a {
+  font-family: 'Pally',sans-serif;
+  font-weight: 500;
+  position: relative;
+  font-size: 20px;
+}
+header nav a::before {
+  content: '';
+  height: 2px;
+  width: 130%;
+  background-color: rgb(183, 75, 75);
+  position: absolute;
+  left: 50%;
+  bottom:-10%;
+  transform: scaleX(0) translate(-50%,10%) ;
+  transform-origin: right;
+  transition: transform 0.4s;
+}
+header nav a:hover:before {
+  transform-origin: left;
+  transform: scaleX(1) translate(-50%,10%) ;
+
+}
+
+/*header end*/
+
+
+/*section begin*/
+
+
+section.info {
+  display: flex;
+  gap: 100px;
+  width: 60%;
+  margin: 0 auto;
+}
+section.info img {
+  width: 250px;
+  clip-path: ellipse();
+}
+.info-right{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.info-right span {
+  color: rgb(183, 75, 75);
+  position: relative;
+}
+span.typing::before {
+  content: '';
+  text-transform: capitalize;
+  animation: typingboard 6s infinite;
+}
+span.typing::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: -6%;
+  top: 50%;
+  transform: translate(0%,-50%);
+  width: 2px;
+  height: calc(105%);
+  background-color: rgb(183, 75, 75);
+  opacity: 0;
+  animation: typing 0.6s linear infinite;
+}
+.info-right h1 {
+  margin-top: 80px;
+  font-family: 'lxgw',sans-serif;
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+.info-right h3 {
+  font-family: 'lxgw',sans-serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.info-right p {
+  font-family: 'lxgw';
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.info-right > a {
+  font-family: 'Work Sans';
+  font-size: 16px;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 8px 12px;
+  border: 2px solid rgb(183, 75, 75);
+  border-radius: 12px;
+  color: rgb(183, 75, 75);
+  width: fit-content;
+  transition: all 0.2s;
+}
+.info-right > a:hover {
+  color: black;
+  background-color: rgb(183, 75, 75);
+  box-shadow: 0 0 25px 1px rgb(183, 75, 75);
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.links a {
+  color: rgb(183, 75, 75);
+  border: 2px solid rgb(183, 75, 75);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+.links a:hover {
+  transform: scale(1.1) translateY(-10%);
+  background-color: rgb(183, 75, 75);
+  box-shadow: 0 0 20px  rgba(183, 75, 75,0.9);
+}
+.links a:hover i {
+  color: black;
+}
+
+@keyframes typing {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes typingboard {
+  0% {
+    content: 'china';
+  }
+  25% {
+    content: 'hunan';
+  }
+  50% {
+    content: 'zhuzhou';
+  }
+  75% {
+    content: 'chalin';
+  }
+  100% {
+    content: 'china';
+  }
+}
