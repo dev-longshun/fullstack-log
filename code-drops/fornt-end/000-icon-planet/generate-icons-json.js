@@ -38,9 +38,9 @@ const synonymsMap = {
 
 // ============== 2. 配置参数  =============
 // 图标所在文件夹
-const ICONS_DIR = './icons';
+const ICONS_DIR = './solid-icons';
 // 输出的 JSON 文件名
-const OUTPUT_JSON = './icons.json';
+const OUTPUT_JSON = './solid-icons.json';
 // 为了说明来源或协议，给全部图标加一个 license，若不想加可留空
 const DEFAULT_LICENSE = "Custom/Unknown";  
 // 你也可以专门为 FontAwesome 图标写个检测逻辑
@@ -81,8 +81,8 @@ function main() {
       "name": baseName,
       // keywords 就是 tokens + 同义词 的综合
       "keywords": allKeywords,
-      // 默认 path 指向 icons 文件夹
-      "path": `../000-icon-planet/icons/${filename}`,
+      // 默认 path 指向 solid-icons 文件夹
+      "path": `../000-icon-planet/solid-icons/${filename}`,
       // category 可自己补
       "category": "",
       // license 默认填
