@@ -138,7 +138,7 @@ div.card p{
   object-position: center;/*这个图片刚好是正方形的，所以不用调整*/
   border-radius: inherit;
   border: 2px solid white;
-  display: block;
+  /* display: block; 这个是用来消除图片下边多出来的类似于自带的文字线这种，但由于这里是100%height，所以加不加无所谓*/
 }
 
 .links{
