@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Nunito';
+  src: url('../../000-font/english/nunito/Nunito-Regular.woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Robot';
+  src: url('../../000-font/english/robot/Roboto-Bold.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Robot';
+  src: url('../../000-font/english/robot/Roboto-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../../000-font/english/open-sans/OpenSans-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
