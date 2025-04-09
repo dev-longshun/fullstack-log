@@ -49,6 +49,7 @@ header {
   width: 24px;
 }
 .header-middle .search-box {
+  width: 100%;
   display: flex;
 }
 .search-box input {
@@ -207,6 +208,7 @@ section.chip-content a {
   font-family: 'Robot',sans-serif;
   font-size: 14px;
   transition: background 0.2s;
+  white-space: nowrap;
 }
 section.chip-content a:hover {
   background-color: rgb(229,229,229);
@@ -225,7 +227,9 @@ section.video {
   margin-left: 84px;
   margin-top: 100px;
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(280px,0.8fr));
+  justify-content: center;
+  /* 其实没有必要设置1fr平均占满所有空白，会比较挤，只要是均分就可以了，还有这里得是content，因为单列的时候grid子项是自动占满的，我们要居中的是grid容器 */
   /* 在没有设置行模板的时候，默认是grid-auto-rows:auto;即自适应内容高度 */
   gap: 1.5rem;
 }
@@ -293,4 +297,20 @@ section.video {
   font-size: 14px;
   font-family: 'Robot',sans-serif;
   color: #606060;
+}
+
+@media screen and (max-width:791px){
+  section.sidebar {
+    display: none;
+  }
+  section.video {
+    margin-left: 0;
+    padding: 0 5%;
+  }
+  section.chip-content {
+    margin-left: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+  }
 }
