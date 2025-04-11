@@ -1,0 +1,117 @@
+
+/*header区域的响应式设计*/
+@media (max-width:1000px) {
+  .nav-right li.bars {
+    display: initial;/*恢复*/
+  }
+  .nav-right li.bars a i {
+    font-size: 32px;
+  }
+  .nav-right li.nav-item {
+    display: none;
+  }
+
+}
+
+/*hero 区域的响应式设计*/
+/* 第一次收缩，背景图片换成渐变色 */
+@media  (max-width:1200px) {
+  .hero_area .bg-box img {
+    display: none;
+  }
+  .hero_area .bg-box {
+    background: linear-gradient(130deg, #231a6f, #0f054c);
+  }
+  .track .page .info h1 {
+    font-size: 36px;
+  }
+  section.service {
+    margin-top: 8rem;
+  }
+}
+/* 第二次收缩，滑动区域变成一行两列式布局 */
+@media (max-width:800px) {
+  div.page {
+    grid-template-columns: 80%;
+    /* grid-template-rows: 50%;
+    grid-auto-rows: 50%; */
+    /* `加了这两行代码反而会出问题（比如第一行的元素因为高度问题溢出到第二行了，所以让它自适应好得多 */
+    justify-content: center;
+    align-items: center;
+  }
+
+  @keyframes subtleFloat {
+    0%{
+      transform: translate(0%,-10px);
+    }
+    50%{
+      transform: translate(0%,10px);
+    }
+    100%{
+      transform: translate(0%,-10px);
+    }
+  }
+  .page .img-box {
+    padding: 20px 0;
+    width: 80%;
+    justify-self: center;
+    display: flex;/*这里为了让缩小后的图片居中显示*/
+    justify-content: center;
+  }
+  .page .img-box img{
+    animation: subtleFloat 4s ease infinite;
+    width: 80%;
+    
+  }
+}
+
+/* about区域的媒体查询 */
+@media (max-width:900px) {
+  article.about-body {
+    grid-template-columns: 80%;
+    justify-content: center;
+  }
+  .about-body .about-intro { /*这里写的时候一定要注意特异性的问题啊，特异性相等的时候，后面的是会覆盖掉前面的，这也是为什么一般媒体查询都在css文件的末尾写*/
+    align-items: center;/*这里是info的数值flex布局 ，按钮居中*/
+    gap: 1rem;/*这时候gap用百分比就没用了不知道为啥，这里的em是相对于info自己当前的font-size大小来的，不是里面的子元素的。嘿嘿，不知道为啥是吧，gap千万别用%就是了，省事儿*/
+  }
+
+}
+
+/* team区域的媒体查询，直接变到两列，而非普通fill布局（先是三列，底下只有一个没对齐不美观） */
+@media  (min-width:870px) and (max-width:1300px) {
+  section.team .member {
+    grid-template-columns: repeat(2,minmax(300px,40%));
+    justify-content: center;
+    justify-self: center;
+  } 
+}
+
+/* customer区域的媒体查询，看上去好像很难实现要把轨道从两列改成一列的响应式，其实要改的地方很少，轨道的另一端也会跟着改变，所以轨道根本不用动，动page就行了 */
+@media screen and (max-width:1260px){
+  .customer-page {
+    display: grid;
+    grid-template-columns: 80%;
+    justify-items: center;
+    row-gap: 8rem;
+  }
+}
+
+/* footer区域的响应式查询 */
+@media screen and (max-width:1000px) {
+  footer.footer {
+    grid-template-columns: repeat(2,50%);
+  }
+  footer.footer .info p {
+    min-width: 20rem;
+  }
+}
+
+@media screen and (max-width:700px) {
+  footer.footer {
+    grid-template-columns: repeat(1,80%);
+    justify-content: center;
+    row-gap: 1rem;/*嘿嘿这里也是，你可以试试把单位换成%，父元素不会撑开，有你好受的，这个隐藏bug是真的难找哈，第一次找了半个多小时都打算放弃了，最后关头4o的一句话，我的一个尝试，破了o1都没破出来的案🤣*/
+  }
+}
+

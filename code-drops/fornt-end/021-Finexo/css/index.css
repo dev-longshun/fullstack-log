@@ -25,7 +25,7 @@ section.hero_area .bg-box {
 }
 section.hero_area .bg-box img {
   width: 100%;
-  /* height: 100%; */ /*这时候如果写死了height，就会导致被剪切，图片容器的height定下来了，是hero的height：100%。*/
+  /* height: 100%;  /*这时候如果写死了height，就会导致被剪切，图片容器的height定下来了，是hero的height：100%。 */
   /* 有趣的是，如果box写的是max-height的话，即使这里写了height：100%，图片的高度也不会被裁剪，而是能够溢出，这是因为，height是最强约束，说了是多少就是多少，但是max-height只是一个建议，也就是，你最好不要超过这么多，如果要超过，也不拦你 */
   object-fit: cover;/*一开始没有给img固定宽高就直接让它cover，死活不生效，因为fit的前提是图片本身有宽高限制，而不是说自动适应父元素，唉，我就说调了半天咋都解决不了把父元素撑大的问题，原来关键点在这！*/
 }
@@ -39,7 +39,7 @@ nav.navbar{
 }
 
 .nav-left span{
-  font-size: 24px;
+  font-size: 32px;
   font-family: 'Work Sans',sans-serif;
   font-weight: 600;
 }
@@ -50,10 +50,15 @@ nav.navbar{
   text-transform: uppercase;
   align-items: center;
 }
+.nav-right li.bars {
+  display: none;
+}
+
+
 a.nav-link{
   padding: 5px 8px;
   color: white;
-  font-size: 16px;
+  font-size: 20px;
   font-family: 'Work Sans',sans-serif;
   transition: color 0.2s;
   white-space: nowrap;/*页面收缩的时候也不换行*/
@@ -65,11 +70,19 @@ a.nav-link:hover i {
 a.nav-link:hover,a.nav-link:hover i{
   color: rgb(  0,187,240);
 }
+li.bars a i {
+  transition: color 0.2s;
+}
+li.bars a:hover i {
+  color: rgb(0,187,240);
+}
+
 
 /*slide-section*/
 
 .slider_section {
   position: relative;
+  /*让switch定位*/
 }
 
 input[type='radio'] {
@@ -79,9 +92,10 @@ input[type='radio'] {
 .switch{
   display: flex;
   gap: 10px;
-  position: absolute;
-  bottom: 0;
+  position: absolute;/*这里脱离了正常文档流，所以就好像被嵌在tracker-container里面了，其实他们是兄弟关系*/
+  bottom: 1rem;
   left: 50%;
+  /* 如果你没写 top / left / right / bottom，它虽然脱离文档流了，但位置其实还是“视觉上原来的位置”； */
   transform: translate(-50%,0);
 }
 
@@ -94,26 +108,28 @@ input[type='radio'] {
   transition: transform 0.2s;
 }
 
+/* 滑动式轨道经典flex写法 */
 div.track-container{
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 div.track{
-  min-width: 300%;
+  min-width: 300%;/*在flex等的弹性盒子中，如果子元素要的空间超过父元素，最好写min或者加上shrink：0，不然可能会被压缩到内容宽度，虽然现在*/
   display: flex;
-
 }
 
 div.page{
   width: 34%;
-  display: flex;
+  /* display: flex; */
   transition: transform 0.8s;
   padding: 50px;
-  height: 500px;
-  position: relative;
-
+  /* height:500px 这个高度写死会导致后面响应式布局的一行变两行无法自动撑开高度，一定要删掉*/
+  /* position: relative; */
+  display: grid;
+  grid-template-columns: repeat(2,50%);
 }
+
 
 .page .info{
   flex: 1;
@@ -126,10 +142,13 @@ div.page{
   font-size: 48px;
   text-transform: uppercase;
   font-family: 'Open Sans',sans-serif;
+  min-width: 300px;
 }
 .page .info p {
   font-size: 14px;
   font-family: 'Open Sans',sans-serif;
+  min-width: 300px;
+
 }
 .page .info a{
   width: 200px;
@@ -199,8 +218,15 @@ section.service{
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
-  margin: 300px 20px 0;
+  gap: 3rem;
+  /* 这里用flex布局和grid布局都没什么关系，实现视觉上面的响应式主要看bpdy部分的grid布局，这里只要不写死宽高就行了 */
+  color: black;
+  /* display: grid;
+  grid-template-rows: repeat(3,auto); */
+  /* gap: 5rem; */
+  /* 这里千万要注意啊，千万不能用%，因为如果用了%的话，父元素高度不会被撑开，但是这个间隙又是真的存在，就会出现看上去溢出的问题 */
+  /* 只有能解析出确定物理尺寸的 gap 单位（如 px、rem、em），才会参与父元素高度计算。而 % 是相对容器宽度来的，不适用于竖直方向的高度推导，因此“不会撑开”父元素。 这是GRT的解释，怎么说呢，长记性就好了*/
+  margin: 400px 20px 0;
   padding:20px;
   
 }
@@ -208,6 +234,9 @@ section.service p,
 section.service a {
   font-size: 16px;
   font-family: 'Open Sans',sans-serif;
+}
+section.service h3 {
+  white-space: nowrap;
 }
 section.service .service-body a {
   font-weight: 500;
@@ -240,18 +269,26 @@ section.service a:hover {
 
 
 .service-body{
-  display: flex;
-  gap: 20px;
+  /* display: flex;
+  gap: 20px; */
+  width: 100%;/*如果这里没有设置宽度的话，就默认是卡片撑开的内容宽度，因为竖直方向有个flex布局*/
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-template-rows: auto;
+  grid-auto-rows: auto;
+  justify-content: center;
+  height: fit-content;
+  /* justify-items: center;这里没有生效是因为card默认是占满轨道的？所以根本没有空间留给他选择。默认占满的原因是它里面的文字太长了，你可以试试把文字删掉，因为文字默认是一行显示的，这里换行了说明宽度不够，只是撑满了网格轨道而已 */
+  /* 所以啊，fr和子元素在网格里面对齐这个点还是冲突的，在fr的情况下使用对齐，那个元素就会收缩到内容区域，而不是根据fr来多占空间 */
 }
 
 .service-body .card{
   display: flex;
   flex-direction: column;
-  flex: 1;
   justify-content: space-around;
   background-color: rgb(248,248,249);
-  height: 300px;
-  padding: 15px 20px;
+  padding: 25px 20px;
   border-radius: 4px;
   align-items: center;
 }
@@ -259,6 +296,10 @@ section.service a:hover {
   width: 80px;
   height: 80px;
 }
+
+/* .service .service-foot {
+  justify-self: center;
+} 这是在service使用grid布局的时候让button水平居中的方法 */
 
 .service .service-foot a {
   padding: 10px 40px;
@@ -274,18 +315,21 @@ section.service a:hover {
 /*about_section*/
 
 .about {
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   background-color: rgb(  0, 32, 74);
-  box-sizing: content-box;
-  height: 500px;
-  padding: 90px 0;
-  margin-top: 80px;
+  padding: 90px 10px;
+  margin-top: 10rem;
 }
 .about p {
   font-size: 16px;
   font-family: 'Open Sans',sans-serif;
+}
+.about .about-head p {
+  width: 75%;
+  text-align: center;
 }
 .about h2 {
   font-size: 32px;
@@ -306,12 +350,14 @@ section.service a:hover {
 
 
 .about-body {
-  display: flex;
-  height: 350px;
+  /* display: flex;
+  height: 350px; */
+  display: grid;
+  grid-template-columns: repeat(2,50%);
 }
-.about-body figure,.about-body .about-intro {
-  flex: 1;
-}
+
+
+
 
 .about-body figure img {
   width: 100%;
@@ -322,8 +368,10 @@ section.service a:hover {
 .about-intro {
   padding: 30px 20px;
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
-  justify-content: space-around;
+  gap: 5%;
+  justify-content: center;
   align-items: start;
 }
 
@@ -347,6 +395,7 @@ section.service a:hover {
 /*why section*/
 
 section.why {
+  color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -364,6 +413,7 @@ section.why h3 {
   font-family: 'Open Sans',sans-serif;
 }
 section.why p {
+  min-width: 550px;
   font-size: 16px;
   font-family: 'Open Sans',sans-serif;
 }
@@ -408,6 +458,7 @@ section.why a:hover {
 /*team_section*/
 
 section.team {
+  color: white;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -417,7 +468,6 @@ section.team {
   margin-top: 80px;
 }
 section.team h2 {
-  color: white;
   font-size: 32px;
   font-family: 'Open Sans',sans-serif;
 }
@@ -435,16 +485,20 @@ section.team p {
   font-size: 16px;
   font-family: 'Open Sans',sans-serif;
   margin-bottom: 30px;
-  color: white;
 }
 
 
-.team .member{
+section.team .member{
   width: 100%;
-  display: flex;
-  gap:35px;
-
+  /* display: flex;
+  gap:35px; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 20px;
 }
+
+
+
 .member-card {
   padding: 30px 0 15px;
   flex: 1;
@@ -452,6 +506,7 @@ section.team p {
   flex-direction: column;
   align-items: center;
   background-color: rgb(  0, 40, 92);
+  white-space: nowrap;
 }
 .member-card figure {
   height: 120px;
@@ -469,12 +524,19 @@ section.team p {
 }
 
 div.contact {
-  display: flex;
-  gap: 20px;
+  /* display: flex;
+  gap: 20px; */
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(5,20%);/*这里因为考虑到要居中对齐，所以最好不要使用fr单位，因为用了fr单位就不能实现在宽度里面对其了，因为一旦对其就会自动收缩到内容宽度*/
+  justify-content: center;
+  justify-items: center;
+  /* 这里的link标签不用加gap还能实现间隙丝滑过度的秘密就在于这个20%和对齐上面,目前还是有点小迷惑的，有时候用fr吧，就不能对齐了，因为会导致子项所占宽度自动收缩（也就是内容宽度），但是这里又不会，emmm，还是%保险？ */
 }
 div.contact a i{
   color: white;
   transition: color 0.2s;
+  font-size: 1.5em;
 }
 div.contact a:hover i{
   color: rgb(  0,187,240);
@@ -483,6 +545,7 @@ div.contact a:hover i{
 /*customer section*/
 
 section.customer {
+  color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -529,6 +592,7 @@ section.customer {
   justify-content: space-around;
   transition: transform 0.4s ease;
 }
+
 .customer-card {
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   width: 500px;
@@ -586,12 +650,18 @@ section.customer {
 /* section_footer */
 
 footer.footer {
-  display: flex;
+  /* display: flex; */
   padding: 40px;
   background-color: rgb(  0, 32, 74);
-  justify-content: space-between;
+  /* justify-content: space-between; */
   margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(4,25%);
+
+  
 }
+
+
 footer.footer h3 {
   font-size: 24px;
   font-family: 'Open Sans',sans-serif;
@@ -601,12 +671,12 @@ footer.footer h3 {
   color: white;
 }
 
-.footer address,
+/* .footer address,
 .footer .info ,
 .footer .links,
 .footer .subscribe {
   flex: 1;
-}
+} */
 
 .footer address {
   display: flex;
@@ -615,7 +685,7 @@ footer.footer h3 {
 .footer address .contact-box {
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
+  margin-bottom: 1rem;
 }
 .footer address .contact-box a {
   font-size: 16px;
@@ -638,12 +708,12 @@ footer.footer h3 {
   color: rgb(  0,187,240);
 }
 
-.footer .info {
+/* .footer .info {
   width: 250px;
   height: 250px;
-  padding-right: 40px;
-}
+} */
 .footer .info p {
+  width: 80%;
   font-size: 16px;
   font-family: 'Open Sans',sans-serif;
   color: white;
@@ -728,3 +798,5 @@ section.comment {
 section.comment p {
   font-family: 'Open Sans',sans-serif;
 }
+
+
