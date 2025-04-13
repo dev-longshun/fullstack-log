@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaming your life</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/font.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+
+</head>
+<body>
+  <header>
+    <h1>Gaming your life</h1>
+  </header>
+
+  <div class="container">
+    <!-- 提示信息 -->
+    <!-- <div id="messageBox">操作成功</div> -->
+
+    <!-- 1. 兑换倍率设置 -->
+    <div class="section">
+      <h2>1. 设置兑换倍率</h2>
+      <label>
+        前端学习： 1 分钟 -> <input type="number" step="0.1" id="ratioFrontend" placeholder="0.2" /> 分钟游戏
+      </label>
+      <label>
+        期末课程： 1 分钟 -> <input type="number" step="0.1" id="ratioOther" placeholder="0.3" /> 分钟游戏
+      </label>
+      <label>
+        锻炼： 1 分钟 -> <input type="number" step="0.1" id="ratioExercise" placeholder="0.4" /> 分钟游戏
+      </label>
+      <label>
+        冥想： 1 分钟 -> <input type="number" step="0.1" id="ratioMeditation" placeholder="0.5" /> 分钟游戏
+      </label>
+      <button class="btn" onclick="saveRatio()">保存倍率</button>
+      <div id="ratioMsg"></div>
+      <!-- <hr> -->
+      <!-- 我靠一开始这个水平分割线写在外层，和div同级，导致我container的grid布局乱成一锅粥，给我都整不自信了（我还以为我就一天没学前端连这么基本的东西都忘了呢） -->
+    </div>
+
+
+    <!-- 2. 添加努力 -->
+    <div class="section">
+      <h2>2. 添加努力</h2>
+      <label>前端学习（分钟）
+        <input type="number" id="frontend" min="0" />
+      </label>
+      <label>期末课程（分钟）
+        <input type="number" id="other" min="0" />
+      </label>
+      <label>锻炼（分钟）
+        <input type="number" id="exercise" min="0" />
+      </label>
+      <label>冥想（分钟）
+        <input type="number" id="meditation" min="0" />
+      </label>
+      <button class="btn" onclick="calculateTime()">添加努力</button>
+      <div id="effortMsg"></div>
+      <!-- <hr> -->
+    </div>
+
+
+    <!-- 3. 扣除游戏时间 -->
+    <div class="section">
+      <h2>3. 扣除游戏时间</h2>
+      <label>已玩游戏时长（分钟）
+        <input type="number" id="used" min="0" />
+      </label>
+      <button class="btn" onclick="useTime()">扣除</button>
+      <div id="gameMsg"></div>
+    </div>
+
+    <footer>
+      <div class="leaving-time" id="output">
+        当前可用游戏时长：<strong id="available">0</strong> 分钟
+      </div>
+  
+      <div class="history" id="historyLog">
+        <p>操作记录：</p>
+        <div id="historyList"></div>
+      </div>
+      <button class="btn clear-btn" onclick="resetAll()">重置全部数据</button>
+    </footer>
+
+  </div>
+
+  <div class="copyright">Copyright © longshun </div>
+
+  <script>
+    // 全局可用时长
+    let totalGameMinutes = 0;
+
+    // 默认倍率
+    let ratioFrontend = 0.5;
+    let ratioOther = 0.5;
+    let ratioExercise = 0.5;
+    let ratioMeditation = 0.5;
+
+    // 页面加载时，从 localStorage 中读取数据
+    window.addEventListener('load', () => {
+      // 读取总游戏时长
+      const storedMinutes = localStorage.getItem('totalGameMinutes');
+      if(storedMinutes) {
+        totalGameMinutes = parseFloat(storedMinutes);
+      }
+
+      // 读取倍率
+      const storedRatioFrontend = localStorage.getItem('ratioFrontend');
+      const storedRatioOther = localStorage.getItem('ratioOther');
+      const storedRatioExercise = localStorage.getItem('ratioExercise');
+      const storedRatioMeditation = localStorage.getItem('ratioMeditation');
+
+      if(storedRatioFrontend) ratioFrontend = parseFloat(storedRatioFrontend);
+      if(storedRatioOther) ratioOther = parseFloat(storedRatioOther);
+      if(storedRatioExercise) ratioExercise = parseFloat(storedRatioExercise);
+      if(storedRatioMeditation) ratioMeditation = parseFloat(storedRatioMeditation);
+
+      // 设置到页面
+      document.getElementById('ratioFrontend').value = ratioFrontend;
+      document.getElementById('ratioOther').value = ratioOther;
+      document.getElementById('ratioExercise').value = ratioExercise;
+      document.getElementById('ratioMeditation').value = ratioMeditation;
+
+      // 加载操作记录
+      const storedHistory = localStorage.getItem('historyLog');
+      if(storedHistory) {
+        document.getElementById('historyList').innerHTML = storedHistory;
+      }
+
+      updateOutput();
+    });
+
+    // 显示游戏实长消耗的提示消息
+    function showMessage(msg) {
+      const box = document.getElementById('gameMsg');
+      box.textContent = msg;
+      box.style.opacity = 1;
+      setTimeout(() => {
+        box.style.opacity = 0;
+      }, 2000);
+    }
+
+    // 保存倍率
+    function saveRatio() {
+    // 1) 获取并保存倍率
+      const fVal = parseFloat(document.getElementById('ratioFrontend').value);
+      const oVal = parseFloat(document.getElementById('ratioOther').value);
+      const eVal = parseFloat(document.getElementById('ratioExercise').value);
+      const mVal = parseFloat(document.getElementById('ratioMeditation').value);
+
+      // 如果输入NaN，就保持原值
+      if(!isNaN(fVal)) ratioFrontend = fVal;
+      if(!isNaN(oVal)) ratioOther = oVal;
+      if(!isNaN(eVal)) ratioExercise = eVal;
+      if(!isNaN(mVal)) ratioMeditation = mVal;
+
+      localStorage.setItem('ratioFrontend', ratioFrontend);
+      localStorage.setItem('ratioOther', ratioOther);
+      localStorage.setItem('ratioExercise', ratioExercise);
+      localStorage.setItem('ratioMeditation', ratioMeditation);
+
+      addHistory(`更新倍率 -> 前端:${ratioFrontend}, 期末课程:${ratioOther}, 锻炼:${ratioExercise}, 冥想:${ratioMeditation}`);
+      // showMessage("倍率已更新成功！");
+
+      // 2) 更新相应提示
+      const ratioMsg = document.getElementById('ratioMsg');
+  ratioMsg.textContent = "倍率已更新成功！";
+  ratioMsg.style.opacity = 1; // 立刻变为可见
+
+      setTimeout(() => {
+        ratioMsg.style.opacity = 0; // 2秒后淡出
+      }, 2000);
+    }
+
+    // 添加努力（增加游戏时间）
+    function calculateTime() {
+      // 1) 获取各项输入时间（分钟）
+      const frontend = parseFloat(document.getElementById("frontend").value) || 0;
+      const other = parseFloat(document.getElementById("other").value) || 0;
+      const exercise = parseFloat(document.getElementById("exercise").value) || 0;
+      const meditation = parseFloat(document.getElementById("meditation").value) || 0;
+
+      // 2) 计算总兑换时间
+      let added = 0;
+      added += frontend * ratioFrontend;
+      added += other * ratioOther;
+      added += exercise * ratioExercise;
+      added += meditation * ratioMeditation;
+      added = parseFloat(added.toFixed(1)); // 保留 1 位小数
+
+      // 3) 获取提示框并设置提示信息
+      const effortMsg = document.getElementById('effortMsg');
+
+      if (added !== 0) {
+        const before = totalGameMinutes;
+        totalGameMinutes += added;
+        localStorage.setItem('totalGameMinutes', totalGameMinutes);
+
+        addHistory(`前端:${frontend}min + 其他:${other}min + 锻炼:${exercise}min + 冥想:${meditation}min -> +${added}分钟 (从${before.toFixed(1)} -> ${totalGameMinutes.toFixed(1)})`);
+
+        effortMsg.textContent = `添加成功，增加了 ${added} 分钟游戏时长！`;
+      } else {
+        effortMsg.textContent = "输入无效，未增加任何游戏时长";
+      }
+
+      effortMsg.style.opacity = 1;
+      setTimeout(() => {
+        effortMsg.style.opacity = 0;
+      }, 2000);
+
+      // 4) 清空输入框
+      document.getElementById("frontend").value = '';
+      document.getElementById("other").value = '';
+      document.getElementById("exercise").value = '';
+      document.getElementById("meditation").value = '';
+
+      updateOutput();
+    }
+
+
+    function useTime() {
+      const used = parseFloat(document.getElementById("used").value) || 0;
+      if(used === 0) {
+        showMessage("输入游戏时长为 0 或无效，未扣除");
+      } else {
+        const before = totalGameMinutes;
+        totalGameMinutes = Math.max(-9999, (totalGameMinutes - used));/*前面是最小值哈，这样写是为了可以有负数*/
+        localStorage.setItem('totalGameMinutes', totalGameMinutes);
+        let msg = `游戏:${used}分钟 -> -${used} 分钟 (从${before.toFixed(1)} -> ${totalGameMinutes.toFixed(1)})`;
+        addHistory(msg);
+        showMessage(`扣除成功！已扣除 ${used} 分钟`);
+      }
+      document.getElementById("used").value = '';
+      updateOutput();
+    }
+
+
+
+    // dateAscending: earliest on top, latest on bottom
+    // we use append instead of prepend
+    function addHistory(text) {
+      const historyList = document.getElementById('historyList');
+      const now = new Date();
+      // Format date: yyyy-MM-dd
+      const dateStr = now.toLocaleDateString('zh-CN', {
+        year: 'numeric', month: '2-digit', day: '2-digit'
+      });
+      // Format time: HH:mm:ss
+      const timeStr = now.toLocaleTimeString('zh-CN', {
+        hour: '2-digit', minute:'2-digit', second:'2-digit', hour12: false
+      });
+
+      const div = document.createElement('div');
+      div.className = 'history-item';
+      div.textContent = `[${dateStr} ${timeStr}] ${text}`;
+
+      historyList.append(div); // append = time ascending
+      localStorage.setItem('historyLog', historyList.innerHTML);
+    }
+
+    function resetAll() {
+      if(confirm('确定要清空所有数据吗？')) {
+        totalGameMinutes = 0;
+        localStorage.setItem('totalGameMinutes', 0);
+        document.getElementById('historyList').innerHTML = '';
+        localStorage.setItem('historyLog', '');
+        showMessage("已重置全部数据");
+        updateOutput();
+      }
+    }
+
+    function updateOutput() {
+      document.getElementById("available").innerText = totalGameMinutes.toFixed(1);
+    }
+  </script>
+</body>
+</html>

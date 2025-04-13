@@ -1,0 +1,14 @@
+@media screen and (max-width:1000px) {
+  .container {
+    grid-template-columns: 80%;
+    justify-content: center;
+    justify-items: center;
+    grid-template-rows: auto;
+  }
+  .section {
+    width: 80%;
+  }
+  footer {
+    width: 80%;
+  }
+}

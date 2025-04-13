@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Sharpie';
+  src: url('../../000-font/english/sharpie/Sharpie-Bold.woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Smile Sans';
+  src: url('../../000-font/chinese/smile/SmileySans-Oblique.ttf.woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cat Round';
+  src: url('../../000-font/chinese/catround/catround.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lxgw';
+  src: url('../../000-font/chinese/lxgw/LXGWWenKaiMono-Medium.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
