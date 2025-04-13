@@ -109,7 +109,7 @@ input[type='radio'] {
 }
 
 /* 滑动式轨道经典flex写法 */
-div.track-container{
+div.track-container {
   width: 100%;
   overflow-x: hidden;
 }
