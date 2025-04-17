@@ -1,0 +1,51 @@
+@font-face{
+  font-family: 'Cat Round';
+  src: url('../000-font/chinese/catround/catround.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  font-family: 'Cat Round', sans-serif;
+  text-align: center;
+  padding: 50px;
+  background: #111;
+  color: white;
+}
+canvas {
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+}
+h1 {
+  color: #fff;
+}
+p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+body p:nth-of-type(2) span{
+  margin: 0 auto;
+  background: linear-gradient( 80deg, #ff0000, #ff7300,  #7a00ff, #ff00c8, #ff0000);
+  background-clip: text;
+  color: transparent;
+  width: fit-content;
+  background-size: 400%;/*一开始这里没有设置背景大小，就导致背景只有那么点大小，所以根本无法流动，即动画效果无法生效*/
+  animation: glowEffect 25s linear infinite;
+
+}
+.highlight {
+  color: #d9534f;
+  font-weight: bold;
+}
+
+@keyframes glowEffect {
+  0% {
+    background-position: 0 0 ;
+  }
+  50% {
+    background-position: 400% 0 ;
+  }
+  100% {
+    background-position: 0 0 ;
+  }
+}
