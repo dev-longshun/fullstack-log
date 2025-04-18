@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  padding: 50px;
+  background: #111;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+
+}
+canvas {
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+}
+.highlight {
+  color: #d9534f;
+  font-weight: bold;
+}
+
+
+h1 {
+  font-family: 'Smile Sans';
+  font-size: 40px;
+  letter-spacing: 0.5em;
+  margin-left: 0.5em;
+}
+body p:first-of-type {
+  font-family: 'Cat Round',sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.05em;
+}
+body p:nth-of-type(2) {
+  font-family: 'Cat Round',sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+}
+body p:nth-of-type(3){
+  background: linear-gradient( 80deg, #ff0000, #ff7300,  #7a00ff, #ff00c8, #ff0000);
+  background-clip: text;
+  color: transparent;
+  background-size: 400%;/*一开始这里没有设置背景大小，就导致背景只有那么点大小，所以根本无法流动，即动画效果无法生效*/
+  animation: glowEffect 25s linear infinite;
+  font-family: 'Pally',sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+
+}
+
+@keyframes glowEffect {
+  0% {
+    background-position: 0 0 ;
+  }
+  50% {
+    background-position: 400% 0 ;
+  }
+  100% {
+    background-position: 0 0 ;
+  }
+}

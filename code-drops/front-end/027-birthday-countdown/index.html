@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>birthday Countdown</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="font.css">
+
+</head>
+<body>
+  <h1>生日倒计时</h1>
+  <p id="today" class="highlight"></p>
+  <p id="birthday"></span></p>
+  <p id="time"></p>
+
+  <script>
+    function birthdayCountdown() {
+    let now = new Date();
+    let birthday = new Date(now);/**这里一定要new，才能产生新对象 */ 
+    birthday.setMonth(3);
+    birthday.setDate(25);
+    birthday.setHours(0,0,0,0);/**这里设置成当天0点,注意，一定要把分钟和秒也设置！不然的话就是和now相同的值，这样的话remaining的对应部分就一直是0 */
+    
+    let remaining = birthday - now;
+    if (remaining < 0) remaining += (365 * 24 * 60 * 60 * 1000);
+    //这里需要再补充一下闰年的判断
+    let ifToday = now.getMonth() === birthday.getMonth() && now.getDate() === birthday.getDate();
+
+    let days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+    let hours = Math.floor(remaining % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+    let minutes = Math.floor(remaining % (1000 * 60 * 60) / (1000 * 60));
+    let seconds = Math.floor(remaining % (1000 * 60) / (1000));
+    document.getElementById('today').innerText = `今天是：${now.getFullYear()} - ${now.getMonth() + 1} - ${now.getDate()}`
+    document.getElementById('birthday').innerText = ifToday
+      ? `🎉 shun,happy birthday ! 🎂`
+      : `⏳ 距离生日还有`;
+    document.getElementById('time').innerText = ifToday 
+      ? ''
+      : `${days} days ${hours} h ${minutes} m ${seconds} s` 
+  }
+  birthdayCountdown();
+  setInterval(birthdayCountdown,1000)
+  </script>
+  <canvas id="c"></canvas>
+  <script src="background.js"></script>
+</body>
+</html>
