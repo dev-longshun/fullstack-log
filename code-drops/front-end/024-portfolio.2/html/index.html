@@ -1,29 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
   <title>My portfolio</title>
-  <link rel="stylesheet" href="../../000-icon-planet/icomoon-solid/style.css">
   <link rel="stylesheet" href="../css/index.css">
-  <link rel="stylesheet" href="../css/font.css">
-  <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../../000-icon-planet/icomoon-solid/style.css">
 </head>
 <body>
-  <section class="hero_area">
-    <header>
-      <div class="header-left">
-      <span>longshun</span>
+  <!-- 导航栏 -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <a href="#">longshun</a>
+      </div>
+      <ul class="navbar-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Resume</a></li>
+        <li><a href="#">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 主体内容 -->
+  <main>
+    <!-- 主页顶部/英雄区 -->
+    <section class="hero-section">
+        <!-- 可能展示的标签，比如“Design / Development / Marketing” -->
+        <div class="tags">
+          <span class="tag">Design</span>
+          <span class="tag">Development</span>
+          <span class="tag">Marketing</span>
+        </div>
+
+      <div class="hero-content">
+        <!-- 上方文字部分 -->
+        <h1>I can help your business to</h1>
+        <h2>Get online and grow fast</h2>
+        
+
+        <!-- 按钮组 -->
+        <div class="cta-buttons">
+          <a href="#" class="btn-resume">Resume</a>
+          <a href="#" class="btn-projects">Projects</a>
+        </div>
       </div>
 
-      <button class="header-right-bar"><i class="icon-bars-solid"></i></button>
-      <ul class="header-right">
-        <li><a href="#" class="header-link">Home</a></li>
-        <li><a href="#" class="header-link">Resume</a></li>
-        <li><a href="#" class="header-link">Project</a></li>
-        <li><a href="#" class="header-link">Contact</a></li>
-      </ul>
-    </header>
-  </section>
+      <!-- 人物形象部分 -->
+      <div class="hero-image">
+        <div class="img-bg"></div>
+        <!-- 如果不想用本地图片，可以用链接或者空 src 让 CSS 做占位 -->
+        <img src="../img/profile.png" alt="Profile Picture" />
+      </div>
+    </section>
+
+    <!-- About Me 区域 -->
+    <section class="about-section">
+      <h2>About Me</h2>
+      <p>
+        My name is longshun and I help brands grow. 
+      </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor ligula, interdum eu quam et, fermentum aliquet quam. Quisque nisl augue, tristique vel est quis, placerat finibus sapien.</p>
+      <!-- 社交链接，可以自行换成对应平台图标 -->
+      <div class="social-links">
+        <a href="#" >
+          <i class="icon-twitter-brands"></i>
+        </a>
+        <a href="#">
+          <i class="icon-linkedin-in-brands"></i>
+        </a>
+        <a href="#">
+          <i class="icon-github-brands"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <p> © designed by shun 2025-04-21  </p>
+  </footer>
 </body>
 </html>

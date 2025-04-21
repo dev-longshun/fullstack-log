@@ -8,42 +8,174 @@ a {
   color: inherit;
 }
 
+/* header area */
 
-/* hero_area  */
-
-header {
-  padding: 10px 0;
-  width: 90%;
+header nav {
+  padding: 2rem 0;
+  width: 80%;
   margin: 0 auto;
+  /* 这里采取百分比的居中方式而不是用padding填充左右，目的是创造一种丝滑的效果（浏览器尺寸缩放的时候，如果是用padding的话，缩放的另一侧（一般是缩放右边，然后左边那测的位置是定死的，不太优雅）），这其实只是个width的问题，不是出在flex布局上 */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-header .header-left span {
-  font-size: 24px;
-  color: #1e30f3;
-  font-family: 'Plus Jakarta Sans',sans-serif;
-  font-weight: bold;
-}
-
-header .header-right {
+nav ul {
   display: flex;
-  gap: 2rem;
-  color: #0000008c;
-}
-header .header-right a.header-link {
-  font-size: 18px;
-  font-weight: bold;
-  font-family: 'Plus Jakarta Sans',sans-serif;
-}
-header button.header-right-bar {
-  border: 1px solid rgb(0,0,0,0.2);
-  padding: 8px 20px;
-  border-radius: 6px;
-  font-size: 24px;
-  color: #0000008c;
-  display: none;
-  background-color: transparent;
+  gap: 1.5rem;
 }
 
+nav .navbar-brand {
+  font-size: 24px;
+  font-family: 'Pally';
+  font-weight: bold;
+  color: rgb( 30, 48,243);
+}
+ul.navbar-menu li a {
+  color: #0000008c;
+  font-weight: 500;
+  font-family: 'Plus Jakarta Sans';
+  font-weight: bold;
+  transition: color 0.2s;
+}
+ul.navbar-menu li a:hover {
+  color: rgb( 76, 76, 76);
+}
+
+/* hero section */
+
+div.tags {
+  margin: 0 auto;
+  color: white;
+  font-family: 'Plus Jakarta Sans';
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0.2em 1em;
+  border-radius: 8px;
+  background: linear-gradient(135deg,rgb( 39, 48,238), rgb(214, 31,135));
+  width: fit-content;
+}
+
+
+section.hero-section {
+  margin: 0 auto;
+  text-align: center;
+}
+.hero-content h1 {
+  font-weight: 300;
+  font-family: 'Plus Jakarta Sans';
+  font-size: 32px;
+  color: #0000008c;
+}
+.hero-content h2 {
+  font-size: 60px;
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 700;
+  background: linear-gradient(135deg,rgb( 39, 48,238), rgb(214, 31,135));
+  background-clip: text;
+  color: transparent;
+  /* 下面这两个是保险兼容写法 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+div.cta-buttons {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+div.cta-buttons a {
+  padding: 1rem 2rem;
+  border: 1px solid black;
+  border-radius: 12px;
+  font-size: 18px;
+}
+div.cta-buttons a:first-of-type {
+  background-color: rgb( 30, 48,243);
+  color: white;
+  font-family: 'Plus Jakarta Sans';
+  font-weight: bold;
+  border: none;
+}
+div.cta-buttons a:nth-of-type(2) {
+  color: rgb( 33, 37, 41);
+  font-family: 'Plus Jakarta Sans';
+  font-weight: bold;
+  transition: all 0.2s;
+}
+div.cta-buttons a:nth-of-type(2):hover {
+  background-color: rgb( 33, 37, 41);
+  color: white;
+
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-image .img-bg {
+  background: linear-gradient(135deg,rgb( 39, 48,238), rgb(214, 31,135));
+  height: 400px;
+  width: 350px;
+  border-radius: 30px;
+}
+.hero-image img {
+  position: absolute;
+  height: 400px;
+  z-index: 1;
+}
+
+/* about_section */
+
+.about-section {
+  background-color: rgb(248,249,250);
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.about-section h2 {
+  font-size: 36px;
+  background: linear-gradient(135deg,rgb( 39, 48,238), rgb(214, 31,135));
+  background-clip: text;
+  color: transparent;
+}
+
+.about-section p {
+  color: #212529;
+  font-family: 'Plus Jakarta Sans',sans-serif;
+  font-weight: 300;
+
+}
+.about-section p:first-of-type {
+  font-size: 18px;
+}
+.about-section p:nth-of-type(2) {
+  font-size: 14px;
+  width: 80%;
+}
+
+.about-section .social-links {
+  display: flex;
+  gap: 1rem;
+}
+.about-section .social-links a i {
+  font-size: 1.45rem;
+  color: transparent;
+  background: linear-gradient(135deg,rgb( 39, 48,238), rgb(214, 31,135));
+  background-clip: text;
+}
+
+.footer p {
+  font-size: 14px;
+  padding: 1rem;
+  width: fit-content;
+  margin: 0 auto;
+  font-family: 'Plus Jakarta Sans',sans-serif;
+  font-weight: 300;
+}
