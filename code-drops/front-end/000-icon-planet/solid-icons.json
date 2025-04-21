@@ -1,8 +1,43 @@
 [
   {
+    "name": "accessibility",
+    "keywords": ["accessibility"],
+    "path": "../000-icon-planet/solid-icons/accessibility.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "accessible-icon-brands-solid",
     "keywords": ["accessible", "icon", "brands", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/accessible-icon-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "address-book",
+    "keywords": ["address", "book"],
+    "path": "../000-icon-planet/solid-icons/address-book.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "aid-kit",
+    "keywords": ["aid", "kit"],
+    "path": "../000-icon-planet/solid-icons/aid-kit.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "airplane",
+    "keywords": ["airplane"],
+    "path": "../000-icon-planet/solid-icons/airplane.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "alarm",
+    "keywords": ["alarm"],
+    "path": "../000-icon-planet/solid-icons/alarm.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -21,6 +56,13 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "amazon",
+    "keywords": ["amazon"],
+    "path": "../000-icon-planet/solid-icons/amazon.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "amilia-brands-solid",
     "keywords": ["amilia", "brands", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/amilia-brands-solid.svg",
@@ -31,6 +73,13 @@
     "name": "android-brands-solid",
     "keywords": ["android", "brands", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/android-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "android",
+    "keywords": ["android"],
+    "path": "../000-icon-planet/solid-icons/android.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -91,6 +140,20 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "angry",
+    "keywords": ["angry"],
+    "path": "../000-icon-planet/solid-icons/angry.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "angry2",
+    "keywords": ["angry2"],
+    "path": "../000-icon-planet/solid-icons/angry2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "apple-brands",
     "keywords": ["apple", "brands"],
     "path": "../000-icon-planet/solid-icons/apple-brands.svg",
@@ -105,9 +168,163 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "appleinc",
+    "keywords": ["appleinc"],
+    "path": "../000-icon-planet/solid-icons/appleinc.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "arrow-down-left",
+    "keywords": ["arrow", "direction", "pointer", "down", "left", "previous", "backward"],
+    "path": "../000-icon-planet/solid-icons/arrow-down-left.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "arrow-down-left2",
+    "keywords": ["arrow", "direction", "pointer", "down", "left2"],
+    "path": "../000-icon-planet/solid-icons/arrow-down-left2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "arrow-down-right",
+    "keywords": ["arrow", "direction", "pointer", "down", "right", "next", "forward"],
+    "path": "../000-icon-planet/solid-icons/arrow-down-right.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "arrow-down-right2",
+    "keywords": ["arrow", "direction", "pointer", "down", "right2"],
+    "path": "../000-icon-planet/solid-icons/arrow-down-right2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "arrow-down",
+    "keywords": ["arrow", "direction", "pointer", "down"],
+    "path": "../000-icon-planet/solid-icons/arrow-down.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "arrow-down2",
+    "keywords": ["arrow", "direction", "pointer", "down2"],
+    "path": "../000-icon-planet/solid-icons/arrow-down2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "arrow-left",
+    "keywords": ["arrow", "direction", "pointer", "left", "previous", "backward"],
+    "path": "../000-icon-planet/solid-icons/arrow-left.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "arrow-left2",
+    "keywords": ["arrow", "direction", "pointer", "left2"],
+    "path": "../000-icon-planet/solid-icons/arrow-left2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "arrow-right",
+    "keywords": ["arrow", "direction", "pointer", "right", "next", "forward"],
+    "path": "../000-icon-planet/solid-icons/arrow-right.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "arrow-right2",
+    "keywords": ["arrow", "direction", "pointer", "right2"],
+    "path": "../000-icon-planet/solid-icons/arrow-right2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "arrow-up-left",
+    "keywords": ["arrow", "direction", "pointer", "up", "left", "previous", "backward"],
+    "path": "../000-icon-planet/solid-icons/arrow-up-left.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "arrow-up-left2",
+    "keywords": ["arrow", "direction", "pointer", "up", "left2"],
+    "path": "../000-icon-planet/solid-icons/arrow-up-left2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "arrow-up-right",
+    "keywords": ["arrow", "direction", "pointer", "up", "right", "next", "forward"],
+    "path": "../000-icon-planet/solid-icons/arrow-up-right.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "arrow-up-right2",
+    "keywords": ["arrow", "direction", "pointer", "up", "right2"],
+    "path": "../000-icon-planet/solid-icons/arrow-up-right2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "arrow-up",
+    "keywords": ["arrow", "direction", "pointer", "up"],
+    "path": "../000-icon-planet/solid-icons/arrow-up.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "arrow-up2",
+    "keywords": ["arrow", "direction", "pointer", "up2"],
+    "path": "../000-icon-planet/solid-icons/arrow-up2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "attachment",
+    "keywords": ["attachment"],
+    "path": "../000-icon-planet/solid-icons/attachment.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "award-solid",
     "keywords": ["award", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/award-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "backward",
+    "keywords": ["backward"],
+    "path": "../000-icon-planet/solid-icons/backward.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "backward2",
+    "keywords": ["backward2"],
+    "path": "../000-icon-planet/solid-icons/backward2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "baffled",
+    "keywords": ["baffled"],
+    "path": "../000-icon-planet/solid-icons/baffled.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "baffled2",
+    "keywords": ["baffled2"],
+    "path": "../000-icon-planet/solid-icons/baffled2.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -119,6 +336,13 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "barcode",
+    "keywords": ["barcode"],
+    "path": "../000-icon-planet/solid-icons/barcode.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "bars-solid",
     "keywords": ["bars", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/bars-solid.svg",
@@ -126,9 +350,37 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "basecamp",
+    "keywords": ["basecamp"],
+    "path": "../000-icon-planet/solid-icons/basecamp.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "behance",
+    "keywords": ["behance"],
+    "path": "../000-icon-planet/solid-icons/behance.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "behance2",
+    "keywords": ["behance2"],
+    "path": "../000-icon-planet/solid-icons/behance2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "bell-solid",
     "keywords": ["bell", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/bell-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "bell",
+    "keywords": ["bell"],
+    "path": "../000-icon-planet/solid-icons/bell.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -147,6 +399,55 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "bin",
+    "keywords": ["bin"],
+    "path": "../000-icon-planet/solid-icons/bin.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "bin2",
+    "keywords": ["bin2"],
+    "path": "../000-icon-planet/solid-icons/bin2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "binoculars",
+    "keywords": ["binoculars"],
+    "path": "../000-icon-planet/solid-icons/binoculars.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "blocked",
+    "keywords": ["blocked"],
+    "path": "../000-icon-planet/solid-icons/blocked.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "blog",
+    "keywords": ["blog"],
+    "path": "../000-icon-planet/solid-icons/blog.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "blogger",
+    "keywords": ["blogger"],
+    "path": "../000-icon-planet/solid-icons/blogger.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "blogger2",
+    "keywords": ["blogger2"],
+    "path": "../000-icon-planet/solid-icons/blogger2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "bluesky-brands",
     "keywords": ["bluesky", "brands"],
     "path": "../000-icon-planet/solid-icons/bluesky-brands.svg",
@@ -157,6 +458,132 @@
     "name": "bluetooth-brands-solid",
     "keywords": ["bluetooth", "brands", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/bluetooth-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "bold",
+    "keywords": ["bold"],
+    "path": "../000-icon-planet/solid-icons/bold.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "book",
+    "keywords": ["book"],
+    "path": "../000-icon-planet/solid-icons/book.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "bookmark",
+    "keywords": ["bookmark"],
+    "path": "../000-icon-planet/solid-icons/bookmark.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "bookmarks",
+    "keywords": ["bookmarks"],
+    "path": "../000-icon-planet/solid-icons/bookmarks.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "books",
+    "keywords": ["books"],
+    "path": "../000-icon-planet/solid-icons/books.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "box-add",
+    "keywords": ["box", "add", "plus", "insert", "new"],
+    "path": "../000-icon-planet/solid-icons/box-add.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "box-remove",
+    "keywords": ["box", "remove"],
+    "path": "../000-icon-planet/solid-icons/box-remove.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "briefcase",
+    "keywords": ["briefcase"],
+    "path": "../000-icon-planet/solid-icons/briefcase.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "brightness-contrast",
+    "keywords": ["brightness", "contrast"],
+    "path": "../000-icon-planet/solid-icons/brightness-contrast.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "bubble",
+    "keywords": ["bubble"],
+    "path": "../000-icon-planet/solid-icons/bubble.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "bubble2",
+    "keywords": ["bubble2"],
+    "path": "../000-icon-planet/solid-icons/bubble2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "bubbles",
+    "keywords": ["bubbles"],
+    "path": "../000-icon-planet/solid-icons/bubbles.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "bubbles2",
+    "keywords": ["bubbles2"],
+    "path": "../000-icon-planet/solid-icons/bubbles2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "bubbles3",
+    "keywords": ["bubbles3"],
+    "path": "../000-icon-planet/solid-icons/bubbles3.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "bubbles4",
+    "keywords": ["bubbles4"],
+    "path": "../000-icon-planet/solid-icons/bubbles4.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "bug",
+    "keywords": ["bug"],
+    "path": "../000-icon-planet/solid-icons/bug.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "bullhorn",
+    "keywords": ["bullhorn"],
+    "path": "../000-icon-planet/solid-icons/bullhorn.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "calculator",
+    "keywords": ["calculator"],
+    "path": "../000-icon-planet/solid-icons/calculator.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -189,6 +616,13 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "calendar",
+    "keywords": ["calendar"],
+    "path": "../000-icon-planet/solid-icons/calendar.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "camera-solid",
     "keywords": ["camera", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/camera-solid.svg",
@@ -196,9 +630,30 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "camera",
+    "keywords": ["camera"],
+    "path": "../000-icon-planet/solid-icons/camera.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "cancel-circle",
+    "keywords": ["cancel", "circle", "round", "shape"],
+    "path": "../000-icon-planet/solid-icons/cancel-circle.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "cart-shopping-solid",
     "keywords": ["cart", "shopping", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/cart-shopping-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "cart",
+    "keywords": ["cart"],
+    "path": "../000-icon-planet/solid-icons/cart.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -231,9 +686,79 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "checkbox-checked",
+    "keywords": ["checkbox", "checked"],
+    "path": "../000-icon-planet/solid-icons/checkbox-checked.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "checkbox-unchecked",
+    "keywords": ["checkbox", "unchecked"],
+    "path": "../000-icon-planet/solid-icons/checkbox-unchecked.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "checkmark",
+    "keywords": ["checkmark"],
+    "path": "../000-icon-planet/solid-icons/checkmark.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "checkmark2",
+    "keywords": ["checkmark2"],
+    "path": "../000-icon-planet/solid-icons/checkmark2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "chrome",
+    "keywords": ["chrome"],
+    "path": "../000-icon-planet/solid-icons/chrome.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "circle-down",
+    "keywords": ["circle", "round", "shape", "down"],
+    "path": "../000-icon-planet/solid-icons/circle-down.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "circle-left",
+    "keywords": ["circle", "round", "shape", "left", "previous", "backward"],
+    "path": "../000-icon-planet/solid-icons/circle-left.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "circle-right",
+    "keywords": ["circle", "round", "shape", "right", "next", "forward"],
+    "path": "../000-icon-planet/solid-icons/circle-right.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "circle-up",
+    "keywords": ["circle", "round", "shape", "up"],
+    "path": "../000-icon-planet/solid-icons/circle-up.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "circle-user-solid",
     "keywords": ["circle", "round", "shape", "user", "person", "account", "profile", "member", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/circle-user-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "clear-formatting",
+    "keywords": ["clear", "formatting"],
+    "path": "../000-icon-planet/solid-icons/clear-formatting.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -252,9 +777,65 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "clipboard",
+    "keywords": ["clipboard"],
+    "path": "../000-icon-planet/solid-icons/clipboard.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "clock",
+    "keywords": ["clock"],
+    "path": "../000-icon-planet/solid-icons/clock.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "clock2",
+    "keywords": ["clock2"],
+    "path": "../000-icon-planet/solid-icons/clock2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "cloud-check",
+    "keywords": ["cloud", "check"],
+    "path": "../000-icon-planet/solid-icons/cloud-check.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "cloud-download",
+    "keywords": ["cloud", "download"],
+    "path": "../000-icon-planet/solid-icons/cloud-download.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "cloud-solid",
     "keywords": ["cloud", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/cloud-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "cloud-upload",
+    "keywords": ["cloud", "upload"],
+    "path": "../000-icon-planet/solid-icons/cloud-upload.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "cloud",
+    "keywords": ["cloud"],
+    "path": "../000-icon-planet/solid-icons/cloud.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "clubs",
+    "keywords": ["clubs"],
+    "path": "../000-icon-planet/solid-icons/clubs.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -266,9 +847,65 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "codepen",
+    "keywords": ["codepen"],
+    "path": "../000-icon-planet/solid-icons/codepen.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "cog",
+    "keywords": ["cog"],
+    "path": "../000-icon-planet/solid-icons/cog.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "cogs",
+    "keywords": ["cogs"],
+    "path": "../000-icon-planet/solid-icons/cogs.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "coin-dollar",
+    "keywords": ["coin", "dollar"],
+    "path": "../000-icon-planet/solid-icons/coin-dollar.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "coin-euro",
+    "keywords": ["coin", "euro"],
+    "path": "../000-icon-planet/solid-icons/coin-euro.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "coin-pound",
+    "keywords": ["coin", "pound"],
+    "path": "../000-icon-planet/solid-icons/coin-pound.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "coin-yen",
+    "keywords": ["coin", "yen"],
+    "path": "../000-icon-planet/solid-icons/coin-yen.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "coins-solid",
     "keywords": ["coins", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/coins-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "command",
+    "keywords": ["command"],
+    "path": "../000-icon-planet/solid-icons/command.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -283,6 +920,69 @@
     "name": "comment-solid",
     "keywords": ["comment", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/comment-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "compass",
+    "keywords": ["compass"],
+    "path": "../000-icon-planet/solid-icons/compass.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "compass2",
+    "keywords": ["compass2"],
+    "path": "../000-icon-planet/solid-icons/compass2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "confused",
+    "keywords": ["confused"],
+    "path": "../000-icon-planet/solid-icons/confused.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "confused2",
+    "keywords": ["confused2"],
+    "path": "../000-icon-planet/solid-icons/confused2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "connection",
+    "keywords": ["connection"],
+    "path": "../000-icon-planet/solid-icons/connection.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "contrast",
+    "keywords": ["contrast"],
+    "path": "../000-icon-planet/solid-icons/contrast.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "cool",
+    "keywords": ["cool"],
+    "path": "../000-icon-planet/solid-icons/cool.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "cool2",
+    "keywords": ["cool2"],
+    "path": "../000-icon-planet/solid-icons/cool2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "copy",
+    "keywords": ["copy"],
+    "path": "../000-icon-planet/solid-icons/copy.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -308,9 +1008,100 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "credit-card",
+    "keywords": ["credit", "card"],
+    "path": "../000-icon-planet/solid-icons/credit-card.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "crop",
+    "keywords": ["crop"],
+    "path": "../000-icon-planet/solid-icons/crop.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "cross",
+    "keywords": ["cross"],
+    "path": "../000-icon-planet/solid-icons/cross.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "crying",
+    "keywords": ["crying"],
+    "path": "../000-icon-planet/solid-icons/crying.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "crying2",
+    "keywords": ["crying2"],
+    "path": "../000-icon-planet/solid-icons/crying2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "css3",
+    "keywords": ["css3"],
+    "path": "../000-icon-planet/solid-icons/css3.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "ctrl",
+    "keywords": ["ctrl"],
+    "path": "../000-icon-planet/solid-icons/ctrl.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "database",
+    "keywords": ["database"],
+    "path": "../000-icon-planet/solid-icons/database.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "delicious",
+    "keywords": ["delicious"],
+    "path": "../000-icon-planet/solid-icons/delicious.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "deskpro-brands-solid",
     "keywords": ["deskpro", "brands", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/deskpro-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "deviantart",
+    "keywords": ["deviantart"],
+    "path": "../000-icon-planet/solid-icons/deviantart.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "diamonds",
+    "keywords": ["diamonds"],
+    "path": "../000-icon-planet/solid-icons/diamonds.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "dice",
+    "keywords": ["dice"],
+    "path": "../000-icon-planet/solid-icons/dice.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "display",
+    "keywords": ["display"],
+    "path": "../000-icon-planet/solid-icons/display.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -322,9 +1113,142 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "download",
+    "keywords": ["download"],
+    "path": "../000-icon-planet/solid-icons/download.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "download2",
+    "keywords": ["download2"],
+    "path": "../000-icon-planet/solid-icons/download2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "download3",
+    "keywords": ["download3"],
+    "path": "../000-icon-planet/solid-icons/download3.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "drawer",
+    "keywords": ["drawer"],
+    "path": "../000-icon-planet/solid-icons/drawer.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "drawer2",
+    "keywords": ["drawer2"],
+    "path": "../000-icon-planet/solid-icons/drawer2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "dribbble",
+    "keywords": ["dribbble"],
+    "path": "../000-icon-planet/solid-icons/dribbble.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "drive",
+    "keywords": ["drive"],
+    "path": "../000-icon-planet/solid-icons/drive.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "dropbox",
+    "keywords": ["dropbox"],
+    "path": "../000-icon-planet/solid-icons/dropbox.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "droplet",
+    "keywords": ["droplet"],
+    "path": "../000-icon-planet/solid-icons/droplet.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "earth",
+    "keywords": ["earth"],
+    "path": "../000-icon-planet/solid-icons/earth.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "edge-legacy-brands-solid",
     "keywords": ["edge", "legacy", "brands", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/edge-legacy-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "edge",
+    "keywords": ["edge"],
+    "path": "../000-icon-planet/solid-icons/edge.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "eject",
+    "keywords": ["eject"],
+    "path": "../000-icon-planet/solid-icons/eject.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "ello",
+    "keywords": ["ello"],
+    "path": "../000-icon-planet/solid-icons/ello.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "embed",
+    "keywords": ["embed"],
+    "path": "../000-icon-planet/solid-icons/embed.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "embed2",
+    "keywords": ["embed2"],
+    "path": "../000-icon-planet/solid-icons/embed2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "enlarge",
+    "keywords": ["enlarge"],
+    "path": "../000-icon-planet/solid-icons/enlarge.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "enlarge2",
+    "keywords": ["enlarge2"],
+    "path": "../000-icon-planet/solid-icons/enlarge2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "enter",
+    "keywords": ["enter"],
+    "path": "../000-icon-planet/solid-icons/enter.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "envelop",
+    "keywords": ["envelop"],
+    "path": "../000-icon-planet/solid-icons/envelop.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -339,6 +1263,76 @@
     "name": "envelope-solid",
     "keywords": ["envelope", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/envelope-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "equalizer",
+    "keywords": ["equalizer"],
+    "path": "../000-icon-planet/solid-icons/equalizer.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "equalizer2",
+    "keywords": ["equalizer2"],
+    "path": "../000-icon-planet/solid-icons/equalizer2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "evil",
+    "keywords": ["evil"],
+    "path": "../000-icon-planet/solid-icons/evil.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "evil2",
+    "keywords": ["evil2"],
+    "path": "../000-icon-planet/solid-icons/evil2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "exit",
+    "keywords": ["exit"],
+    "path": "../000-icon-planet/solid-icons/exit.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "eye-blocked",
+    "keywords": ["eye", "blocked"],
+    "path": "../000-icon-planet/solid-icons/eye-blocked.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "eye-minus",
+    "keywords": ["eye", "minus"],
+    "path": "../000-icon-planet/solid-icons/eye-minus.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "eye-plus",
+    "keywords": ["eye", "plus"],
+    "path": "../000-icon-planet/solid-icons/eye-plus.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "eye",
+    "keywords": ["eye"],
+    "path": "../000-icon-planet/solid-icons/eye.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "eyedropper",
+    "keywords": ["eyedropper"],
+    "path": "../000-icon-planet/solid-icons/eyedropper.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -364,9 +1358,79 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "facebook",
+    "keywords": ["facebook"],
+    "path": "../000-icon-planet/solid-icons/facebook.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "facebook2",
+    "keywords": ["facebook2"],
+    "path": "../000-icon-planet/solid-icons/facebook2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "feed",
+    "keywords": ["feed"],
+    "path": "../000-icon-planet/solid-icons/feed.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "figma-brands",
     "keywords": ["figma", "brands"],
     "path": "../000-icon-planet/solid-icons/figma-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "file-empty",
+    "keywords": ["file", "empty"],
+    "path": "../000-icon-planet/solid-icons/file-empty.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "file-excel",
+    "keywords": ["file", "excel"],
+    "path": "../000-icon-planet/solid-icons/file-excel.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "file-music",
+    "keywords": ["file", "music"],
+    "path": "../000-icon-planet/solid-icons/file-music.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "file-openoffice",
+    "keywords": ["file", "openoffice"],
+    "path": "../000-icon-planet/solid-icons/file-openoffice.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "file-pdf",
+    "keywords": ["file", "pdf"],
+    "path": "../000-icon-planet/solid-icons/file-pdf.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "file-picture",
+    "keywords": ["file", "picture"],
+    "path": "../000-icon-planet/solid-icons/file-picture.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "file-play",
+    "keywords": ["file", "play"],
+    "path": "../000-icon-planet/solid-icons/file-play.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -385,6 +1449,76 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "file-text",
+    "keywords": ["file", "text"],
+    "path": "../000-icon-planet/solid-icons/file-text.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "file-text2",
+    "keywords": ["file", "text2"],
+    "path": "../000-icon-planet/solid-icons/file-text2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "file-video",
+    "keywords": ["file", "video"],
+    "path": "../000-icon-planet/solid-icons/file-video.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "file-word",
+    "keywords": ["file", "word"],
+    "path": "../000-icon-planet/solid-icons/file-word.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "file-zip",
+    "keywords": ["file", "zip"],
+    "path": "../000-icon-planet/solid-icons/file-zip.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "files-empty",
+    "keywords": ["files", "empty"],
+    "path": "../000-icon-planet/solid-icons/files-empty.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "film",
+    "keywords": ["film"],
+    "path": "../000-icon-planet/solid-icons/film.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "filter",
+    "keywords": ["filter"],
+    "path": "../000-icon-planet/solid-icons/filter.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "finder",
+    "keywords": ["finder"],
+    "path": "../000-icon-planet/solid-icons/finder.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "fire",
+    "keywords": ["fire"],
+    "path": "../000-icon-planet/solid-icons/fire.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "firefox-brands-solid",
     "keywords": ["firefox", "brands", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/firefox-brands-solid.svg",
@@ -399,9 +1533,205 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "firefox",
+    "keywords": ["firefox"],
+    "path": "../000-icon-planet/solid-icons/firefox.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "first",
+    "keywords": ["first"],
+    "path": "../000-icon-planet/solid-icons/first.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "flag",
+    "keywords": ["flag"],
+    "path": "../000-icon-planet/solid-icons/flag.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "flattr",
+    "keywords": ["flattr"],
+    "path": "../000-icon-planet/solid-icons/flattr.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "flickr",
+    "keywords": ["flickr"],
+    "path": "../000-icon-planet/solid-icons/flickr.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "flickr2",
+    "keywords": ["flickr2"],
+    "path": "../000-icon-planet/solid-icons/flickr2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "flickr3",
+    "keywords": ["flickr3"],
+    "path": "../000-icon-planet/solid-icons/flickr3.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "flickr4",
+    "keywords": ["flickr4"],
+    "path": "../000-icon-planet/solid-icons/flickr4.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "floppy-disk",
+    "keywords": ["floppy", "disk"],
+    "path": "../000-icon-planet/solid-icons/floppy-disk.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "folder-download",
+    "keywords": ["folder", "download"],
+    "path": "../000-icon-planet/solid-icons/folder-download.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "folder-minus",
+    "keywords": ["folder", "minus"],
+    "path": "../000-icon-planet/solid-icons/folder-minus.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "folder-open",
+    "keywords": ["folder", "open"],
+    "path": "../000-icon-planet/solid-icons/folder-open.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "folder-plus",
+    "keywords": ["folder", "plus"],
+    "path": "../000-icon-planet/solid-icons/folder-plus.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "folder-upload",
+    "keywords": ["folder", "upload"],
+    "path": "../000-icon-planet/solid-icons/folder-upload.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "folder",
+    "keywords": ["folder"],
+    "path": "../000-icon-planet/solid-icons/folder.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "font-size",
+    "keywords": ["font", "size"],
+    "path": "../000-icon-planet/solid-icons/font-size.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "font",
+    "keywords": ["font"],
+    "path": "../000-icon-planet/solid-icons/font.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "forward",
+    "keywords": ["forward"],
+    "path": "../000-icon-planet/solid-icons/forward.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "forward2",
+    "keywords": ["forward2"],
+    "path": "../000-icon-planet/solid-icons/forward2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "forward3",
+    "keywords": ["forward3"],
+    "path": "../000-icon-planet/solid-icons/forward3.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "foursquare",
+    "keywords": ["foursquare"],
+    "path": "../000-icon-planet/solid-icons/foursquare.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "frustrated",
+    "keywords": ["frustrated"],
+    "path": "../000-icon-planet/solid-icons/frustrated.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "frustrated2",
+    "keywords": ["frustrated2"],
+    "path": "../000-icon-planet/solid-icons/frustrated2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "gift",
+    "keywords": ["gift"],
+    "path": "../000-icon-planet/solid-icons/gift.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "git",
+    "keywords": ["git"],
+    "path": "../000-icon-planet/solid-icons/git.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "github-brands",
     "keywords": ["github", "brands"],
     "path": "../000-icon-planet/solid-icons/github-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "github",
+    "keywords": ["github"],
+    "path": "../000-icon-planet/solid-icons/github.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "glass",
+    "keywords": ["glass"],
+    "path": "../000-icon-planet/solid-icons/glass.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "glass2",
+    "keywords": ["glass2"],
+    "path": "../000-icon-planet/solid-icons/glass2.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -423,6 +1753,13 @@
     "name": "google-drive-brands-solid",
     "keywords": ["google", "drive", "brands", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/google-drive-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "google-drive",
+    "keywords": ["google", "drive"],
+    "path": "../000-icon-planet/solid-icons/google-drive.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -455,6 +1792,104 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "google-plus",
+    "keywords": ["google", "plus"],
+    "path": "../000-icon-planet/solid-icons/google-plus.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "google-plus2",
+    "keywords": ["google", "plus2"],
+    "path": "../000-icon-planet/solid-icons/google-plus2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "google-plus3",
+    "keywords": ["google", "plus3"],
+    "path": "../000-icon-planet/solid-icons/google-plus3.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "google",
+    "keywords": ["google"],
+    "path": "../000-icon-planet/solid-icons/google.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "google2",
+    "keywords": ["google2"],
+    "path": "../000-icon-planet/solid-icons/google2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "google3",
+    "keywords": ["google3"],
+    "path": "../000-icon-planet/solid-icons/google3.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "grin",
+    "keywords": ["grin"],
+    "path": "../000-icon-planet/solid-icons/grin.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "grin2",
+    "keywords": ["grin2"],
+    "path": "../000-icon-planet/solid-icons/grin2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "hackernews",
+    "keywords": ["hackernews"],
+    "path": "../000-icon-planet/solid-icons/hackernews.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "hammer",
+    "keywords": ["hammer"],
+    "path": "../000-icon-planet/solid-icons/hammer.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "hammer2",
+    "keywords": ["hammer2"],
+    "path": "../000-icon-planet/solid-icons/hammer2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "hangouts",
+    "keywords": ["hangouts"],
+    "path": "../000-icon-planet/solid-icons/hangouts.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "happy",
+    "keywords": ["happy"],
+    "path": "../000-icon-planet/solid-icons/happy.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "happy2",
+    "keywords": ["happy2"],
+    "path": "../000-icon-planet/solid-icons/happy2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "hashtag-solid",
     "keywords": ["hashtag", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/hashtag-solid.svg",
@@ -465,6 +1900,20 @@
     "name": "headphones-solid",
     "keywords": ["headphones", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/headphones-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "headphones",
+    "keywords": ["headphones"],
+    "path": "../000-icon-planet/solid-icons/headphones.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "heart-broken",
+    "keywords": ["heart", "broken"],
+    "path": "../000-icon-planet/solid-icons/heart-broken.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -483,6 +1932,62 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "heart",
+    "keywords": ["heart"],
+    "path": "../000-icon-planet/solid-icons/heart.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "hipster",
+    "keywords": ["hipster"],
+    "path": "../000-icon-planet/solid-icons/hipster.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "hipster2",
+    "keywords": ["hipster2"],
+    "path": "../000-icon-planet/solid-icons/hipster2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "history",
+    "keywords": ["history"],
+    "path": "../000-icon-planet/solid-icons/history.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "home",
+    "keywords": ["home", "house", "residence", "building", "realestate"],
+    "path": "../000-icon-planet/solid-icons/home.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "home2",
+    "keywords": ["home2"],
+    "path": "../000-icon-planet/solid-icons/home2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "home3",
+    "keywords": ["home3"],
+    "path": "../000-icon-planet/solid-icons/home3.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "hour-glass",
+    "keywords": ["hour", "glass"],
+    "path": "../000-icon-planet/solid-icons/hour-glass.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "house-chimney-solid",
     "keywords": ["house", "home", "building", "residence", "realestate", "chimney", "smokestack", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/house-chimney-solid.svg",
@@ -497,9 +2002,37 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "html-five",
+    "keywords": ["html", "five"],
+    "path": "../000-icon-planet/solid-icons/html-five.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "html-five2",
+    "keywords": ["html", "five2"],
+    "path": "../000-icon-planet/solid-icons/html-five2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "html5-brands-solid",
     "keywords": ["html5", "brands", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/html5-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "IcoMoon",
+    "keywords": ["icomoon"],
+    "path": "../000-icon-planet/solid-icons/IcoMoon.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "IE",
+    "keywords": ["ie"],
+    "path": "../000-icon-planet/solid-icons/IE.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -511,9 +2044,65 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "image",
+    "keywords": ["image"],
+    "path": "../000-icon-planet/solid-icons/image.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "images",
+    "keywords": ["images"],
+    "path": "../000-icon-planet/solid-icons/images.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "indent-decrease",
+    "keywords": ["indent", "decrease"],
+    "path": "../000-icon-planet/solid-icons/indent-decrease.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "indent-increase",
+    "keywords": ["indent", "increase"],
+    "path": "../000-icon-planet/solid-icons/indent-increase.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "infinite",
+    "keywords": ["infinite"],
+    "path": "../000-icon-planet/solid-icons/infinite.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "info",
+    "keywords": ["info"],
+    "path": "../000-icon-planet/solid-icons/info.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "insert-template",
+    "keywords": ["insert", "template"],
+    "path": "../000-icon-planet/solid-icons/insert-template.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "instagram-brands",
     "keywords": ["instagram", "brands"],
     "path": "../000-icon-planet/solid-icons/instagram-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "instagram",
+    "keywords": ["instagram"],
+    "path": "../000-icon-planet/solid-icons/instagram.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -525,6 +2114,20 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "italic",
+    "keywords": ["italic"],
+    "path": "../000-icon-planet/solid-icons/italic.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "joomla",
+    "keywords": ["joomla"],
+    "path": "../000-icon-planet/solid-icons/joomla.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "key-solid",
     "keywords": ["key", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/key-solid.svg",
@@ -532,9 +2135,121 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "key",
+    "keywords": ["key"],
+    "path": "../000-icon-planet/solid-icons/key.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "key2",
+    "keywords": ["key2"],
+    "path": "../000-icon-planet/solid-icons/key2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "keyboard",
+    "keywords": ["keyboard"],
+    "path": "../000-icon-planet/solid-icons/keyboard.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "lab",
+    "keywords": ["lab"],
+    "path": "../000-icon-planet/solid-icons/lab.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "lanyrd",
+    "keywords": ["lanyrd"],
+    "path": "../000-icon-planet/solid-icons/lanyrd.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "laptop",
+    "keywords": ["laptop"],
+    "path": "../000-icon-planet/solid-icons/laptop.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "last",
+    "keywords": ["last"],
+    "path": "../000-icon-planet/solid-icons/last.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "lastfm",
+    "keywords": ["lastfm"],
+    "path": "../000-icon-planet/solid-icons/lastfm.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "lastfm2",
+    "keywords": ["lastfm2"],
+    "path": "../000-icon-planet/solid-icons/lastfm2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "leaf",
+    "keywords": ["leaf"],
+    "path": "../000-icon-planet/solid-icons/leaf.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "library",
+    "keywords": ["library"],
+    "path": "../000-icon-planet/solid-icons/library.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "libreoffice",
+    "keywords": ["libreoffice"],
+    "path": "../000-icon-planet/solid-icons/libreoffice.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "lifebuoy",
+    "keywords": ["lifebuoy"],
+    "path": "../000-icon-planet/solid-icons/lifebuoy.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "ligature",
+    "keywords": ["ligature"],
+    "path": "../000-icon-planet/solid-icons/ligature.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "ligature2",
+    "keywords": ["ligature2"],
+    "path": "../000-icon-planet/solid-icons/ligature2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "link-solid",
     "keywords": ["link", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/link-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "link",
+    "keywords": ["link"],
+    "path": "../000-icon-planet/solid-icons/link.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -553,9 +2268,44 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "linkedin",
+    "keywords": ["linkedin"],
+    "path": "../000-icon-planet/solid-icons/linkedin.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "linkedin2",
+    "keywords": ["linkedin2"],
+    "path": "../000-icon-planet/solid-icons/linkedin2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "linux-brands-solid",
     "keywords": ["linux", "brands", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/linux-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "list-numbered",
+    "keywords": ["list", "numbered"],
+    "path": "../000-icon-planet/solid-icons/list-numbered.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "list",
+    "keywords": ["list"],
+    "path": "../000-icon-planet/solid-icons/list.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "list2",
+    "keywords": ["list2"],
+    "path": "../000-icon-planet/solid-icons/list2.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -581,9 +2331,65 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "location",
+    "keywords": ["location"],
+    "path": "../000-icon-planet/solid-icons/location.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "location2",
+    "keywords": ["location2"],
+    "path": "../000-icon-planet/solid-icons/location2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "lock-solid",
     "keywords": ["lock", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/lock-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "lock",
+    "keywords": ["lock"],
+    "path": "../000-icon-planet/solid-icons/lock.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "loop",
+    "keywords": ["loop"],
+    "path": "../000-icon-planet/solid-icons/loop.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "loop2",
+    "keywords": ["loop2"],
+    "path": "../000-icon-planet/solid-icons/loop2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "ltr",
+    "keywords": ["ltr"],
+    "path": "../000-icon-planet/solid-icons/ltr.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "magic-wand",
+    "keywords": ["magic", "wand"],
+    "path": "../000-icon-planet/solid-icons/magic-wand.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "magnet",
+    "keywords": ["magnet"],
+    "path": "../000-icon-planet/solid-icons/magnet.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -595,9 +2401,163 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "mail",
+    "keywords": ["mail"],
+    "path": "../000-icon-planet/solid-icons/mail.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "mail2",
+    "keywords": ["mail2"],
+    "path": "../000-icon-planet/solid-icons/mail2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "mail3",
+    "keywords": ["mail3"],
+    "path": "../000-icon-planet/solid-icons/mail3.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "mail4",
+    "keywords": ["mail4"],
+    "path": "../000-icon-planet/solid-icons/mail4.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "make-group",
+    "keywords": ["make", "group"],
+    "path": "../000-icon-planet/solid-icons/make-group.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "man-woman",
+    "keywords": ["man", "woman"],
+    "path": "../000-icon-planet/solid-icons/man-woman.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "man",
+    "keywords": ["man"],
+    "path": "../000-icon-planet/solid-icons/man.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "map",
+    "keywords": ["map"],
+    "path": "../000-icon-planet/solid-icons/map.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "map2",
+    "keywords": ["map2"],
+    "path": "../000-icon-planet/solid-icons/map2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "menu",
+    "keywords": ["menu"],
+    "path": "../000-icon-planet/solid-icons/menu.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "menu2",
+    "keywords": ["menu2"],
+    "path": "../000-icon-planet/solid-icons/menu2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "menu3",
+    "keywords": ["menu3"],
+    "path": "../000-icon-planet/solid-icons/menu3.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "menu4",
+    "keywords": ["menu4"],
+    "path": "../000-icon-planet/solid-icons/menu4.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "meter",
+    "keywords": ["meter"],
+    "path": "../000-icon-planet/solid-icons/meter.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "meter2",
+    "keywords": ["meter2"],
+    "path": "../000-icon-planet/solid-icons/meter2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "mic",
+    "keywords": ["mic"],
+    "path": "../000-icon-planet/solid-icons/mic.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "microsoft-brands-solid",
     "keywords": ["microsoft", "brands", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/microsoft-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "minus",
+    "keywords": ["minus"],
+    "path": "../000-icon-planet/solid-icons/minus.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "mobile",
+    "keywords": ["mobile"],
+    "path": "../000-icon-planet/solid-icons/mobile.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "mobile2",
+    "keywords": ["mobile2"],
+    "path": "../000-icon-planet/solid-icons/mobile2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "move-down",
+    "keywords": ["move", "down"],
+    "path": "../000-icon-planet/solid-icons/move-down.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "move-up",
+    "keywords": ["move", "up"],
+    "path": "../000-icon-planet/solid-icons/move-up.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "mug",
+    "keywords": ["mug"],
+    "path": "../000-icon-planet/solid-icons/mug.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -609,9 +2569,184 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "music",
+    "keywords": ["music"],
+    "path": "../000-icon-planet/solid-icons/music.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "neutral",
+    "keywords": ["neutral"],
+    "path": "../000-icon-planet/solid-icons/neutral.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "neutral2",
+    "keywords": ["neutral2"],
+    "path": "../000-icon-planet/solid-icons/neutral2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "new-tab",
+    "keywords": ["new", "tab"],
+    "path": "../000-icon-planet/solid-icons/new-tab.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "newspaper",
+    "keywords": ["newspaper"],
+    "path": "../000-icon-planet/solid-icons/newspaper.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "next",
+    "keywords": ["next"],
+    "path": "../000-icon-planet/solid-icons/next.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "next2",
+    "keywords": ["next2"],
+    "path": "../000-icon-planet/solid-icons/next2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "node-brands-solid",
     "keywords": ["node", "brands", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/node-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "notification",
+    "keywords": ["notification"],
+    "path": "../000-icon-planet/solid-icons/notification.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "npm",
+    "keywords": ["npm"],
+    "path": "../000-icon-planet/solid-icons/npm.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "office",
+    "keywords": ["office"],
+    "path": "../000-icon-planet/solid-icons/office.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "omega",
+    "keywords": ["omega"],
+    "path": "../000-icon-planet/solid-icons/omega.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "onedrive",
+    "keywords": ["onedrive"],
+    "path": "../000-icon-planet/solid-icons/onedrive.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "opera",
+    "keywords": ["opera"],
+    "path": "../000-icon-planet/solid-icons/opera.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "opt",
+    "keywords": ["opt"],
+    "path": "../000-icon-planet/solid-icons/opt.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "pacman",
+    "keywords": ["pacman"],
+    "path": "../000-icon-planet/solid-icons/pacman.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "page-break",
+    "keywords": ["page", "break"],
+    "path": "../000-icon-planet/solid-icons/page-break.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "pagebreak",
+    "keywords": ["pagebreak"],
+    "path": "../000-icon-planet/solid-icons/pagebreak.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "paint-format",
+    "keywords": ["paint", "format"],
+    "path": "../000-icon-planet/solid-icons/paint-format.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "paragraph-center",
+    "keywords": ["paragraph", "center"],
+    "path": "../000-icon-planet/solid-icons/paragraph-center.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "paragraph-justify",
+    "keywords": ["paragraph", "justify"],
+    "path": "../000-icon-planet/solid-icons/paragraph-justify.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "paragraph-left",
+    "keywords": ["paragraph", "left", "previous", "backward"],
+    "path": "../000-icon-planet/solid-icons/paragraph-left.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "paragraph-right",
+    "keywords": ["paragraph", "right", "next", "forward"],
+    "path": "../000-icon-planet/solid-icons/paragraph-right.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "paste",
+    "keywords": ["paste"],
+    "path": "../000-icon-planet/solid-icons/paste.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "pause",
+    "keywords": ["pause"],
+    "path": "../000-icon-planet/solid-icons/pause.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "pause2",
+    "keywords": ["pause2"],
+    "path": "../000-icon-planet/solid-icons/pause2.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -623,9 +2758,79 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "paypal",
+    "keywords": ["paypal"],
+    "path": "../000-icon-planet/solid-icons/paypal.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "pen",
+    "keywords": ["pen"],
+    "path": "../000-icon-planet/solid-icons/pen.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "pencil",
+    "keywords": ["pencil"],
+    "path": "../000-icon-planet/solid-icons/pencil.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "pencil2",
+    "keywords": ["pencil2"],
+    "path": "../000-icon-planet/solid-icons/pencil2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "phone-hang-up",
+    "keywords": ["phone", "hang", "up"],
+    "path": "../000-icon-planet/solid-icons/phone-hang-up.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "phone-solid",
     "keywords": ["phone", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/phone-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "phone",
+    "keywords": ["phone"],
+    "path": "../000-icon-planet/solid-icons/phone.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "pie-chart",
+    "keywords": ["pie", "chart"],
+    "path": "../000-icon-planet/solid-icons/pie-chart.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "pilcrow",
+    "keywords": ["pilcrow"],
+    "path": "../000-icon-planet/solid-icons/pilcrow.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "pinterest",
+    "keywords": ["pinterest"],
+    "path": "../000-icon-planet/solid-icons/pinterest.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "pinterest2",
+    "keywords": ["pinterest2"],
+    "path": "../000-icon-planet/solid-icons/pinterest2.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -651,6 +2856,132 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "play",
+    "keywords": ["play"],
+    "path": "../000-icon-planet/solid-icons/play.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "play2",
+    "keywords": ["play2"],
+    "path": "../000-icon-planet/solid-icons/play2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "play3",
+    "keywords": ["play3"],
+    "path": "../000-icon-planet/solid-icons/play3.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "plus",
+    "keywords": ["plus"],
+    "path": "../000-icon-planet/solid-icons/plus.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "podcast",
+    "keywords": ["podcast"],
+    "path": "../000-icon-planet/solid-icons/podcast.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "point-down",
+    "keywords": ["point", "down"],
+    "path": "../000-icon-planet/solid-icons/point-down.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "point-left",
+    "keywords": ["point", "left", "previous", "backward"],
+    "path": "../000-icon-planet/solid-icons/point-left.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "point-right",
+    "keywords": ["point", "right", "next", "forward"],
+    "path": "../000-icon-planet/solid-icons/point-right.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "point-up",
+    "keywords": ["point", "up"],
+    "path": "../000-icon-planet/solid-icons/point-up.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "power-cord",
+    "keywords": ["power", "cord"],
+    "path": "../000-icon-planet/solid-icons/power-cord.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "power",
+    "keywords": ["power"],
+    "path": "../000-icon-planet/solid-icons/power.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "previous",
+    "keywords": ["previous"],
+    "path": "../000-icon-planet/solid-icons/previous.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "previous2",
+    "keywords": ["previous2"],
+    "path": "../000-icon-planet/solid-icons/previous2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "price-tag",
+    "keywords": ["price", "tag"],
+    "path": "../000-icon-planet/solid-icons/price-tag.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "price-tags",
+    "keywords": ["price", "tags"],
+    "path": "../000-icon-planet/solid-icons/price-tags.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "printer",
+    "keywords": ["printer"],
+    "path": "../000-icon-planet/solid-icons/printer.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "profile",
+    "keywords": ["profile", "user", "avatar", "account"],
+    "path": "../000-icon-planet/solid-icons/profile.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "pushpin",
+    "keywords": ["pushpin"],
+    "path": "../000-icon-planet/solid-icons/pushpin.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "python-brands-solid",
     "keywords": ["python", "brands", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/python-brands-solid.svg",
@@ -661,6 +2992,27 @@
     "name": "qq-brands",
     "keywords": ["qq", "brands"],
     "path": "../000-icon-planet/solid-icons/qq-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "qrcode",
+    "keywords": ["qrcode"],
+    "path": "../000-icon-planet/solid-icons/qrcode.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "question",
+    "keywords": ["question"],
+    "path": "../000-icon-planet/solid-icons/question.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "quill",
+    "keywords": ["quill"],
+    "path": "../000-icon-planet/solid-icons/quill.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -679,6 +3031,41 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "quotes-left",
+    "keywords": ["quotes", "left", "previous", "backward"],
+    "path": "../000-icon-planet/solid-icons/quotes-left.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "quotes-right",
+    "keywords": ["quotes", "right", "next", "forward"],
+    "path": "../000-icon-planet/solid-icons/quotes-right.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "radio-checked",
+    "keywords": ["radio", "checked"],
+    "path": "../000-icon-planet/solid-icons/radio-checked.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "radio-checked2",
+    "keywords": ["radio", "checked2"],
+    "path": "../000-icon-planet/solid-icons/radio-checked2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "radio-unchecked",
+    "keywords": ["radio", "unchecked"],
+    "path": "../000-icon-planet/solid-icons/radio-unchecked.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "react-brands-solid",
     "keywords": ["react", "brands", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/react-brands-solid.svg",
@@ -686,9 +3073,401 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "reddit",
+    "keywords": ["reddit"],
+    "path": "../000-icon-planet/solid-icons/reddit.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "redo",
+    "keywords": ["redo"],
+    "path": "../000-icon-planet/solid-icons/redo.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "redo2",
+    "keywords": ["redo2"],
+    "path": "../000-icon-planet/solid-icons/redo2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "renren",
+    "keywords": ["renren"],
+    "path": "../000-icon-planet/solid-icons/renren.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "reply",
+    "keywords": ["reply"],
+    "path": "../000-icon-planet/solid-icons/reply.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "road",
+    "keywords": ["road"],
+    "path": "../000-icon-planet/solid-icons/road.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "rocket",
+    "keywords": ["rocket"],
+    "path": "../000-icon-planet/solid-icons/rocket.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "rss",
+    "keywords": ["rss"],
+    "path": "../000-icon-planet/solid-icons/rss.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "rss2",
+    "keywords": ["rss2"],
+    "path": "../000-icon-planet/solid-icons/rss2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "rtl",
+    "keywords": ["rtl"],
+    "path": "../000-icon-planet/solid-icons/rtl.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "sack-dollar-solid",
     "keywords": ["sack", "dollar", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/sack-dollar-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "sad",
+    "keywords": ["sad"],
+    "path": "../000-icon-planet/solid-icons/sad.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "sad2",
+    "keywords": ["sad2"],
+    "path": "../000-icon-planet/solid-icons/sad2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "safari",
+    "keywords": ["safari"],
+    "path": "../000-icon-planet/solid-icons/safari.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "scissors",
+    "keywords": ["scissors"],
+    "path": "../000-icon-planet/solid-icons/scissors.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "search",
+    "keywords": ["search", "magnifier", "find", "lookup"],
+    "path": "../000-icon-planet/solid-icons/search.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "section",
+    "keywords": ["section"],
+    "path": "../000-icon-planet/solid-icons/section.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "share",
+    "keywords": ["share"],
+    "path": "../000-icon-planet/solid-icons/share.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "share2",
+    "keywords": ["share2"],
+    "path": "../000-icon-planet/solid-icons/share2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "shield",
+    "keywords": ["shield"],
+    "path": "../000-icon-planet/solid-icons/shield.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "shift",
+    "keywords": ["shift"],
+    "path": "../000-icon-planet/solid-icons/shift.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "shocked",
+    "keywords": ["shocked"],
+    "path": "../000-icon-planet/solid-icons/shocked.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "shocked2",
+    "keywords": ["shocked2"],
+    "path": "../000-icon-planet/solid-icons/shocked2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "shrink",
+    "keywords": ["shrink"],
+    "path": "../000-icon-planet/solid-icons/shrink.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "shrink2",
+    "keywords": ["shrink2"],
+    "path": "../000-icon-planet/solid-icons/shrink2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "shuffle",
+    "keywords": ["shuffle"],
+    "path": "../000-icon-planet/solid-icons/shuffle.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "sigma",
+    "keywords": ["sigma"],
+    "path": "../000-icon-planet/solid-icons/sigma.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "sina-weibo",
+    "keywords": ["sina", "weibo"],
+    "path": "../000-icon-planet/solid-icons/sina-weibo.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "skype",
+    "keywords": ["skype"],
+    "path": "../000-icon-planet/solid-icons/skype.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "sleepy",
+    "keywords": ["sleepy"],
+    "path": "../000-icon-planet/solid-icons/sleepy.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "sleepy2",
+    "keywords": ["sleepy2"],
+    "path": "../000-icon-planet/solid-icons/sleepy2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "smile",
+    "keywords": ["smile"],
+    "path": "../000-icon-planet/solid-icons/smile.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "smile2",
+    "keywords": ["smile2"],
+    "path": "../000-icon-planet/solid-icons/smile2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "sort-alpha-asc",
+    "keywords": ["sort", "alpha", "asc"],
+    "path": "../000-icon-planet/solid-icons/sort-alpha-asc.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "sort-alpha-desc",
+    "keywords": ["sort", "alpha", "desc"],
+    "path": "../000-icon-planet/solid-icons/sort-alpha-desc.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "sort-amount-asc",
+    "keywords": ["sort", "amount", "asc"],
+    "path": "../000-icon-planet/solid-icons/sort-amount-asc.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "sort-amount-desc",
+    "keywords": ["sort", "amount", "desc"],
+    "path": "../000-icon-planet/solid-icons/sort-amount-desc.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "sort-numberic-desc",
+    "keywords": ["sort", "numberic", "desc"],
+    "path": "../000-icon-planet/solid-icons/sort-numberic-desc.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "sort-numeric-asc",
+    "keywords": ["sort", "numeric", "asc"],
+    "path": "../000-icon-planet/solid-icons/sort-numeric-asc.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "soundcloud",
+    "keywords": ["soundcloud"],
+    "path": "../000-icon-planet/solid-icons/soundcloud.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "soundcloud2",
+    "keywords": ["soundcloud2"],
+    "path": "../000-icon-planet/solid-icons/soundcloud2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "spades",
+    "keywords": ["spades"],
+    "path": "../000-icon-planet/solid-icons/spades.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "spell-check",
+    "keywords": ["spell", "check"],
+    "path": "../000-icon-planet/solid-icons/spell-check.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "sphere",
+    "keywords": ["sphere"],
+    "path": "../000-icon-planet/solid-icons/sphere.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "spinner",
+    "keywords": ["spinner"],
+    "path": "../000-icon-planet/solid-icons/spinner.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "spinner10",
+    "keywords": ["spinner10"],
+    "path": "../000-icon-planet/solid-icons/spinner10.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "spinner11",
+    "keywords": ["spinner11"],
+    "path": "../000-icon-planet/solid-icons/spinner11.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "spinner2",
+    "keywords": ["spinner2"],
+    "path": "../000-icon-planet/solid-icons/spinner2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "spinner3",
+    "keywords": ["spinner3"],
+    "path": "../000-icon-planet/solid-icons/spinner3.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "spinner4",
+    "keywords": ["spinner4"],
+    "path": "../000-icon-planet/solid-icons/spinner4.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "spinner5",
+    "keywords": ["spinner5"],
+    "path": "../000-icon-planet/solid-icons/spinner5.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "spinner6",
+    "keywords": ["spinner6"],
+    "path": "../000-icon-planet/solid-icons/spinner6.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "spinner7",
+    "keywords": ["spinner7"],
+    "path": "../000-icon-planet/solid-icons/spinner7.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "spinner8",
+    "keywords": ["spinner8"],
+    "path": "../000-icon-planet/solid-icons/spinner8.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "spinner9",
+    "keywords": ["spinner9"],
+    "path": "../000-icon-planet/solid-icons/spinner9.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "spoon-knife",
+    "keywords": ["spoon", "knife"],
+    "path": "../000-icon-planet/solid-icons/spoon-knife.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "spotify",
+    "keywords": ["spotify"],
+    "path": "../000-icon-planet/solid-icons/spotify.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -735,6 +3514,41 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "stack",
+    "keywords": ["stack"],
+    "path": "../000-icon-planet/solid-icons/stack.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "stackoverflow",
+    "keywords": ["stackoverflow"],
+    "path": "../000-icon-planet/solid-icons/stackoverflow.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "star-empty",
+    "keywords": ["star", "empty"],
+    "path": "../000-icon-planet/solid-icons/star-empty.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "star-full",
+    "keywords": ["star", "full"],
+    "path": "../000-icon-planet/solid-icons/star-full.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "star-half",
+    "keywords": ["star", "half"],
+    "path": "../000-icon-planet/solid-icons/star-half.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "star-regular",
     "keywords": ["star", "regular"],
     "path": "../000-icon-planet/solid-icons/star-regular.svg",
@@ -745,6 +3559,27 @@
     "name": "star-solid",
     "keywords": ["star", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/star-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "stats-bars",
+    "keywords": ["stats", "bars"],
+    "path": "../000-icon-planet/solid-icons/stats-bars.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "stats-bars2",
+    "keywords": ["stats", "bars2"],
+    "path": "../000-icon-planet/solid-icons/stats-bars2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "stats-dots",
+    "keywords": ["stats", "dots"],
+    "path": "../000-icon-planet/solid-icons/stats-dots.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -763,9 +3598,184 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "steam",
+    "keywords": ["steam"],
+    "path": "../000-icon-planet/solid-icons/steam.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "steam2",
+    "keywords": ["steam2"],
+    "path": "../000-icon-planet/solid-icons/steam2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "stop",
+    "keywords": ["stop"],
+    "path": "../000-icon-planet/solid-icons/stop.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "stop2",
+    "keywords": ["stop2"],
+    "path": "../000-icon-planet/solid-icons/stop2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "stopwatch",
+    "keywords": ["stopwatch"],
+    "path": "../000-icon-planet/solid-icons/stopwatch.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "strikethrough",
+    "keywords": ["strikethrough"],
+    "path": "../000-icon-planet/solid-icons/strikethrough.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "stumbleupon",
+    "keywords": ["stumbleupon"],
+    "path": "../000-icon-planet/solid-icons/stumbleupon.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "stumbleupon2",
+    "keywords": ["stumbleupon2"],
+    "path": "../000-icon-planet/solid-icons/stumbleupon2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "subscript",
+    "keywords": ["subscript"],
+    "path": "../000-icon-planet/solid-icons/subscript.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "subscript2",
+    "keywords": ["subscript2"],
+    "path": "../000-icon-planet/solid-icons/subscript2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "sun",
+    "keywords": ["sun"],
+    "path": "../000-icon-planet/solid-icons/sun.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "superscript",
+    "keywords": ["superscript"],
+    "path": "../000-icon-planet/solid-icons/superscript.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "superscript2",
+    "keywords": ["superscript2"],
+    "path": "../000-icon-planet/solid-icons/superscript2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "svg",
+    "keywords": ["svg"],
+    "path": "../000-icon-planet/solid-icons/svg.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "switch",
+    "keywords": ["switch"],
+    "path": "../000-icon-planet/solid-icons/switch.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "tab",
+    "keywords": ["tab"],
+    "path": "../000-icon-planet/solid-icons/tab.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "table",
+    "keywords": ["table"],
+    "path": "../000-icon-planet/solid-icons/table.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "table2",
+    "keywords": ["table2"],
+    "path": "../000-icon-planet/solid-icons/table2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "tablet",
+    "keywords": ["tablet"],
+    "path": "../000-icon-planet/solid-icons/tablet.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "target",
+    "keywords": ["target"],
+    "path": "../000-icon-planet/solid-icons/target.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "telegram-brands-solid",
     "keywords": ["telegram", "brands", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/telegram-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "telegram",
+    "keywords": ["telegram"],
+    "path": "../000-icon-planet/solid-icons/telegram.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "terminal",
+    "keywords": ["terminal"],
+    "path": "../000-icon-planet/solid-icons/terminal.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "text-color",
+    "keywords": ["text", "color"],
+    "path": "../000-icon-planet/solid-icons/text-color.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "text-height",
+    "keywords": ["text", "height"],
+    "path": "../000-icon-planet/solid-icons/text-height.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "text-width",
+    "keywords": ["text", "width"],
+    "path": "../000-icon-planet/solid-icons/text-width.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -777,9 +3787,30 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "ticket",
+    "keywords": ["ticket"],
+    "path": "../000-icon-planet/solid-icons/ticket.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "tiktok-brands",
     "keywords": ["tiktok", "brands"],
     "path": "../000-icon-planet/solid-icons/tiktok-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "tongue",
+    "keywords": ["tongue"],
+    "path": "../000-icon-planet/solid-icons/tongue.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "tongue2",
+    "keywords": ["tongue2"],
+    "path": "../000-icon-planet/solid-icons/tongue2.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -791,9 +3822,72 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "tree",
+    "keywords": ["tree"],
+    "path": "../000-icon-planet/solid-icons/tree.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "trello",
+    "keywords": ["trello"],
+    "path": "../000-icon-planet/solid-icons/trello.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "trophy",
+    "keywords": ["trophy"],
+    "path": "../000-icon-planet/solid-icons/trophy.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "truck",
+    "keywords": ["truck"],
+    "path": "../000-icon-planet/solid-icons/truck.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "tumblr",
+    "keywords": ["tumblr"],
+    "path": "../000-icon-planet/solid-icons/tumblr.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "tumblr2",
+    "keywords": ["tumblr2"],
+    "path": "../000-icon-planet/solid-icons/tumblr2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "tux",
+    "keywords": ["tux"],
+    "path": "../000-icon-planet/solid-icons/tux.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "tv",
+    "keywords": ["tv"],
+    "path": "../000-icon-planet/solid-icons/tv.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "twitch-brands-solid",
     "keywords": ["twitch", "brands", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/twitch-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "twitch",
+    "keywords": ["twitch"],
+    "path": "../000-icon-planet/solid-icons/twitch.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -805,9 +3899,93 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "twitter",
+    "keywords": ["twitter"],
+    "path": "../000-icon-planet/solid-icons/twitter.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "underline",
+    "keywords": ["underline"],
+    "path": "../000-icon-planet/solid-icons/underline.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "undo",
+    "keywords": ["undo"],
+    "path": "../000-icon-planet/solid-icons/undo.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "undo2",
+    "keywords": ["undo2"],
+    "path": "../000-icon-planet/solid-icons/undo2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "ungroup",
+    "keywords": ["ungroup"],
+    "path": "../000-icon-planet/solid-icons/ungroup.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "unlock-solid",
     "keywords": ["unlock", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/unlock-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "unlocked",
+    "keywords": ["unlocked"],
+    "path": "../000-icon-planet/solid-icons/unlocked.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "upload",
+    "keywords": ["upload"],
+    "path": "../000-icon-planet/solid-icons/upload.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "upload2",
+    "keywords": ["upload2"],
+    "path": "../000-icon-planet/solid-icons/upload2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "upload3",
+    "keywords": ["upload3"],
+    "path": "../000-icon-planet/solid-icons/upload3.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "user-check",
+    "keywords": ["user", "person", "account", "profile", "member", "check"],
+    "path": "../000-icon-planet/solid-icons/user-check.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "user-minus",
+    "keywords": ["user", "person", "account", "profile", "member", "minus"],
+    "path": "../000-icon-planet/solid-icons/user-minus.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "user-plus",
+    "keywords": ["user", "person", "account", "profile", "member", "plus"],
+    "path": "../000-icon-planet/solid-icons/user-plus.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -826,9 +4004,121 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "user-tie",
+    "keywords": ["user", "person", "account", "profile", "member", "tie"],
+    "path": "../000-icon-planet/solid-icons/user-tie.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "user",
+    "keywords": ["user", "person", "account", "profile", "member"],
+    "path": "../000-icon-planet/solid-icons/user.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "users-solid",
     "keywords": ["users", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/users-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "users",
+    "keywords": ["users"],
+    "path": "../000-icon-planet/solid-icons/users.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "video-camera",
+    "keywords": ["video", "camera"],
+    "path": "../000-icon-planet/solid-icons/video-camera.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "vimeo",
+    "keywords": ["vimeo"],
+    "path": "../000-icon-planet/solid-icons/vimeo.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "vimeo2",
+    "keywords": ["vimeo2"],
+    "path": "../000-icon-planet/solid-icons/vimeo2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "vine",
+    "keywords": ["vine"],
+    "path": "../000-icon-planet/solid-icons/vine.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "vk",
+    "keywords": ["vk"],
+    "path": "../000-icon-planet/solid-icons/vk.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "volume-decrease",
+    "keywords": ["volume", "decrease"],
+    "path": "../000-icon-planet/solid-icons/volume-decrease.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "volume-high",
+    "keywords": ["volume", "high"],
+    "path": "../000-icon-planet/solid-icons/volume-high.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "volume-increase",
+    "keywords": ["volume", "increase"],
+    "path": "../000-icon-planet/solid-icons/volume-increase.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "volume-low",
+    "keywords": ["volume", "low"],
+    "path": "../000-icon-planet/solid-icons/volume-low.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "volume-medium",
+    "keywords": ["volume", "medium"],
+    "path": "../000-icon-planet/solid-icons/volume-medium.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "volume-mute",
+    "keywords": ["volume", "mute"],
+    "path": "../000-icon-planet/solid-icons/volume-mute.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "volume-mute2",
+    "keywords": ["volume", "mute2"],
+    "path": "../000-icon-planet/solid-icons/volume-mute2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "warning",
+    "keywords": ["warning"],
+    "path": "../000-icon-planet/solid-icons/warning.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -847,6 +4137,13 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "whatsapp",
+    "keywords": ["whatsapp"],
+    "path": "../000-icon-planet/solid-icons/whatsapp.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "wifi-solid",
     "keywords": ["wifi", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/wifi-solid.svg",
@@ -861,9 +4158,65 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "wikipedia",
+    "keywords": ["wikipedia"],
+    "path": "../000-icon-planet/solid-icons/wikipedia.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "windows-brands-solid",
     "keywords": ["windows", "brands", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/windows-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "windows",
+    "keywords": ["windows"],
+    "path": "../000-icon-planet/solid-icons/windows.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "windows8",
+    "keywords": ["windows8"],
+    "path": "../000-icon-planet/solid-icons/windows8.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "wink",
+    "keywords": ["wink"],
+    "path": "../000-icon-planet/solid-icons/wink.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "wink2",
+    "keywords": ["wink2"],
+    "path": "../000-icon-planet/solid-icons/wink2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "woman",
+    "keywords": ["woman"],
+    "path": "../000-icon-planet/solid-icons/woman.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "wondering",
+    "keywords": ["wondering"],
+    "path": "../000-icon-planet/solid-icons/wondering.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "wondering2",
+    "keywords": ["wondering2"],
+    "path": "../000-icon-planet/solid-icons/wondering2.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -875,9 +4228,58 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "wordpress",
+    "keywords": ["wordpress"],
+    "path": "../000-icon-planet/solid-icons/wordpress.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "wrench",
+    "keywords": ["wrench"],
+    "path": "../000-icon-planet/solid-icons/wrench.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "x-twitter-brands",
     "keywords": ["x", "twitter", "brands"],
     "path": "../000-icon-planet/solid-icons/x-twitter-brands.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "xing",
+    "keywords": ["xing"],
+    "path": "../000-icon-planet/solid-icons/xing.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "xing2",
+    "keywords": ["xing2"],
+    "path": "../000-icon-planet/solid-icons/xing2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "yahoo",
+    "keywords": ["yahoo"],
+    "path": "../000-icon-planet/solid-icons/yahoo.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "yahoo2",
+    "keywords": ["yahoo2"],
+    "path": "../000-icon-planet/solid-icons/yahoo2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "yelp",
+    "keywords": ["yelp"],
+    "path": "../000-icon-planet/solid-icons/yelp.svg",
     "category": "",
     "license": "Custom/Unknown"
   },
@@ -896,9 +4298,37 @@
     "license": "Custom/Unknown"
   },
   {
+    "name": "youtube",
+    "keywords": ["youtube"],
+    "path": "../000-icon-planet/solid-icons/youtube.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "youtube2",
+    "keywords": ["youtube2"],
+    "path": "../000-icon-planet/solid-icons/youtube2.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
     "name": "zhihu-brands-solid",
     "keywords": ["zhihu", "brands", "solid", "fill", "bold"],
     "path": "../000-icon-planet/solid-icons/zhihu-brands-solid.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "zoom-in",
+    "keywords": ["zoom", "in"],
+    "path": "../000-icon-planet/solid-icons/zoom-in.svg",
+    "category": "",
+    "license": "Custom/Unknown"
+  },
+  {
+    "name": "zoom-out",
+    "keywords": ["zoom", "out"],
+    "path": "../000-icon-planet/solid-icons/zoom-out.svg",
     "category": "",
     "license": "Custom/Unknown"
   }
