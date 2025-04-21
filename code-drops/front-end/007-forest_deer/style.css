@@ -45,16 +45,16 @@ body{
   height: 1.3px;
   background-color: white;
   position: absolute;
-  left: -18%;
+  left: -7%;
   bottom: 0;
   width: 130%;
-  transform: scaleX(0) translateX(-18%) ;
+  transform: scaleX(0) translateX(-7%) ;
   transform-origin: right;
   transition: transform 0.25s;/*动画效果写在这里才有用，写在a标签里面没用*/
 
 }
 .nav-right a.link-basic:hover::after{
-  transform: scaleX(1);
+  transform: scaleX(1) translateX(-7%);
   transform-origin: left;
 }
 

@@ -1,0 +1,82 @@
+/*页面结构*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.a-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+} 
+
+/*general--style*/
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* underline-static */
+.link--underline-static {
+  text-decoration: underline;
+  transition: text-shadow 0.2s;
+}
+.link--underline-static:hover {
+  text-shadow: 1px 2px 12px rgba(0,0,0,0.5);
+}
+
+/* underline-animate--style */
+.link--underline-animate {
+  position: relative;
+}
+.link--underline-animate::after {
+  content: '';
+  display: inline-block;
+  height: 1px;
+  width: 130%;
+  background-color: black;
+  position: absolute;
+  bottom: -1px;
+  left: -8%;
+  transform: scaleX(0) translateX(-8%);/*这里很好理解，就是配合left进行左移。关键点在于为什么要先位移再伸缩，因为如果先伸缩的话，这时候再去进行位移，这时候的百分比就不是原长的百分比了，这就会把位移的问题复杂化。*/
+  transition: transform 0.2s;/*这里的变换一定不能写all，因为写all的话，tranform-origin也会参与到动画效果，这就是造成伸缩七点左右摇晃的罪魁祸首！*/
+  transform-origin: right;/*在这里是设置scale的起点，其实还能设置其他的，比如rotate起点，以后遇到了再说*/
+
+}
+
+/* .nav__link--underline::after:hover {
+  transform: translateX(-50%) scale(1);
+} 
+这段代码不生效的原因是伪元素没有hover这一说法*/
+.link--underline-animate:hover::after {
+  transform:  scaleX(1) translateX(-8%) ;
+  transform-origin: left;
+}
+
+
+/* icon-style */
+.icon-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+}
+
+.icon-link--round {
+  border-radius: 50%;
+}
+
+.icon-link--outline {
+  border: 0.1rem solid rgb( 33, 61, 85);
+  background-color: rgb( 33, 61, 85);
+  color: white;
+  transition: all 0.2s;
+}
+.icon-link--outline:hover {
+  background-color: white;
+  color: rgb( 33, 61, 85);
+}
