@@ -1,0 +1,126 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+h2 {
+  margin: 0 auto;
+  width: fit-content;
+  margin-top: 2rem;
+}
+
+
+/* feature-card__area */
+.feature-card-container {
+  margin: 2rem auto 0;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,0.8fr));
+  gap: 2rem;
+  justify-content: center;/*这个生效的前提是minmax的最大不能设置成1fr，因为如果设置成1fr了，就没有多余的空白空间可以给它调整位置了*/
+  
+}
+
+.feature-card {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgb(248,248,249);
+  padding: 1.25rem 1.75rem;
+  border-radius: 4px;
+  align-items: center;
+  gap: 1rem;
+  color: black;
+}
+.feature-card__img {
+  width: 20%;
+  object-fit: cover;
+  object-position: center;
+}
+.feature-card__title {
+  white-space: nowrap;
+}
+.feature-card__text {
+  min-width: 70%;
+}
+.feature-card__link--light {
+  font-size: 1rem;
+  color: inherit;
+  transition: all 0.2s;
+  padding: 0.25rem;
+}
+.feature-card__link--light:hover {
+  color: rgb(0,187,240);
+}
+
+.feature-card__link--solid {
+  font-size: 1rem;
+  color: white;
+  padding: 0.35rem 1rem;
+  background-color: rgb(  0,187,240);
+  transition: background 0.2s;
+}
+.feature-card__link--solid:hover {
+  background-color: rgb(  0,127,164);
+}
+
+
+/* video-card-section */
+
+.video-card-container {
+  width: 80%;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,0.8fr));
+  justify-content: center;
+  gap: 2rem;
+}
+.video-card {
+  /* 这里card没有写宽度就是默认列宽，最好的grid响应式写法，其次是用百分比，因为如果写死宽度的话，屏幕缩放的时候card的大小就不会变化，就比较生硬 */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.video-card__thumb-box {
+  width: 100%;
+  position: relative;
+}
+.video-card__thumbnail {
+  width: 100%;
+  border-radius: 8px;
+}
+.video-card__duration {
+  position: absolute;
+  bottom: 4%;
+  right: 2%;
+  line-height: 18px;
+  padding: 0 4px;
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.video-card__info {
+  display: flex;
+  gap: 0.75rem;
+}
+.video-card__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.video-card__info-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
