@@ -55,28 +55,50 @@
   transform:  scaleX(1) translateX(-8%) ;
   transform-origin: left;
 }
+.link--underline-animate:active {
+  opacity: 0.7;
+}
 
 
 /* icon-style */
-.icon-link {
+.link-with-icon {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 3rem;
-  height: 3rem;
+  padding: 1rem;
 }
 
-.icon-link--round {
+.link--round {
   border-radius: 50%;
 }
 
-.icon-link--outline {
+.link--solid {
   border: 0.1rem solid rgb( 33, 61, 85);
   background-color: rgb( 33, 61, 85);
   color: white;
   transition: all 0.2s;
 }
-.icon-link--outline:hover {
+.link--solid:hover {
   background-color: white;
   color: rgb( 33, 61, 85);
+}
+.link--solid:active {
+  box-shadow: inset 0 -1px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* link--outline */
+
+.link--outline {
+  border: 0.1rem solid rgb( 33, 61, 85);
+  background-color: transparent;
+  color: rgb( 33, 61, 85);
+  transition: all 0.2s opacity 0.1s box-shadow 0.1s;
+}
+.link--outline:hover {
+  color: white;
+  background-color: rgb( 33, 61, 85);
+}
+
+.link--outline:active {
+  opacity: 0.7;
 }

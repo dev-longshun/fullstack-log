@@ -24,7 +24,7 @@ function updateClock() {
   // 构造目标时间（本周四上午 10:00）
   let target = new Date(now);//这里是为了创建一个now副本，因为如果直接把now的值给target的话，之后修改target的时候也会把now给修改了。背后的本质原因：now是一个对象，是一个引用类型，即存的是一个地址，而不是具体的值，所以把这个值给target的时候，如果target改变了，这个now也会改。
   target.setDate(now.getDate() + diff);
-  target.setHours(10, 0, 0, 0); // 设置为上午10:00整
+  target.setHours(10, 0, 1, 0); // 设置为上午10:00整
 
   let remaining = target - now; // 毫秒差
 
@@ -34,7 +34,7 @@ function updateClock() {
   else {
     let hours = Math.floor(remaining / (1000 * 60 * 60));
     let minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+    let seconds = Math.floor((remaining % (1000 * 60)) / 1000); /**因为这里是向下取整，所以这个秒数和真正的十点整之间会差个一秒的差值，最简单的解决办法就是把目标时间加一秒 */
 
     document.getElementById('notice').innerText = 
       ifToday
