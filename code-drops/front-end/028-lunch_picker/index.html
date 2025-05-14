@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今天吃什么？</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <h1>今天吃什么？</h1>
+        <div class="food-display">
+            <div id="result" class="result">点击按钮开始选择</div>
+        </div>
+        <button id="pickButton" class="pick-button">随机选择</button>
+        
+        <div class="food-management">
+            <div class="add-food">
+                <input type="text" id="newFood" placeholder="输入新的美食">
+                <button id="addButton">添加</button>
+            </div>
+            
+            <div class="file-import">
+                <input type="file" id="fileInput" accept=".json,.txt" class="file-input">
+                <label for="fileInput" class="file-label">导入美食清单</label>
+            </div>
+            
+            <div class="food-list">
+                <h3>当前美食清单</h3>
+                <ul id="foodList"></ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

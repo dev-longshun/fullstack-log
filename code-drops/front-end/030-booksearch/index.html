@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书搜索</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>图书搜索</h1>
+            <form id="search-form">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="输入书名、作者或关键词..." required>
+                    <button type="submit">搜索</button>
+                </div>
+            </form>
+        </header>
+        <div class="loader" id="loader">
+            <div class="spinner"></div>
+        </div>
+        <main>
+            <div class="books-grid" id="books-container"></div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

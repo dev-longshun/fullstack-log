@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Microsoft YaHei', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  color: #333;
+  position: relative;
+  overflow-x: hidden;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  width: 80%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #e74c3c;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.food-display {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.result {
+  font-size: 2rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  color: #2c3e50;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.pick-button {
+  display: block;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.pick-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+}
+
+.food-management {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px dashed #eee;
+}
+
+/* 食物增加模块 */
+.add-food {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+  flex: 1;/*妙不可言！*/
+  padding: 0.8rem 1rem;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #e74c3c;
+  outline: none;
+}
+
+.add-food button,
+.file-label {
+  padding: 0.8rem 1.5rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-food button:hover,
+.file-label:hover {
+  background-color: #2980b9;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  background-color: #2ecc71;
+}
+
+.file-label:hover {
+  background-color: #27ae60;
+}
+
+.food-list {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.food-list h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+#foodList {
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#foodList li {
+  padding: 0.8rem;
+  background: white;
+  /* margin-bottom: 0.5rem; 和上面的flex布局的gap效果相同*/
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+#foodList li button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#foodList li button:hover {
+  background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .container {
+      margin: 1rem auto;
+      padding: 1rem;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  .result {
+      font-size: 1.5rem;
+      padding: 1rem;
+  }
+
+  .add-food {
+      flex-direction: column;
+  }
+
+  .add-food button {
+      width: 100%;
+  }
+
+  .file-label {
+      width: 100%;
+      text-align: center;
+  }
+}
