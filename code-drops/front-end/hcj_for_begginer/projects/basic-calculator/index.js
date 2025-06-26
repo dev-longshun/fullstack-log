@@ -1,29 +1,39 @@
-const buttonsEl = document.querySelectorAll("button");
+    const buttonsEl = document.querySelectorAll("button");
+    const inputFieldEl = document.getElementById("result");
+    const toggleThemeBtn = document.getElementById("toggle-theme");
 
-const inputFieldEl = document.getElementById("result");
-
-for (let i = 0; i < buttonsEl.length; i++) {
-  buttonsEl[i].addEventListener("click", () => {
-    const buttonValue = buttonsEl[i].textContent;
-    if (buttonValue === "C") {
-      clearResult();
-    } else if (buttonValue === "=") {
-      calculateResult();
-    } else {
-      appendValue(buttonValue);
+    // 恢复主题
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark");
+      toggleThemeBtn.textContent = "☀️";
     }
-  });
-}
 
-function clearResult() {
-  inputFieldEl.value = "";
-}
+    // 切换主题
+    toggleThemeBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      const isDark = document.body.classList.contains("dark");
+      toggleThemeBtn.textContent = isDark ? "☀️" : "🌙";
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
 
-function calculateResult() {
-  inputFieldEl.value = eval(inputFieldEl.value);
-}
+    // 绑定按钮事件
+    buttonsEl.forEach(btn => {
+      const val = btn.textContent;
+      if (val === 'C' || val === '=' || btn.id === 'toggle-theme') return;
 
-function appendValue(buttonValue) {
-  inputFieldEl.value += buttonValue;
-  //   inputFieldEl.value = inputFieldEl.value + buttonValue;
-}
+      btn.addEventListener("click", () => {
+        inputFieldEl.value += val;
+      });
+    });
+
+    document.querySelector(".clear").addEventListener("click", () => {
+      inputFieldEl.value = "";
+    });
+
+    document.querySelector(".equals").addEventListener("click", () => {
+      try {
+        inputFieldEl.value = eval(inputFieldEl.value);
+      } catch {
+        inputFieldEl.value = "错误";
+      }
+    });

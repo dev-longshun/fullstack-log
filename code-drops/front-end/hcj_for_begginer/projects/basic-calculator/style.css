@@ -1,20 +1,54 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    font-family: sans-serif;
+}
+
+body.dark {
+    background-color: #121212;
 }
 
 .calculator {
-  background-color: #f2f2f2;
-  padding: 20px;
-  max-width: 400px;
-  margin: 0 auto;
-  border: solid 1px #ccc;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-  margin-top: 40px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    max-width: 400px;
+    margin: 40px auto;
+    border: solid 1px #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    position: relative;
 }
 
-#result{
+body.dark .calculator {
+    background-color: #333;
+    color: #fff;
+    border-color: #666;
+}
+
+.theme-toggle {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+#toggle-theme {
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    transition: transform 0.2s ease;
+}
+
+#toggle-theme:hover {
+    transform: scale(1.2);
+}
+
+#result {
     width: 100%;
     padding: 10px;
     font-size: 24px;
@@ -23,14 +57,14 @@
     border-radius: 5px;
 }
 
-.buttons{
+.buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     margin-top: 20px;
 }
 
-button{
+button {
     padding: 10px;
     font-size: 24px;
     border: none;
@@ -38,31 +72,55 @@ button{
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-
 }
 
-button:hover{
+button:hover {
     background-color: #ddd;
 }
 
-.clear{
+.clear {
     background-color: #ff4136;
     color: #fff;
 }
 
-.number, .decimal{
+.number, .decimal {
     background-color: #fff;
     color: #333;
-
 }
 
-.operator{
+.operator {
     background-color: #0074d9;
     color: #fff;
 }
 
-.equals{
+.equals {
     background-color: #01ff70;
     grid-row: span 3;
     color: #fff;
+}
+
+body.dark .number,
+body.dark .decimal {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark .operator {
+    background-color: #0066cc;
+}
+
+body.dark .equals {
+    background-color: #00cc88;
+}
+
+body.dark .clear {
+    background-color: #cc3333;
+}
+
+#c {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
 }

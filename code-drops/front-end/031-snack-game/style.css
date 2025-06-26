@@ -1,0 +1,114 @@
+/* CSS 样式 */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;/*这里设置的其实是最小高度，即如果canvas的高度很小，也会自动调整flex布局等让页面占满*/
+  overflow-y: hidden;
+  margin: 0;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+h1 {
+    color: #4CAF50;
+}
+
+#game-container {
+    position: relative;
+    border: 2px solid #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #fdfdfd;
+}
+
+#game-canvas {
+    display: block;
+}
+
+#score-display {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+#score-display span {
+    font-weight: bold;
+    color: #E91E63;
+}
+
+/* 浮层通用样式 */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* 开始菜单 */
+#start-screen h2 {
+    font-size: 2em;
+    color: #333;
+}
+
+.difficulty-btn {
+    margin: 10px;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 150px;
+}
+
+.difficulty-btn:hover {
+    transform: scale(1.05);
+}
+
+#easy-btn { background-color: #4CAF50; }
+#medium-btn { background-color: #ff9800; }
+#hard-btn { background-color: #f44336; }
+#easy-btn:hover { background-color: #45a049; }
+#medium-btn:hover { background-color: #fb8c00; }
+#hard-btn:hover { background-color: #d32f2f; }
+
+/* 游戏结束界面 */
+#game-over-overlay {
+    display: none; /* 默认隐藏 */
+}
+
+#game-over-text {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #d32f2f;
+}
+
+#final-score {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+#restart-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#restart-button:hover {
+    background-color: #45a049;
+}

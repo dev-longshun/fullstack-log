@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Matrix Visualizer 完整版</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <aside>
+      <h2>矩阵设置</h2>
+      <div class="section">
+        <label for="dimension">矩阵阶数</label>
+        <select id="dimension">
+          <option value="2">2 × 2</option>
+          <option value="3">3 × 3</option>
+        </select>
+      </div>
+      <div class="section" id="matrixInputs"></div>
+      <div class="section">
+        <label>箭头大小：<span id="arrowVal">8</span></label>
+        <input id="arrowSize" type="range" class="slider" min="4" max="20" value="8" />
+      </div>
+      <div class="section">
+        <label>常见矩阵</label>
+        <button class="btn" data-matrix="identity">单位</button>
+        <button class="btn" data-matrix="rotate45">旋转45°</button>
+        <button class="btn" data-matrix="scale2">缩放 2×</button>
+        <button class="btn" data-matrix="shear">剪切</button>
+        <button class="btn" data-matrix="reflect">反射</button>
+      </div>
+      <div class="section legend">
+        <span><i style="background:#fb7185"></i> 原始 e₁</span>
+        <span><i style="background:#60a5fa"></i> 原始 e₂</span>
+        <span><i style="background:#f472b6"></i> 变换后 e₁′</span>
+        <span><i style="background:#34d399"></i> 变换后 e₂′</span>
+      </div>
+    </aside>
+    <canvas id="canvas2d"></canvas>
+    <div id="canvas3d" style="display:none"></div>
+  </div>
+<script>
+let dimension = 2;
+let current   = [1,0,0,1];
+let target    = [1,0,0,1];
+const ANIM_MS = 400;
+let animStart = null;
+let zoom=60, panX=0, panY=0;
+let dragging=false, dragPt=[0,0];
+let arrowLen=8;
+
+const selDim=document.getElementById('dimension');
+const matrixBox=document.getElementById('matrixInputs');
+const rngArrow=document.getElementById('arrowSize');
+const spanArrow=document.getElementById('arrowVal');
+const canvas2d=document.getElementById('canvas2d');
+const ctx=canvas2d.getContext('2d');
+const container3d=document.getElementById('canvas3d');
+
+const lerp=(a,b,t)=>a+(b-a)*t;
+const w2s=(x,y)=>[x*zoom+panX+canvas2d.width/2,-y*zoom+panY+canvas2d.height/2];
+
+// ---------- 侧栏矩阵输入 ----------
+function makeCell(idx){
+  const box=document.createElement('div'); box.className='numBox';
+  const inp=document.createElement('input'); inp.type='number'; inp.step='0.5'; inp.value=target[idx];
+  inp.onblur=()=>{target[idx]=parseFloat(inp.value)||0; dimension===2?animate():update3D();};
+  inp.onkeydown=e=>{if(e.key==='Enter')inp.blur();};
+  const up=document.createElement('button'); up.textContent='▲'; up.onclick=()=>{inp.value=(+inp.value||0)+0.5;inp.blur();};
+  const dn=document.createElement('button'); dn.textContent='▼'; dn.onclick=()=>{inp.value=(+inp.value||0)-0.5;inp.blur();};
+  box.append(inp,up,dn); return box;
+}
+function rebuildInputs(){
+  matrixBox.innerHTML='';
+  const n=dimension;
+  for(let r=0;r<n;r++){
+    for(let c=0;c<n;c++){
+      const idx=r*n+c; if(target[idx]===undefined) target[idx]=(r===c?1:0);
+      matrixBox.appendChild(makeCell(idx));
+    }
+    matrixBox.appendChild(document.createElement('br'));
+  }
+}
+
+// ---------- 常见矩阵按钮 ----------
+function setPreset(type){
+  if(type==='identity') target=dimension===2?[1,0,0,1]:[1,0,0,0,1,0,0,0,1];
+  if(type==='rotate45' && dimension===2){const c=Math.cos(Math.PI/4),s=Math.sin(Math.PI/4);target=[c,-s,s,c];}
+  if(type==='scale2')  target=dimension===2?[2,0,0,2]:[2,0,0,0,2,0,0,0,2];
+  if(type==='shear')   target=[1,1,0,1];
+  if(type==='reflect') target=[1,0,0,-1];
+  rebuildInputs(); dimension===2?animate():update3D();
+}
+document.querySelectorAll('.btn[data-matrix]').forEach(b=>b.onclick=()=>setPreset(b.dataset.matrix));
+
+// ---------- 2D 绘制 ----------
+function arrow(sx,sy,tx,ty,col){
+  ctx.strokeStyle=col; ctx.fillStyle=col; ctx.lineWidth=2;
+  ctx.beginPath();ctx.moveTo(sx,sy);ctx.lineTo(tx,ty);ctx.stroke();
+  const a=Math.atan2(ty-sy,tx-sx);
+  ctx.beginPath();ctx.moveTo(tx,ty);
+  ctx.lineTo(tx-arrowLen*Math.cos(a-0.5),ty-arrowLen*Math.sin(a-0.5));
+  ctx.lineTo(tx-arrowLen*Math.cos(a+0.5),ty-arrowLen*Math.sin(a+0.5));
+  ctx.closePath();ctx.fill();
+}
+function grid(){
+  ctx.lineWidth=1;ctx.strokeStyle='#334155';const step=zoom;
+  for(let x=-canvas2d.width/2;x<canvas2d.width/2;x+=step){
+    ctx.beginPath();ctx.moveTo(x+panX%step+canvas2d.width/2,0);ctx.lineTo(x+panX%step+canvas2d.width/2,canvas2d.height);ctx.stroke();
+  }
+  for(let y=-canvas2d.height/2;y<canvas2d.height/2;y+=step){
+    ctx.beginPath();ctx.moveTo(0,y+panY%step+canvas2d.height/2);ctx.lineTo(canvas2d.width,y+panY%step+canvas2d.height/2);ctx.stroke();
+  }
+}
+function draw2D(){
+  ctx.clearRect(0,0,canvas2d.width,canvas2d.height); grid();
+  ctx.lineWidth=2; ctx.strokeStyle='#475569';
+  ctx.beginPath(); ctx.moveTo(0,panY+canvas2d.height/2); ctx.lineTo(canvas2d.width,panY+canvas2d.height/2); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(panX+canvas2d.width/2,0); ctx.lineTo(panX+canvas2d.width/2,canvas2d.height); ctx.stroke();
+  const [ox,oy]=w2s(0,0), e1=w2s(1,0), e2=w2s(0,1); arrow(ox,oy,e1[0],e1[1],'#fb7185'); arrow(ox,oy,e2[0],e2[1],'#60a5fa');
+  const [a,b,c,d]=current; const t1=w2s(a,c), t2=w2s(b,d); arrow(ox,oy,t1[0],t1[1],'#f472b6'); arrow(ox,oy,t2[0],t2[1],'#34d399');
+  // 面积填充
+  ctx.fillStyle='rgba(240,113,175,0.25)'; ctx.beginPath();
+  ctx.moveTo(ox,oy); ctx.lineTo(t1[0],t1[1]); ctx.lineTo(t1[0]+(t2[0]-ox),t1[1]+(t2[1]-oy)); ctx.lineTo(t2[0],t2[1]); ctx.closePath(); ctx.fill();
+}
+function animate(){
+  animStart=null; requestAnimationFrame(step);
+  function step(ts){if(animStart===null)animStart=ts; const t=Math.min(1,(ts-animStart)/ANIM_MS); current=current.map((v,i)=>lerp(v,target[i],t)); draw2D(); if(t<1)requestAnimationFrame(step);}
+}
+
+// ---------- 3D 基本可视化 ----------
+let scene,camera,renderer,axes=[],vecs=[];
+function init3D(){
+  container3d.innerHTML='';
+  scene=new THREE.Scene();
+  const w=container3d.clientWidth,h=container3d.clientHeight;
+  camera=new THREE.PerspectiveCamera(45,w/h,0.1,1000); camera.position.set(4,4,4); camera.lookAt(0,0,0);
+  renderer=new THREE.WebGLRenderer({antialias:true}); renderer.setSize(w,h); container3d.appendChild(renderer.domElement);
+  scene.add(new THREE.GridHelper(8,8,0x334155,0x334155));
+  // 原始 xyz 基向量
+  axes.forEach(a=>scene.remove(a)); axes=[];
+  axes.push(
+    new THREE.ArrowHelper(new THREE.Vector3(1,0,0),new THREE.Vector3(0,0,0),1,0xfb7185),
+    new THREE.ArrowHelper(new THREE.Vector3(0,1,0),new THREE.Vector3(0,0,0),1,0x60a5fa),
+    new THREE.ArrowHelper(new THREE.Vector3(0,0,1),new THREE.Vector3(0,0,0),1,0xfacc15)
+  );
+  axes.forEach(a=>scene.add(a));
+  update3D();
+  animate3D();
+}
+function update3D(){
+  if(!scene) return;
+  vecs.forEach(a=>scene.remove(a)); vecs=[];
+  if(target.length<9) return;
+  const m=target;
+  // 变换后 e1', e2', e3'
+  const v1=new THREE.Vector3(m[0],m[3],m[6]);
+  const v2=new THREE.Vector3(m[1],m[4],m[7]);
+  const v3=new THREE.Vector3(m[2],m[5],m[8]);
+  vecs.push(
+    new THREE.ArrowHelper(v1.clone().normalize(),new THREE.Vector3(0,0,0),v1.length(),0xf472b6),
+    new THREE.ArrowHelper(v2.clone().normalize(),new THREE.Vector3(0,0,0),v2.length(),0x34d399),
+    new THREE.ArrowHelper(v3.clone().normalize(),new THREE.Vector3(0,0,0),v3.length(),0x38bdf8)
+  );
+  vecs.forEach(a=>scene.add(a));
+  renderer.render(scene,camera);
+}
+function animate3D(){
+  renderer.render(scene,camera);
+  requestAnimationFrame(animate3D);
+}
+
+// ---------- 事件联动 ----------
+function handleResize(){
+  canvas2d.width=window.innerWidth-document.querySelector('aside').offsetWidth;
+  canvas2d.height=window.innerHeight;
+  if(dimension===2) draw2D();
+  if(dimension===3 && renderer) renderer.setSize(container3d.clientWidth,container3d.clientHeight);
+}
+window.onresize = handleResize;
+
+canvas2d.onmousedown = e=>{dragging=true;dragPt=[e.clientX,e.clientY];};
+window.onmousemove = e=>{
+  if(!dragging) return;
+  panX+=e.clientX-dragPt[0]; panY+=e.clientY-dragPt[1]; dragPt=[e.clientX,e.clientY]; draw2D();
+};
+window.onmouseup=()=>dragging=false;
+canvas2d.addEventListener('wheel',e=>{
+  e.preventDefault();
+  const f = e.deltaY<0?1.1:0.9;
+  const rect = canvas2d.getBoundingClientRect();
+  const mx = e.clientX-rect.left-panX-canvas2d.width/2;
+  const my = e.clientY-rect.top-panY-canvas2d.height/2;
+  panX -= mx*(f-1); panY -= my*(f-1); zoom*=f; draw2D();
+},{passive:false});
+
+selDim.onchange = e=>{
+  dimension=parseInt(e.target.value,10);
+  if(dimension===2){
+    container3d.style.display='none';canvas2d.style.display='block';
+    target=[1,0,0,1];
+    rebuildInputs(); draw2D();
+  }else{
+    canvas2d.style.display='none';container3d.style.display='block';
+    target=[1,0,0,0,1,0,0,0,1];
+    rebuildInputs(); init3D();
+  }
+};
+rngArrow.oninput = e=>{
+  arrowLen = parseInt(rngArrow.value,10); spanArrow.textContent = arrowLen;
+  if(dimension===2) draw2D();
+};
+
+rebuildInputs();
+handleResize();
+draw2D();
+</script>
+</body>
+</html>

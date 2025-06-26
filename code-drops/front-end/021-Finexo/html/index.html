@@ -3,400 +3,346 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>index</title>
-  <link rel="stylesheet" href="../css/index.css">
+  <title>Finexo – Bootstrap Edition</title>
+
+  <!-- Bootstrap 5.3.3 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Original custom styles (kept to preserve the pixel‑perfect look) -->
   <link rel="stylesheet" href="../../000-icon-planet/icomoon-solid/style.css">
   <link rel="stylesheet" href="../css/font.css">
-  <link rel="stylesheet" href="../css/responsive.css">
-
+  <link rel="stylesheet" href="../css/index.css">
 </head>
-<body>
-  <section class="hero_area">
-    <div class="bg-box">
-      <img src="../img/hero-bg.png" alt="">
+<body class="bg-white  overflow-x-hidden">
+  <!-- ▬▬▬▬▬▬▬▬▬▬▬▬  HERO  ▬▬▬▬▬▬▬▬▬▬▬▬ -->
+  <section class="hero_area position-relative overflow-visible">
+    <!-- background overlay -->
+    <div class="bg-box position-absolute top-0 start-0 w-100 h-100 z-n1 overflow-visible">
+      <img src="../img/hero-bg.png" class="w-100  object-fit-cover" alt="">
     </div>
+
+    <!-- ▬▬  NAVBAR  ▬▬ -->
     <header>
-      <nav class="navbar">
-        <div class="nav-left">
-          <a class="nav-link" href="#"><span>Finexo</span></a>
+      <nav class="navbar navbar-expand-lg navbar-dark px-3 px-lg-5">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-semibold fs-2" href="#">Finexo</a>
+
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#finexoNav" aria-controls="finexoNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="icon-bars-solid fs-2 text-white"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="finexoNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4 text-uppercase">
+              <li class="nav-item"><a class="nav-link" href="#">home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">about</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">services</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">why us</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">team</a></li>
+              <li class="nav-item"><a class="nav-link" href="#"><i class="icon-user-solid me-1"></i>login</a></li>
+              <li class="nav-item"><a class="nav-link" href="#"><i class="icon-magnifying-glass-solid"></i></a></li>
+            </ul>
+          </div>
         </div>
-        <ul class="nav-right">
-          <li class="bars">
-            <a href="#"><i class="icon-bars-solid"></i></a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link" href="#">home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">about</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">why us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="icon-user-solid"></i> login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="icon-magnifying-glass-solid"></i>
-            </a>
-          </li>
-        </ul>
       </nav>
     </header>
-  
+
+    <!-- ▬▬  SLIDER  ▬▬ -->
     <section class="slider_section">
-      <input type="radio" name="slide" id="page-1" checked>
-      <input type="radio" name="slide" id="page-2">
-      <input type="radio" name="slide" id="page-3">
-  
-      <div class="track-container">
-        <div class="track">
-          <div class="page">
-            <div class="info">
-              <h1>
-                Powering the Future <br>
-                of Digital Finance
-              </h1>
-              <p>
-                At Finexo, we provide a secure, user-friendly platform for buying, selling, and managing cryptocurrency. Join thousands of users worldwide who trust Finexo to navigate the world of digital assets. 
-              </p>
-              <a href="#">
-                Get Started
-              </a>
-            </div>
-            <div class="img-box">
-              <img src="../img/slider-img.png" alt="">
-            </div>
-          </div>
-  
-          <div class="page">
-            <div class="info">
-              <h1>
-                Advanced Crypto Solutions
-              </h1>
-              <p>
-                Whether you're new to crypto or an experienced trader, Finexo offers smart tools and expert support to help you succeed in every market condition.
-              </p>
-              <a href="#">
-                Explore Tools
-              </a>
-            </div>
-            <div class="img-box">
-              <img src="../img/slider-img.png" alt="">
-            </div>
-          </div>
-  
-          <div class="page">
-            <div class="info">
-              <h1>
-                Secure & Reliable
-              </h1>
-              <p>
-                Finexo is committed to keeping your assets safe. We use advanced encryption, multi-layer authentication, and cold storage for top-notch protection.
-              </p>
-              <a href="#">
-                Learn More
-              </a>
-            </div>
-            <div class="img-box">
-              <img src="../img/slider-img.png" alt="">
-            </div>
-          </div>
-  
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+        <!-- indicators -->
+        <div class="carousel-indicators mb-4">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-      </div>
-  
-      <div class="switch">
-        <label for="page-1"></label>
-        <label for="page-2"></label>
-        <label for="page-3"></label>
+
+        <!-- slides -->
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="container d-flex flex-column flex-lg-row align-items-center px-4 px-lg-5 py-5 gap-4">
+              <div class="info text-white col-lg-6">
+                <h1 class="display-5 text-uppercase">Powering the Future <br> of Digital Finance</h1>
+                <p>At Finexo, we provide a secure, user‑friendly platform for buying, selling, and managing cryptocurrency. Join thousands of users worldwide who trust Finexo to navigate the world of digital assets.</p>
+                <a href="#" class="btn text-white mt-3" style="background:#00bbf0">Get Started</a>
+              </div>
+              <div class="img-box col-lg-6 text-center"><img src="../img/slider-img.png" class="img-fluid" alt=""></div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="container d-flex flex-column flex-lg-row align-items-center px-4 px-lg-5 py-5 gap-4">
+              <div class="info text-white col-lg-6">
+                <h1 class="display-5">Advanced Crypto Solutions</h1>
+                <p>Whether you're new to crypto or an experienced trader, Finexo offers smart tools and expert support to help you succeed in every market condition.</p>
+                <a href="#" class="btn text-white mt-3" style="background:#00bbf0">Explore Tools</a>
+              </div>
+              <div class="img-box col-lg-6 text-center"><img src="../img/slider-img.png" class="img-fluid" alt=""></div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="container d-flex flex-column flex-lg-row align-items-center px-4 px-lg-5 py-5 gap-4">
+              <div class="info text-white col-lg-6">
+                <h1 class="display-5">Secure & Reliable</h1>
+                <p>Finexo is committed to keeping your assets safe. We use advanced encryption, multi‑layer authentication, and cold storage for top‑notch protection.</p>
+                <a href="#" class="btn text-white mt-3" style="background:#00bbf0">Learn More</a>
+              </div>
+              <div class="img-box col-lg-6 text-center"><img src="../img/slider-img.png" class="img-fluid" alt=""></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <!--slide_section end-->
   </section>
-  <!--hero_section end-->
+  <!-- ▬▬▬▬▬▬▬  HERO END  ▬▬▬▬▬▬▬ -->
 
-  <section class="service">
-    <article class="service-head">
-      <h2>Our <span>Services</span></h2>
+
+  <!-- ▬▬▬▬▬▬▬▬▬▬▬▬  SERVICES  ▬▬▬▬▬▬▬▬▬▬▬▬ -->
+  <section class="service container text-center " id="service">
+    <article class="service-head mb-4">
+      <h2 class="fw-bold">Our <span class="text-info">Services</span></h2>
       <p>Explore the tools that make crypto simple, secure, and accessible to everyone.</p>
     </article>
-    <article class="service-body">
-      <div class="card">
-        <img class="img-card" src="../img/s1.png" alt="">
-        <h3>Multi-Currency Wallet</h3>
-        <p>Store over 100+ cryptocurrencies in one secure wallet. Seamlessly track and manage your digital assets with real-time updates.</p>
-        <a href="#">Read More</a>
-      </div>
-      <div class="card">
-        <img class="img-card" src="../img/s2.png" alt="">
-        <h3>Military-Grade Security</h3>
-        <p>Your assets are protected by advanced encryption, two-factor authentication, and cold storage technology.</p>
-        <a href="#">Read More</a>
-      </div>
-      <div class="card">
-        <img class="img-card" src="../img/s3.png" alt="">
-        <h3>24/7 Customer Support</h3>
-        <p>Have questions or issues? Our crypto specialists are always available to guide and support your journey.</p>
-        <a href="#">Read More</a>
-      </div>
-    </article>
 
-    <article class="service-foot">
-      <a href="#">View All</a>
-    </article>
+    <div class="row gy-5 service-body">
+      <div class="col-12 col-md-4 d-flex">
+        <div class="card flex-fill align-items-center p-4 bg-light">
+          <img class="img-card mb-3" src="../img/s1.png" alt="">
+          <h3>Multi‑Currency Wallet</h3>
+          <p class="mb-3">Store over 100+ cryptocurrencies in one secure wallet. Seamlessly track and manage your digital assets with real‑time updates.</p>
+          <a href="#" class="stretched-link text-dark fw-medium">Read More</a>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 d-flex">
+        <div class="card flex-fill align-items-center p-4 bg-light">
+          <img class="img-card mb-3" src="../img/s2.png" alt="">
+          <h3>Military‑Grade Security</h3>
+          <p class="mb-3">Your assets are protected by advanced encryption, two‑factor authentication, and cold storage technology.</p>
+          <a href="#" class="stretched-link text-dark fw-medium">Read More</a>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 d-flex">
+        <div class="card flex-fill align-items-center p-4 bg-light">
+          <img class="img-card mb-3" src="../img/s3.png" alt="">
+          <h3>24/7 Customer Support</h3>
+          <p class="mb-3">Have questions or issues? Our crypto specialists are always available to guide and support your journey.</p>
+          <a href="#" class="stretched-link text-dark fw-medium">Read More</a>
+        </div>
+      </div>
+    </div>
 
+    <article class="service-foot mt-4">
+      <a href="#" class="btn text-white" style="background:#00bbf0">View All</a>
+    </article>
   </section>
-  <!--service_section end-->
+  <!-- ▬▬▬▬▬▬▬  SERVICES END  ▬▬▬▬▬▬▬ -->
 
-  <section class="about">
-    <article class="about-head">
-      <h2>About <span>Us</span></h2>
-      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration</p>
-    </article>
 
-    <article class="about-body">
-      <figure>
-        <img src="../img/about-img.png" alt="">
-      </figure>
-      <article class="about-intro">
-        <h3>
-          We Are Finexo
-        </h3>
-        <p>
-          Founded in 2020, Finexo has quickly become a trusted name in cryptocurrency trading and asset management. Our mission is to bridge the gap between traditional finance and the future of decentralized technology.
-        </p>
-        <p>
-          We believe in financial inclusion, technological transparency, and user empowerment. With Finexo, you’re not just investing in crypto—you’re investing in the future.
-        </p>
-        <a href="#">
-          Read More
-        </a>
+  <!-- ▬▬▬▬▬▬▬▬▬▬▬▬  ABOUT  ▬▬▬▬▬▬▬▬▬▬▬▬ -->
+  <section class="about py-5">
+    <div class="container">
+      <article class="about-head text-center mb-5">
+        <h2 class="fw-bold text-black">About <span class="text-info">Us</span></h2>
+        <p class="mx-auto text-black">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration</p>
       </article>
-    </article>
-  </section>
-  <!--about_section end-->
 
-  <section class="why">
-    <h2>Why Choose <span>Us</span></h2>
-    <article class="super-card">
-      <figure>
-        <img src="../img/w1.png" alt="">
-      </figure>
-      <h3>Industry Expertise</h3>
-      <p>
-        Our team includes blockchain developers, financial analysts, and security experts working together to ensure excellence at every step.
-      </p>
-    </article>
-    <article class="super-card">
-      <figure>
-        <img src="../img/w2.png" alt="">
-      </figure>
-      <h3>Regulated & Transparent</h3>
-      <p>
-        We follow global compliance standards and offer real-time reports and dashboards, giving you full control over your investment.
-      </p>
-    </article>
-    <article class="super-card">
-      <figure>
-      <img src="../img/w3.png" alt="">
-      </figure>
-      <h3>Fast & Reliable Execution</h3>
-      <p>
-        Buy and sell cryptocurrencies instantly with our optimized trading engine and user-friendly interface.
-      </p>
-    </article>
-    <article class="super-card">
-      <figure>
-      <img src="../img/w4.png" alt="">
-      </figure>
-      <h3>Trusted by 50,000+ Users</h3>
-      <p>
-        We are proud of our strong global community and continuously strive to deliver an exceptional user experience.
-      </p>
-    </article>
-    <a href="#">Read More</a>
-  </section>
-  <!--section_why end-->
-
-  <section class="team">
-    <h2>Our <span>Team</span></h2>
-    <div class="member">
-      <div class="member-card">
-        <figure>
-          <img src="../img/team-1.jpg" alt="">
-        </figure>
-        <h5>Joseph Brown</h5>
-        <p>Chief Technology Officer</p>
-        <div class="contact">
-          <a href="#"><i class="icon-facebook-f-brands"></i></a>
-          <a href="#"><i class="icon-twitter-brands"></i></a>
-          <a href="#"><i class="icon-linkedin-in-brands"></i></a>
-          <a href="#"><i class="icon-instagram-brands"></i></a>
-          <a href="#"><i class="icon-youtube-brands"></i></a>
-        </div>
-      </div>
-      <div class="member-card">
-        <figure>
-          <img src="../img/team-2.jpg" alt="">
-        </figure>
-        <h5>Nancy White</h5>
-        <p>Chief Operating Officer</p>
-        <div class="contact">
-          <a href="#"><i class="icon-facebook-f-brands"></i></a>
-          <a href="#"><i class="icon-twitter-brands"></i></a>
-          <a href="#"><i class="icon-linkedin-in-brands"></i></a>
-          <a href="#"><i class="icon-instagram-brands"></i></a>
-          <a href="#"><i class="icon-youtube-brands"></i></a>
-        </div>
-      </div>
-      <div class="member-card">
-        <figure>
-          <img src="../img/team-3.jpg" alt="">
-        </figure>
-        <h5>Earl Martinez</h5>
-        <p>Head of Blockchain Engineering</p>
-        <div class="contact">
-          <a href="#"><i class="icon-facebook-f-brands"></i></a>
-          <a href="#"><i class="icon-twitter-brands"></i></a>
-          <a href="#"><i class="icon-linkedin-in-brands"></i></a>
-          <a href="#"><i class="icon-instagram-brands"></i></a>
-          <a href="#"><i class="icon-youtube-brands"></i></a>
-        </div>
-      </div>
-      <div class="member-card">
-        <figure>
-          <img src="../img/team-4.jpg" alt="">
-        </figure>
-        <h5>Josephine Allard</h5>
-        <p>Chief Marketing Officer</p>
-        <div class="contact">
-          <a href="#"><i class="icon-facebook-f-brands"></i></a>
-          <a href="#"><i class="icon-twitter-brands"></i></a>
-          <a href="#"><i class="icon-linkedin-in-brands"></i></a>
-          <a href="#"><i class="icon-instagram-brands"></i></a>
-          <a href="#"><i class="icon-youtube-brands"></i></a>
+      <div class="row align-items-center about-body g-4">
+        <div class="col-lg-6"><img src="../img/about-img.png" class="img-fluid" alt=""></div>
+        <div class="col-lg-6 about-intro text-black">
+          <h3 class="mb-3">We Are Finexo</h3>
+          <p>Founded in 2020, Finexo has quickly become a trusted name in cryptocurrency trading and asset management. Our mission is to bridge the gap between traditional finance and the future of decentralized technology.</p>
+          <p>We believe in financial inclusion, technological transparency, and user empowerment. With Finexo, you’re not just investing in crypto—you’re investing in the future.</p>
+          <a href="#" class="btn text-white mt-2" style="background:#00bbf0">Read More</a>
         </div>
       </div>
     </div>
   </section>
-  <!--team_section end-->
+  <!-- ▬▬▬▬▬▬▬  ABOUT END  ▬▬▬▬▬▬▬ -->
 
-  <section class="customer">
-    <input type="radio" name="customer" id="tab-1" checked>
-    <input type="radio" name="customer" id="tab-2">
-    <h2>What says our <span>Customers</span></h2>
-    <div class="customer-track-container">
-      <div class="customer-track">
-        <div class="customer-page">
-          <div class="customer-card">
-            <img src="../img/client1.jpg" alt="">
-            <h5>Zen Court</h5>
-            <p>magna aliqua. Ut</p>
-            <p>I've used several crypto platforms, but Finexo is by far the most intuitive and secure. Their support team is also amazing.</p>
-            <i class="icon-quote-left-solid"></i>
-          </div>
-          <div class="customer-card">
-            <img src="../img/client2.jpg" alt="">
-            <h5>LusDen</h5>
-            <p>magna aliqua. Ut</p>
-            <p>As someone new to cryptocurrency, Finexo made everything easy to understand and safe to use. Highly recommended.</p>
-            <i class="icon-quote-left-solid"></i>
-          </div>
-        </div>
-        <div class="customer-page">
-          <div class="customer-card">
-            <img src="../img/client-3.jpg" alt="">
-            <h5>Zen Court</h5>
-            <p>magna aliqua. Ut</p>
-            <p>I've been using Finexo for over a year now. The interface is clean, the transactions are lightning fast, and the mobile app is just brilliant. A game changer for my crypto investments.</p>
-            <i class="icon-quote-left-solid"></i>
-          </div>
-          <div class="customer-card">
-            <img src="../img/client-4.jpg" alt="">
-            <h5>LusDen</h5>
-            <p>magna aliqua. Ut</p>
-            <p>Security is my top priority when choosing a crypto platform. Finexo checks every box — secure, transparent, and professional. Highly trustworthy platform.</p>
-            <i class="icon-quote-left-solid"></i>
-          </div>
-        </div>
+
+  <!-- ▬▬▬▬▬▬▬▬▬▬▬▬  WHY US  ▬▬▬▬▬▬▬▬▬▬▬▬ -->
+  <section class="why container text-center my-5">
+    <h2 class="fw-bold">Why Choose <span class="text-info">Us</span></h2>
+
+    <div class="row justify-content-center gy-4 gx-4 mt-4 ">
+      <div class="col-12 col-sm-6 col-md-3 d-flex bg-light ">
+        <article class="super-card flex-fill">
+          <figure class="d-flex justify-content-center align-items-center border border-4 rounded-circle mx-auto mb-3" style="width:120px;height:120px;">
+            <img src="../img/w1.png" class="img-fluid" alt="">
+          </figure>
+          <h3 class="mb-2">Industry Expertise</h3>
+          <p>Our team includes blockchain developers, financial analysts, and security experts working together to ensure excellence at every step.</p>
+        </article>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3 d-flex bg-light">
+        <article class="super-card flex-fill">
+          <figure class="d-flex justify-content-center align-items-center border border-4 rounded-circle mx-auto mb-3" style="width:120px;height:120px;">
+            <img src="../img/w2.png" class="img-fluid" alt="">
+          </figure>
+          <h3 class="mb-2">Regulated & Transparent</h3>
+          <p>We follow global compliance standards and offer real‑time reports and dashboards, giving you full control over your investment.</p>
+        </article>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3 d-flex bg-light">
+        <article class="super-card flex-fill">
+          <figure class="d-flex justify-content-center align-items-center border border-4 rounded-circle mx-auto mb-3" style="width:120px;height:120px;">
+            <img src="../img/w3.png" class="img-fluid" alt="">
+          </figure>
+          <h3 class="mb-2">Fast & Reliable Execution</h3>
+          <p>Buy and sell cryptocurrencies instantly with our optimized trading engine and user‑friendly interface.</p>
+        </article>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3 d-flex bg-light">
+        <article class="super-card flex-fill">
+          <figure class="d-flex justify-content-center align-items-center border border-4 rounded-circle mx-auto mb-3" style="width:120px;height:120px;">
+            <img src="../img/w4.png" class="img-fluid" alt="">
+          </figure>
+          <h3 class="mb-2">Trusted by 50,000+ Users</h3>
+          <p>We are proud of our strong global community and continuously strive to deliver an exceptional user experience.</p>
+        </article>
       </div>
     </div>
-    <div class="customer-switch">
-      <label for="tab-1">
-        <span><i class="icon-angle-left-solid"></i></span>
-      </label>
-      <label for="tab-2">
-        <span><i class="icon-angle-right-solid"></i></span>
-      </label>
-    </div>
+
+    <a href="#" class="btn text-white mt-4" style="background:#00bbf0">Read More</a>
   </section>
-  <!--customer_section end-->
+  <!-- ▬▬▬▬▬▬▬  WHY US END  ▬▬▬▬▬▬▬ -->
 
-  <footer class="footer">
-    <address>
-      <h3>Address</h3>
-      <div class="contact-box">
-        <a href="#">
-          <i class="icon-location-dot-solid"></i>
-          <span>Location</span>
-        </a>
-        <a href="#">
-          <i class="icon-phone-solid"></i>
-          <span>Call +01 1234567890</span>
-        </a>
-        <a href="#">
-          <i class="icon-envelope-solid"></i>
-          <span>demo@gmail.com</span>
-        </a>
+
+  <!-- ▬▬▬▬▬▬▬▬▬▬▬▬  TEAM  ▬▬▬▬▬▬▬▬▬▬▬▬ -->
+  <section class="team py-5">
+    <div class="container text-black">
+      <h2 class="fw-bold text-center text-black mb-5">Our <span class="text-info">Team</span></h2>
+
+      <div class="row gy-4 member">
+        <!-- Member 1 -->
+        <div class="col-12 col-sm-6 col-lg-3 d-flex">
+          <div class="member-card bg-transparent flex-fill text-center">
+            <figure class="mx-auto overflow-hidden mb-3" style="width:120px;height:120px;border:4px solid #fff;border-radius:50%;">
+              <img src="../img/team-1.jpg" class="w-100 h-100 object-fit-cover rounded-circle" alt="">
+            </figure>
+            <h5>Joseph Brown</h5>
+            <p class="text-black-50">Chief Technology Officer</p>
+            <div class="contact d-flex justify-content-center gap-3 fs-5">
+              <a href="#"><i class="icon-facebook-f-brands"></i></a>
+              <a href="#"><i class="icon-twitter-brands"></i></a>
+              <a href="#"><i class="icon-linkedin-in-brands"></i></a>
+              <a href="#"><i class="icon-instagram-brands"></i></a>
+              <a href="#"><i class="icon-youtube-brands"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Member 2 -->
+        <div class="col-12 col-sm-6 col-lg-3 d-flex">
+          <div class="member-card bg-transparent flex-fill text-center">
+            <figure class="mx-auto overflow-hidden mb-3" style="width:120px;height:120px;border:4px solid #fff;border-radius:50%;">
+              <img src="../img/team-2.jpg" class="w-100 h-100 object-fit-cover rounded-circle" alt="">
+            </figure>
+            <h5>Nancy White</h5>
+            <p class="text-black-50">Chief Operating Officer</p>
+            <div class="contact d-flex justify-content-center gap-3 fs-5">
+              <a href="#"><i class="icon-facebook-f-brands"></i></a>
+              <a href="#"><i class="icon-twitter-brands"></i></a>
+              <a href="#"><i class="icon-linkedin-in-brands"></i></a>
+              <a href="#"><i class="icon-instagram-brands"></i></a>
+              <a href="#"><i class="icon-youtube-brands"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Member 3 -->
+        <div class="col-12 col-sm-6 col-lg-3 d-flex">
+          <div class="member-card bg-transparent flex-fill text-center">
+            <figure class="mx-auto overflow-hidden mb-3" style="width:120px;height:120px;border:4px solid #fff;border-radius:50%;">
+              <img src="../img/team-3.jpg" class="w-100 h-100 object-fit-cover rounded-circle" alt="">
+            </figure>
+            <h5>Earl Martinez</h5>
+            <p class="text-black-50">Head of Blockchain Engineering</p>
+            <div class="contact d-flex justify-content-center gap-3 fs-5">
+              <a href="#"><i class="icon-facebook-f-brands"></i></a>
+              <a href="#"><i class="icon-twitter-brands"></i></a>
+              <a href="#"><i class="icon-linkedin-in-brands"></i></a>
+              <a href="#"><i class="icon-instagram-brands"></i></a>
+              <a href="#"><i class="icon-youtube-brands"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Member 4 -->
+        <div class="col-12 col-sm-6 col-lg-3 d-flex">
+          <div class="member-card bg-transparent flex-fill text-center">
+            <figure class="mx-auto overflow-hidden mb-3" style="width:120px;height:120px;border:4px solid #fff;border-radius:50%;">
+              <img src="../img/team-4.jpg" class="w-100 h-100 object-fit-cover rounded-circle" alt="">
+            </figure>
+            <h5>Josephine Allard</h5>
+            <p class="text-black-50">Chief Marketing Officer</p>
+            <div class="contact d-flex justify-content-center gap-3 fs-5">
+              <a href="#"><i class="icon-facebook-f-brands"></i></a>
+              <a href="#"><i class="icon-twitter-brands"></i></a>
+              <a href="#"><i class="icon-linkedin-in-brands"></i></a>
+              <a href="#"><i class="icon-instagram-brands"></i></a>
+              <a href="#"><i class="icon-youtube-brands"></i></a>
+            </div>
+          </div>
+        </div>
+      </div> <!-- row end -->
+    </div> <!-- container -->
+  </section>
+  <!-- ▬▬▬▬▬▬▬  TEAM END  ▬▬▬▬▬▬▬ -->
+
+
+
+
+
+  <!-- ▬▬▬▬▬▬▬▬▬▬▬▬  FOOTER  ▬▬▬▬▬▬▬▬▬▬▬▬ -->
+  <footer class="footer pt-5" style="background:#00204a">
+    <div class="container">
+      <div class="row gy-4 text-white">
+        <!-- Address -->
+        <address class="col-12 col-md-6 col-lg-3">
+          <h3>Address</h3>
+          <div class="contact-box d-flex flex-column mb-3">
+            <a href="#" class="d-flex align-items-center gap-2 text-white mb-1"><i class="icon-location-dot-solid"></i> <span>Location</span></a>
+            <a href="#" class="d-flex align-items-center gap-2 text-white mb-1"><i class="icon-phone-solid"></i> <span>Call +01 1234567890</span></a>
+            <a href="#" class="d-flex align-items-center gap-2 text-white mb-1"><i class="icon-envelope-solid"></i> <span>demo@gmail.com</span></a>
+          </div>
+          <div class="social-link d-flex gap-3 fs-5">
+            <a href="#" class="text-white"><i class="icon-facebook-f-brands"></i></a>
+            <a href="#" class="text-white"><i class="icon-twitter-brands"></i></a>
+            <a href="#" class="text-white"><i class="icon-linkedin-in-brands"></i></a>
+            <a href="#" class="text-white"><i class="icon-instagram-brands"></i></a>
+          </div>
+        </address>
+        <!-- Info -->
+        <div class="info col-12 col-md-6 col-lg-3">
+          <h3>Info</h3>
+          <p>Finexo is your trusted gateway into the world of cryptocurrency. We combine modern tools with expert knowledge to help you invest securely and smartly.</p>
+        </div>
+        <!-- Links -->
+        <div class="links col-12 col-md-6 col-lg-3 d-flex flex-column">
+          <h3>Links</h3>
+          <a href="#" class="text-white mb-2">Home</a>
+          <a href="#" class="text-white mb-2">About</a>
+          <a href="#" class="text-white mb-2">Services</a>
+          <a href="#" class="text-white mb-2">Why Us</a>
+          <a href="#" class="text-white mb-2">Team</a>
+        </div>
+        <!-- Subscribe -->
+        <div class="subscribe col-12 col-md-6 col-lg-3">
+          <h3>Subscribe</h3>
+          <div class="input w-100 mb-3">
+            <input type="text" class="form-control bg-transparent border-0 text-white px-0" placeholder="Enter email">
+            <hr class="opacity-100">
+          </div>
+          <a href="#" class="btn w-100 text-white" style="background:#00bbf0">Subscribe</a>
+        </div>
       </div>
-
-      <div class="social-link">
-        <a href="#"><i class="icon-facebook-f-brands"></i></a>
-        <a href="#"><i class="icon-twitter-brands"></i></a>
-        <a href="#"><i class="icon-linkedin-in-brands"></i></a>
-        <a href="#"><i class="icon-instagram-brands"></i></a>
-      </div>
-    </address>
-
-    <div class="info">
-      <h3>Info</h3>
-      <p>
-        Finexo is your trusted gateway into the world of cryptocurrency. We combine modern tools with expert knowledge to help you invest securely and smartly.
-      </p>
-    </div>
-
-    <div class="links">
-      <h3>Links</h3>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Why Us</a>
-      <a href="#">Team</a>
-    </div>
-
-    <div class="subscribe">
-      <h3>Subscribe</h3>
-      <div class="input">
-        <input type="text" placeholder="Enter email">
-        <hr>
-      </div>
-      <a href="#">Subscribe</a>
     </div>
   </footer>
 
-  <section class="comment">
-    <p>
-      @ design by longshun at 2025-04-04
-    </p>
+  <section class="comment py-4 text-center">
+    <p>@ design by longshun at 2025‑04‑04</p>
   </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

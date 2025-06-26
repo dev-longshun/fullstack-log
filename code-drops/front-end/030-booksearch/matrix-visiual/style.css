@@ -1,0 +1,133 @@
+/* ====== 全局基础 ====== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  background: #0f172a;
+  color: #f1f5f9;
+  height: 100vh;
+  overflow: hidden;
+}
+#app {
+  display: flex;
+  height: 100vh;
+}
+
+/* ====== 侧栏样式 ====== */
+aside {
+  width: 320px;
+  min-width: 260px;
+  padding: 16px;
+  background: #1e293b;
+  overflow-y: auto;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.section {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+select,
+input[type="number"] {
+  background: #334155;
+  border: 1px solid #475569;
+  color: #f1f5f9;
+  border-radius: 4px;
+  padding: 4px 6px;
+  font-size: 14px;
+}
+select {
+  width: 100%;
+}
+
+/* ====== 矩阵输入区域（微调按钮） ====== */
+.numBox {
+  display: inline-flex;
+  align-items: center;
+  margin: 2px;
+}
+.numBox input {
+  width: 64px;
+  text-align: center;
+}
+.numBox button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-left: 1px solid #475569;
+  background: #475569;
+  color: #f1f5f9;
+  font-size: 12px;
+  cursor: pointer;
+  line-height: 20px;
+  padding: 0;
+  margin: 0;
+}
+.numBox button:hover {
+  background: #64748b;
+}
+
+/* ====== 常规按钮 ====== */
+.btn {
+  cursor: pointer;
+  margin: 4px 2px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  background: #475569;
+  color: #f1f5f9;
+  font-size: 13px;
+  transition: background 0.15s;
+}
+.btn:hover {
+  background: #64748b;
+}
+
+/* ====== 滑动条 ====== */
+.slider {
+  width: 100%;
+  margin-top: 6px;
+}
+
+/* ====== 图例样式 ====== */
+.legend {
+  font-size: 12px;
+  display: grid;
+  gap: 4px;
+}
+.legend span {
+  display: flex;
+  align-items: center;
+}
+.legend i {
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+  border-radius: 2px;
+}
+
+/* ====== 可视化区域（2D/3D画布） ====== */
+#canvas2d,
+#canvas3d {
+  flex: 1 1 auto;
+  background: #0f172a;
+}
+#canvas2d {
+  cursor: grab;
+}
+#canvas2d:active {
+  cursor: grabbing;
+}

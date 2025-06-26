@@ -1,0 +1,739 @@
+/* style.css */
+
+/* 引入B站常用的字体和颜色变量，简化版中我们直接使用CSS变量模拟 */
+:root {
+    --brand-blue: #00a1d6;
+    --text-color: #222;
+    --light-text-color: #999;
+    --bg-color-light: #f6f6f6;
+    --border-color: #e3e5e7;
+    --card-bg: #fff;
+    --orange-highlight: #ff9900;
+    --border-radius-base: 8px;
+    --card-hover-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    --card-transition: all 0.2s ease-out;
+
+    /* 模拟官方的亮色主题颜色 */
+    --light-color-blue: #00a1d6;
+    --light-color-pink: #eb5771;
+    --light-text1: #18191C;
+    --light-text2: #61666D;
+    --light-text3: #9499A0;
+    --light-line: #E3E5E7;
+    --light-fill4: #F1F2F3;
+    --light-fill5: #F6F7F8;
+    --light-bg1: #FFFFFF;
+
+    --Or5: #ff7f24; /* 官网的橘色点赞等 */
+    --Or1: #ffe8d7; /* 官网的橘色背景 */
+}
+
+/* 通用样式重置 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC";
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color-light);
+    color: var(--text-color);
+    line-height: 1.5;
+    min-width: 1200px; /* 保证桌面端最低宽度 */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* SVG 图标样式 */
+.zhuzhan-icon,
+.download-client-trigger__icon,
+.laputa-home_play_count,
+.laputa-home_danmaku_count,
+.laputa-home_up_icon,
+.laputa-home_arrow_left,
+.laputa-home_arrow_right {
+    display: inline-block;
+    vertical-align: middle;
+    fill: currentColor; /* 使SVG颜色与父元素文本颜色一致 */
+}
+
+/* 顶部Header */
+.bili-header {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.bili-header__bar {
+    max-width: 1920px; /* 官网最大宽度 */
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    height: 64px; /* 官网bar高度 */
+    box-sizing: border-box;
+}
+
+.left-entry, .right-entry-panel {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.left-entry li, .right-entry-panel li {
+    margin-right: 18px; /* 官网间距 */
+}
+
+.left-entry li:last-child, .right-entry-panel li:last-child {
+    margin-right: 0;
+}
+
+.left-entry .entry-title {
+    display: flex;
+    align-items: center;
+    color: var(--brand-blue); /* 首页图标颜色 */
+    font-weight: bold;
+}
+
+.left-entry .entry-title svg {
+    margin-right: 5px;
+}
+
+.left-entry .default-entry,
+.left-entry .download-client-trigger {
+    color: var(--text-color);
+    padding: 0 4px;
+    transition: color 0.2s;
+}
+
+.left-entry .default-entry:hover,
+.left-entry .download-client-trigger:hover {
+    color: var(--brand-blue);
+}
+
+.download-client-trigger {
+    display: flex;
+    align-items: center;
+}
+
+.download-client-trigger__icon {
+    margin-right: 5px;
+    font-size: 16px; /* 保持图标大小 */
+    color: var(--brand-blue); /* 下载图标是蓝色 */
+}
+
+
+.center-search-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* 搜索框居中 */
+    margin: 0 40px; /* 调整两侧间距 */
+    max-width: 500px; /* 官网搜索框宽度 */
+}
+
+.center-search__bar {
+    width: 100%;
+}
+
+#nav-searchform {
+    display: flex;
+    width: 100%;
+    height: 36px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--light-fill5); /* 搜索框背景色 */
+    overflow: hidden;
+}
+
+.nav-search-content {
+    display: flex;
+    flex-grow: 1;
+}
+
+.nav-search-input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 0 12px;
+    background-color: transparent;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.nav-search-input::placeholder {
+    color: var(--light-text3);
+}
+
+.nav-search-clean {
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    cursor: pointer;
+    visibility: hidden; /* 默认隐藏，JS控制 */
+}
+.nav-search-clean svg {
+    color: var(--light-text3);
+}
+
+
+.nav-search-btn {
+    width: 50px;
+    background-color: var(--light-fill4); /* 搜索按钮背景色 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.nav-search-btn:hover {
+    background-color: var(--border-color);
+}
+.nav-search-btn svg {
+    color: var(--light-text2); /* 搜索图标颜色 */
+}
+
+
+.right-entry {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* 推到右侧 */
+}
+
+.header-avatar img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.right-entry-panel a {
+    color: var(--light-text1);
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.right-entry-panel a:hover {
+    color: var(--brand-blue);
+}
+
+.right-entry-upload {
+    background-color: #f77; /* 官网投稿按钮颜色 */
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-left: 20px;
+    transition: background-color 0.2s;
+}
+
+.right-entry-upload:hover {
+    background-color: #ff5c5c;
+}
+
+/* Banner区域 */
+.bili-header__banner {
+    position: relative;
+    max-width: 1920px;
+    height: 160px; /* 官网banner高度 */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.bili-header__banner .banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.header-banner__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.header-banner__inner .logo-img {
+    height: 78px; /* 官网Logo图尺寸 */
+    width: 162px;
+    object-fit: contain;
+}
+
+.head-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* 频道区域 */
+.bili-header__channel {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--card-bg); /* 频道栏背景色 */
+    border-top: 1px solid var(--border-color); /* 上边框 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 0 0 var(--border-radius-base) var(--border-radius-base); /* 底部圆角 */
+    margin-bottom: 20px;
+}
+
+.channel-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.channel-icons__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 13px;
+    color: var(--light-text2);
+    transition: color 0.2s;
+}
+
+.channel-icons__item:hover {
+    color: var(--brand-blue);
+}
+
+.channel-icons__item .icon-bg {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    transition: background-color 0.2s;
+}
+
+.icon-bg__dynamic {
+    background-color: #ff9f72; /* 官网动态图标背景色 */
+}
+.icon-bg__popular {
+    background-color: #59ca71; /* 官网热门图标背景色 */
+}
+
+.channel-icons__item .icon-bg i {
+    font-size: 22px; /* 官网图标大小 */
+    color: #fff;
+}
+
+
+.channel-items__left, .channel-items__right {
+    display: flex;
+    flex-wrap: wrap; /* 允许换行 */
+    gap: 15px; /* 官网频道项间距 */
+}
+
+.channel-link, .channel-link__right {
+    color: var(--light-text2);
+    font-size: 14px;
+    padding: 4px 8px; /* 官网频道项内边距 */
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.channel-link:hover, .channel-link__right:hover {
+    background-color: var(--light-fill4);
+    color: var(--brand-blue);
+}
+
+#channel-entry-more {
+    display: inline-flex; /* 保持图标对齐 */
+    align-items: center;
+    color: var(--light-text2);
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#channel-entry-more:hover {
+    background-color: var(--light-fill4);
+    color: var(--brand-blue);
+}
+
+.channel-entry-more__link--arrow {
+    margin-left: 5px;
+    font-size: 10px;
+    color: var(--light-text3);
+}
+
+.channel-link__right {
+    display: flex;
+    align-items: center;
+}
+/* 官网右侧频道链接通常没有额外图标，如果需要，可以添加 */
+/* .channel-link__right svg { margin-right: 5px; font-size: 16px; } */
+
+
+/* 主内容区域布局 */
+.bili-feed4-layout {
+    max-width: 1280px; /* 官网主内容区域的宽度 */
+    margin: 0 auto;
+    padding: 0 20px; /* 两侧留白 */
+    display: flex;
+    flex-direction: column; /* 垂直堆叠 */
+    gap: 20px; /* 轮播和视频列表的间距 */
+}
+
+.container.is-version8 {
+    width: 100%;
+}
+
+/* 轮播图区域 */
+.recommended-swipe {
+    position: relative;
+    width: 100%;
+    padding-bottom: var(--cover-radio); /* 16:9 宽高比 */
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--border-radius-base);
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.carousel.vui_carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.vui_carousel__slides {
+    display: flex;
+    width: 400%; /* 4 items * 100% */
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* 官网过渡效果 */
+}
+
+.vui_carousel__slide {
+    width: 25%; /* 每个slide占据25% */
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.carousel-area {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-inner__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* 官网底部信息栏高度 */
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.carousel-footer-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* 半透明黑色背景 */
+    z-index: 1;
+}
+
+.carousel-footer-text {
+    flex-grow: 1;
+    color: #fff;
+    font-size: 16px;
+    z-index: 2;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.carousel-footer-text a {
+    color: #fff;
+}
+
+
+.carousel-dots {
+    z-index: 2;
+}
+
+.carousel-dots-list {
+    display: flex;
+    gap: 8px;
+}
+
+.carousel-dots-dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-dots-dot.is-active {
+    background-color: var(--brand-blue);
+}
+
+.carousel-arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-sizing: border-box;
+    z-index: 3;
+}
+
+.carousel-arrows button {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #fff;
+    font-size: 20px; /* 调整图标大小 */
+    opacity: 0; /* 默认隐藏，hover显示 */
+}
+/* 父元素hover时显示箭头 */
+.recommended-swipe:hover .carousel-arrows button {
+    opacity: 1;
+}
+
+.carousel-arrows button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* 视频列表（feed流） */
+.feed2 {
+    width: 100%;
+}
+
+.bili-feed-card-list {
+    display: grid;
+    /* 模拟官网的4列布局，根据宽度自适应 */
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px; /* 视频卡片之间的间距 */
+}
+
+.bili-feed-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius-base);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: var(--card-transition);
+    cursor: pointer;
+}
+
+.bili-feed-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.bili-video-card__image {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 宽高比 */
+    overflow: hidden;
+}
+
+.bili-video-card__image--wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.bili-video-card__cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.bili-video-card__mask {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.6));
+    padding: 8px 10px;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bili-video-card__stats {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bili-video-card__stats--left {
+    display: flex;
+    gap: 10px;
+}
+
+.bili-video-card__stats--item {
+    display: flex;
+    align-items: center;
+}
+
+.bili-video-card__stats--item i {
+    font-size: 14px; /* 图标大小 */
+    margin-right: 4px;
+}
+
+.bili-video-card__stats--text {
+    line-height: 1; /* 保证文本和图标对齐 */
+}
+
+.bili-video-card__stats__duration {
+    font-size: 13px;
+}
+
+.bili-video-card__info {
+    padding: 10px 12px;
+    height: 70px; /* 官网信息区域高度 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.bili-video-card__info--tit {
+    font-size: 15px;
+    line-height: 1.4;
+    color: var(--light-text1);
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 限制两行文本 */
+    line-clamp: 2; /* 标准属性 */
+    -webkit-box-orient: vertical;
+    word-break: break-all; /* 防止长单词溢出 */
+}
+
+.bili-video-card__info--tit a:hover {
+    color: var(--brand-blue);
+}
+
+.bili-video-card__info--bottom {
+    display: flex;
+    align-items: center;
+    margin-top: 8px; /* 标题和底部信息的间距 */
+    font-size: 12px;
+    color: var(--light-text3);
+}
+
+.bili-video-card__info--owner {
+    display: flex;
+    align-items: center;
+}
+
+.bili-video-card__info--owner i {
+    font-size: 14px; /* UP主图标大小 */
+    margin-right: 4px;
+}
+
+.bili-video-card__info--author {
+    max-width: 80px; /* 限制UP主名称宽度 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-right: 5px;
+}
+
+.bili-video-card__info--date {
+    white-space: nowrap;
+}
+
+.bili-video-card__info--icon-text {
+    background-color: var(--Or1); /* 橘色背景 */
+    color: var(--Or5); /* 橘色文字 */
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-right: 8px;
+    white-space: nowrap;
+}
+
+/* 底部页脚 */
+.bili-footer {
+    background-color: #333;
+    color: #bbb;
+    padding: 30px 20px;
+    margin-top: 50px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    margin-top: 15px;
+}
+
+.footer-links a {
+    color: #bbb;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
